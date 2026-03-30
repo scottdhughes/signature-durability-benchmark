@@ -75,6 +75,20 @@ def _build_gene_universe(cohort_data: dict[str, dict[str, Any]]) -> list[str]:
     return sorted(all_genes)
 
 
+def _signature_confounder_overlap(
+    sig_genes: set[str],
+    confounder_sets: dict[str, pd.DataFrame],
+) -> dict[str, float]:
+    """Compute fraction of signature genes overlapping each confounder set."""
+    if not sig_genes:
+        return {name: 0.0 for name in confounder_sets}
+    overlaps = {}
+    for name, cdf in confounder_sets.items():
+        conf_genes = set(cdf["gene_symbol"].astype(str).str.upper())
+        overlaps[name] = len(sig_genes & conf_genes) / len(sig_genes)
+    return overlaps
+
+
 def _score_signature_across_cohorts(
     sig_id: str,
     raw_sig: pd.DataFrame,
@@ -88,6 +102,10 @@ def _score_signature_across_cohorts(
     cohort_platforms: list[str] = []
     cohort_confounder_maxes: list[float] = []
     coverages: list[float] = []
+
+    # Compute signature-specific confounder overlap fractions
+    sig_genes = set(raw_sig["gene_symbol"].astype(str).str.upper().str.strip())
+    conf_overlaps = _signature_confounder_overlap(sig_genes, confounder_sets)
 
     for cid, cdata in cohort_data.items():
         crow = cdata["manifest"]
@@ -116,7 +134,7 @@ def _score_signature_across_cohorts(
         cohort_platforms.append(str(crow["platform"]))
         coverages.append(result["coverage_fraction"])
 
-        # Score confounders in this cohort
+        # Score confounders in this cohort, weighted by signature overlap
         conf_scores = score_confounders_in_cohort(
             confounder_sets,
             cdata["expr"],
@@ -125,9 +143,13 @@ def _score_signature_across_cohorts(
             str(crow["case_label"]),
             str(crow["control_label"]),
         )
-        cohort_confounder_maxes.append(
-            max(conf_scores.values()) if conf_scores else 0.0
+        # Weight each confounder effect by the signature's overlap with that confounder
+        weighted_conf = max(
+            (abs(conf_scores[name]) * conf_overlaps.get(name, 0.0)
+             for name in conf_scores),
+            default=0.0,
         )
+        cohort_confounder_maxes.append(float(weighted_conf))
 
     return {
         "per_cohort_records": per_cohort_records,
@@ -318,21 +340,46 @@ def _build_cohort_overlap_summary(
 # Aggregate metrics + success rule
 # ---------------------------------------------------------------------------
 
+def _durability_score(row: pd.Series, model_name: str) -> float:
+    """Compute a model-specific durability score for AUPRC ranking.
+
+    Higher = more likely durable. Each model uses different information,
+    so AUPRC can differentiate between models.
+    """
+    effect = float(row.get("aggregate_effect", 0.0))
+    conf = float(row.get("max_confounder_effect", 0.0))
+    dir_cons = float(row.get("direction_consistency", 0.0))
+    null_p = float(row.get("null_separation_p", 1.0))
+    loo = float(row.get("loo_stability", 0.0))
+    i_sq = float(row.get("i_squared", 0.0))
+
+    if model_name == "overlap_only":
+        return dir_cons
+    elif model_name == "effect_only":
+        return abs(effect) * dir_cons
+    elif model_name == "null_aware":
+        return abs(effect) * dir_cons * (1.0 - null_p) * (1.0 - 0.5 * i_sq)
+    elif model_name == "no_confounder":
+        return abs(effect) * dir_cons * loo * (1.0 - 0.5 * i_sq)
+    else:  # full_model
+        return abs(effect) * dir_cons * loo * (1.0 - 0.5 * i_sq) - conf
+
+
 def _compute_auprc(scores_df: pd.DataFrame, model_name: str) -> float:
     """Compute AUPRC for a single model on the PRIMARY split.
 
     y_true = 1 if expected_class in DURABLE_CLASSES, else 0.
-    y_score = aggregate_effect (larger = more likely durable).
-    Rows with predicted_class == 'insufficient_coverage' are excluded.
+    y_score = model-specific durability score (higher = more likely durable).
+    Rows with expected_class == 'insufficient_coverage' are excluded.
     """
     subset = scores_df[
         (scores_df["model"] == model_name) & (scores_df["split"] == "primary")
     ].copy()
-    subset = subset[subset["predicted_class"] != "insufficient_coverage"]
+    subset = subset[subset["expected_class"] != "insufficient_coverage"]
     if subset.empty:
         return 0.0
     y_true = subset["expected_class"].isin(DURABLE_CLASSES).astype(int).values
-    y_score = subset["aggregate_effect"].values
+    y_score = subset.apply(lambda r: _durability_score(r, model_name), axis=1).values
     if y_true.sum() == 0 or y_true.sum() == len(y_true):
         return 0.0  # degenerate: all one class
     return float(average_precision_score(y_true, y_score))
