@@ -1,15 +1,13 @@
-cohort_id	platform	tissue	biological_program	phenotype_column	case_label	control_label	sample_count
-affy_inflammation_sepsis	affymetrix	blood	inflammation	condition	sepsis	healthy	60
-affy_interferon_viral	affymetrix	blood	interferon	condition	viral_infection	healthy	50
-affy_hypoxia_tumor	affymetrix	solid_tumor	hypoxia	condition	hypoxic	normoxic	50
-affy_proliferation_cancer	affymetrix	solid_tumor	proliferation	condition	tumor	normal	60
-affy_emt_fibrosis	affymetrix	lung	emt	condition	fibrotic	healthy	40
-affy_senescence_aging	affymetrix	skin	senescence	condition	senescent	young	40
-affy_mixed_program	affymetrix	colon	mixed	condition	diseased	healthy	50
-rnaseq_inflammation_sepsis	rnaseq	blood	inflammation	condition	sepsis	healthy	60
-rnaseq_interferon_viral	rnaseq	pbmc	interferon	condition	viral_infection	healthy	50
-rnaseq_hypoxia_tumor	rnaseq	solid_tumor	hypoxia	condition	hypoxic	normoxic	50
-rnaseq_proliferation_cancer	rnaseq	breast	proliferation	condition	tumor	normal	60
-rnaseq_emt_fibrosis	rnaseq	kidney	emt	condition	fibrotic	healthy	40
-rnaseq_senescence_aging	rnaseq	fibroblast	senescence	condition	senescent	young	40
-rnaseq_mixed_program	rnaseq	liver	mixed	condition	diseased	healthy	50
+cohort_id	geo_accession	platform	platform_id	tissue	biological_program	phenotype_column	case_label	control_label	sample_count
+sepsis_mortality_gse65682	GSE65682	affymetrix	GPL13667	whole_blood	inflammation	phenotype	died	survived	479
+breast_prognosis_gse2034	GSE2034	affymetrix	GPL96	breast_tumor	proliferation	phenotype	relapse	no_relapse	286
+breast_er_gse7390	GSE7390	affymetrix	GPL96	breast_tumor	proliferation	phenotype	er_positive	er_negative	198
+hypoxia_cellline_gse53012	GSE53012	affymetrix	GPL570	cell_line	hypoxia	phenotype	hypoxia	normoxia	27
+sepsis_blood_gse28750	GSE28750	affymetrix	GPL570	whole_blood	inflammation	phenotype	sepsis	healthy	30
+tb_blood_gse19491	GSE19491	illumina	GPL6947	whole_blood	interferon	phenotype	active_tb	healthy	155
+ipf_lung_gse47460	GSE47460	agilent	GPL14550	lung	emt	phenotype	ild	control	284
+copd_lung_gse47460	GSE47460	agilent	GPL6480	lung	inflammation	phenotype	copd	control	92
+influenza_pbmc_gse101702	GSE101702	agilent	GPL21185	pbmc	interferon	phenotype	influenza	healthy	159
+trauma_blood_gse36809	GSE36809	affymetrix	GPL570	whole_blood	inflammation	phenotype	trauma	control	857
+hcc_liver_gse6764	GSE6764	affymetrix	GPL570	liver	proliferation	phenotype	hcc	normal	48
+crohn_intestine_gse112366	GSE112366	affymetrix	GPL13158	intestine	inflammation	phenotype	crohn	control	388

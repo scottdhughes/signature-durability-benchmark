@@ -3,5 +3,7 @@ __pycache__/
 *.pyc
 *.egg-info/
 data/raw/
+data/freeze/cohort_matrices/
+data/freeze/cohort_phenotypes/
 outputs/
 .pytest_cache/
