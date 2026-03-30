@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["certificate_type", "verdict", "summary"],
+  "properties": {
+    "certificate_type": {"type": "string"},
+    "verdict": {"enum": ["passed", "mixed", "failed"]},
+    "summary": {"type": "string"},
+    "metrics": {"type": "object"}
+  }
+}
