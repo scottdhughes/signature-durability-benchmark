@@ -1,0 +1,13 @@
+cohort_id	geo_accession	platform	platform_id	tissue	biological_program	phenotype_column	case_label	control_label	sample_count
+sepsis_mortality_gse65682	GSE65682	affymetrix	GPL13667	whole_blood	inflammation	phenotype	died	survived	479
+breast_prognosis_gse2034	GSE2034	affymetrix	GPL96	breast_tumor	proliferation	phenotype	relapse	no_relapse	286
+breast_er_gse7390	GSE7390	affymetrix	GPL96	breast_tumor	proliferation	phenotype	er_positive	er_negative	198
+hypoxia_cellline_gse53012	GSE53012	affymetrix	GPL570	cell_line	hypoxia	phenotype	hypoxia	normoxia	27
+sepsis_blood_gse28750	GSE28750	affymetrix	GPL570	whole_blood	inflammation	phenotype	sepsis	healthy	30
+tb_blood_gse19491	GSE19491	illumina	GPL6947	whole_blood	interferon	phenotype	active_tb	healthy	155
+ipf_lung_gse47460	GSE47460	agilent	GPL14550	lung	emt	phenotype	ild	control	284
+copd_lung_gse47460	GSE47460	agilent	GPL6480	lung	inflammation	phenotype	copd	control	92
+influenza_pbmc_gse101702	GSE101702	agilent	GPL21185	pbmc	interferon	phenotype	influenza	healthy	159
+trauma_blood_gse36809	GSE36809	affymetrix	GPL570	whole_blood	inflammation	phenotype	trauma	control	857
+hcc_liver_gse6764	GSE6764	affymetrix	GPL570	liver	proliferation	phenotype	hcc	normal	48
+crohn_intestine_gse112366	GSE112366	affymetrix	GPL13158	intestine	inflammation	phenotype	crohn	control	388
