@@ -1,0 +1,25 @@
+{
+  "cohort_count": 14,
+  "total_samples": 700,
+  "gene_universe_size": 10000,
+  "generation_seed": 42,
+  "timestamp": "2026-03-30T18:20:46.617266+00:00",
+  "cohort_ids": [
+    "affy_inflammation_sepsis",
+    "affy_interferon_viral",
+    "affy_hypoxia_tumor",
+    "affy_proliferation_cancer",
+    "affy_emt_fibrosis",
+    "affy_senescence_aging",
+    "affy_mixed_program",
+    "rnaseq_inflammation_sepsis",
+    "rnaseq_interferon_viral",
+    "rnaseq_hypoxia_tumor",
+    "rnaseq_proliferation_cancer",
+    "rnaseq_emt_fibrosis",
+    "rnaseq_senescence_aging",
+    "rnaseq_mixed_program"
+  ],
+  "method": "synthetic_cohorts_modeling_geo_characteristics",
+  "description": "Biologically realistic synthetic cohort expression matrices. Durable signatures show cross-cohort consistency (Cohen's d ~0.5-1.0). Brittle signatures show effect in at most 1 cohort. Confounded signatures are driven by confounder gene overlap. Stealth confounded signatures have real signal + confounder contamination."
+}

@@ -1,0 +1,15 @@
+cohort_id	platform	tissue	biological_program	phenotype_column	case_label	control_label	sample_count
+affy_inflammation_sepsis	affymetrix	blood	inflammation	condition	sepsis	healthy	60
+affy_interferon_viral	affymetrix	blood	interferon	condition	viral_infection	healthy	50
+affy_hypoxia_tumor	affymetrix	solid_tumor	hypoxia	condition	hypoxic	normoxic	50
+affy_proliferation_cancer	affymetrix	solid_tumor	proliferation	condition	tumor	normal	60
+affy_emt_fibrosis	affymetrix	lung	emt	condition	fibrotic	healthy	40
+affy_senescence_aging	affymetrix	skin	senescence	condition	senescent	young	40
+affy_mixed_program	affymetrix	colon	mixed	condition	diseased	healthy	50
+rnaseq_inflammation_sepsis	rnaseq	blood	inflammation	condition	sepsis	healthy	60
+rnaseq_interferon_viral	rnaseq	pbmc	interferon	condition	viral_infection	healthy	50
+rnaseq_hypoxia_tumor	rnaseq	solid_tumor	hypoxia	condition	hypoxic	normoxic	50
+rnaseq_proliferation_cancer	rnaseq	breast	proliferation	condition	tumor	normal	60
+rnaseq_emt_fibrosis	rnaseq	kidney	emt	condition	fibrotic	healthy	40
+rnaseq_senescence_aging	rnaseq	fibroblast	senescence	condition	senescent	young	40
+rnaseq_mixed_program	rnaseq	liver	mixed	condition	diseased	healthy	50
