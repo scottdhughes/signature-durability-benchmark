@@ -1,0 +1,11 @@
+sets:
+  proliferation_cell_cycle:
+    genes_up: [MKI67, TOP2A, PCNA, CCNB1, CDK1, CCNA2, BUB1, AURKA, PLK1, CDC20]
+  generic_inflammation:
+    genes_up: [IL6, IL1B, TNF, CXCL8, CCL2, NFKB1, PTGS2, ICAM1, VCAM1, SELE]
+  stress_response:
+    genes_up: [HSPA1A, HSPA1B, HSP90AA1, DDIT3, ATF4, XBP1, GADD45A, CDKN1A, FOS, JUN]
+  batch_ribosomal:
+    genes_up: [RPS4X, RPL13A, RPS27A, RPL7, RPS3, RPL3, RPS8, RPL11, RPS18, RPL5]
+  immune_infiltration:
+    genes_up: [PTPRC, CD3D, CD8A, CD4, MS4A1, CD14, ITGAM, FCGR3A, NKG7, GZMB]
