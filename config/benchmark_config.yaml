@@ -1,0 +1,55 @@
+title: "Signature Durability Benchmark"
+abstract: >
+  Cross-cohort benchmark assessing whether gene expression signatures
+  replicate across independent GEO cohorts, withstand null-model comparison,
+  and resist confounding by nuisance gene sets.
+
+contract_version: "0.1.0"
+
+paths:
+  cohort_manifest: config/cohort_manifest.tsv
+  signature_panel: config/signature_panel.tsv
+  signature_rows: data/curation/all_signatures.tsv
+  confounder_panel: config/confounder_panel.yaml
+  freeze_dir: data/freeze
+  benchmark_protocol: config/benchmark_protocol.json
+
+runtime:
+  random_seed: 42
+  verification_tolerance: 0.01
+
+scoring:
+  null_draws: 32
+  coverage_min_fraction: 0.60
+
+meta_analysis:
+  fixed_effect_method: inverse_variance
+
+freeze:
+  freeze_audit: data/freeze/freeze_audit.json
+
+sources:
+  msigdb:
+    url: "https://www.gsea-msigdb.org/gsea/msigdb/"
+    version: "2024.1.Hs"
+
+outputs:
+  manifest: manifest.json
+  normalization_audit: normalization_audit.json
+  cohort_overlap_summary: cohort_overlap_summary.csv
+  per_cohort_effects: per_cohort_effects.csv
+  aggregate_durability_scores: aggregate_durability_scores.csv
+  matched_null_summary: matched_null_summary.csv
+  leave_one_cohort_out: leave_one_cohort_out.csv
+  platform_holdout_summary: platform_holdout_summary.csv
+  durability_certificate: durability_certificate.json
+  platform_transfer_certificate: platform_transfer_certificate.json
+  confounder_rejection_certificate: confounder_rejection_certificate.json
+  coverage_certificate: coverage_certificate.json
+  benchmark_protocol: benchmark_protocol.json
+  verification: verification.json
+  public_summary: public_summary.md
+  forest_plot: forest_plot.png
+  null_separation_plot: null_separation_plot.png
+  stability_heatmap: stability_heatmap.png
+  platform_transfer_panel: platform_transfer_panel.png
