@@ -1,0 +1,334 @@
+{
+  "description": "Strictly unique Schoggins (41 genes) test \u2014 zero overlap with Hallmark IFN or expansion marker genes",
+  "gene_list": [
+    "C6orf150",
+    "CMPK2",
+    "CXCL11",
+    "DDX60",
+    "DHX58",
+    "GBP3",
+    "GBP4",
+    "GBP5",
+    "HERC6",
+    "HES4",
+    "IFIH1",
+    "IFIT5",
+    "IFITM2",
+    "IRGM",
+    "LAMP3",
+    "LGALS9",
+    "MOV10",
+    "NAMPT",
+    "NT5C3",
+    "PARP10",
+    "PARP12",
+    "PARP14",
+    "PARP9",
+    "PHF11",
+    "PLSCR1",
+    "PML",
+    "PNPT1",
+    "RNF19B",
+    "RTP4",
+    "SERPING1",
+    "SP100",
+    "TDRD7",
+    "TREX1",
+    "TRIM21",
+    "TRIM25",
+    "TRIM34",
+    "TRIM5",
+    "TRIM56",
+    "UBD",
+    "ZBP1",
+    "ZC3HAV1"
+  ],
+  "n_genes": 41,
+  "expansion_marker_overlap": 0,
+  "ifn_cohort_results": [
+    {
+      "cohens_d": 1.0125,
+      "cohens_d_var": 0.031963,
+      "coverage": 0.9268,
+      "case_n": 103,
+      "control_n": 52,
+      "cohort_id": "tb_blood_gse19491",
+      "tissue": "whole_blood"
+    },
+    {
+      "cohens_d": 1.1267,
+      "cohens_d_var": 0.032296,
+      "coverage": 0.9512,
+      "case_n": 107,
+      "control_n": 52,
+      "cohort_id": "influenza_pbmc_gse101702",
+      "tissue": "pbmc"
+    },
+    {
+      "cohens_d": 0.671,
+      "cohens_d_var": 0.066774,
+      "coverage": 0.9024,
+      "case_n": 51,
+      "control_n": 22,
+      "cohort_id": "rsv_blood_gse34205",
+      "tissue": "whole_blood"
+    },
+    {
+      "cohens_d": 0.6379,
+      "cohens_d_var": 0.005011,
+      "coverage": 0.6098,
+      "case_n": 861,
+      "control_n": 272,
+      "cohort_id": "viral_challenge_gse73072",
+      "tissue": "whole_blood"
+    },
+    {
+      "cohens_d": 0.8299,
+      "cohens_d_var": 0.019944,
+      "coverage": 0.9268,
+      "case_n": 211,
+      "control_n": 71,
+      "cohort_id": "influenza_challenge_gse68310",
+      "tissue": "whole_blood"
+    },
+    {
+      "cohens_d": 1.5145,
+      "cohens_d_var": 0.030512,
+      "coverage": 0.8293,
+      "case_n": 59,
+      "control_n": 130,
+      "cohort_id": "influenza_severe_gse111368",
+      "tissue": "whole_blood"
+    },
+    {
+      "cohens_d": 0.9053,
+      "cohens_d_var": 0.070194,
+      "coverage": 0.878,
+      "case_n": 61,
+      "control_n": 20,
+      "cohort_id": "sle_pbmc_gse50772",
+      "tissue": "pbmc"
+    },
+    {
+      "cohens_d": 1.7065,
+      "cohens_d_var": 0.064113,
+      "coverage": 0.9268,
+      "case_n": 157,
+      "control_n": 20,
+      "cohort_id": "sle_blood_gse49454",
+      "tissue": "blood"
+    },
+    {
+      "cohens_d": 2.7211,
+      "cohens_d_var": 0.062801,
+      "coverage": 0.9024,
+      "case_n": 58,
+      "control_n": 64,
+      "cohort_id": "psoriasis_skin_gse13355",
+      "tissue": "skin"
+    },
+    {
+      "cohens_d": 2.0876,
+      "cohens_d_var": 0.116031,
+      "coverage": 0.9024,
+      "case_n": 33,
+      "control_n": 21,
+      "cohort_id": "psoriasis_skin_gse14905",
+      "tissue": "skin"
+    },
+    {
+      "cohens_d": 0.6699,
+      "cohens_d_var": 0.146621,
+      "coverage": 0.9268,
+      "case_n": 28,
+      "control_n": 9,
+      "cohort_id": "dengue_blood_gse51808",
+      "tissue": "blood"
+    }
+  ],
+  "other_cohort_results": [
+    {
+      "cohens_d": -0.2458,
+      "cohens_d_var": 0.011539,
+      "coverage": 0.9268,
+      "case_n": 114,
+      "control_n": 365
+    },
+    {
+      "cohens_d": -0.3132,
+      "cohens_d_var": 0.019172,
+      "coverage": 0.6098,
+      "case_n": 69,
+      "control_n": 217
+    },
+    {
+      "cohens_d": -0.2255,
+      "cohens_d_var": 0.023039,
+      "coverage": 0.6098,
+      "case_n": 134,
+      "control_n": 64
+    },
+    {
+      "cohens_d": -0.4361,
+      "cohens_d_var": 0.160241,
+      "coverage": 0.9024,
+      "case_n": 18,
+      "control_n": 9
+    },
+    {
+      "cohens_d": -0.3729,
+      "cohens_d_var": 0.144319,
+      "coverage": 0.9024,
+      "case_n": 10,
+      "control_n": 20
+    },
+    {
+      "cohens_d": -0.4032,
+      "cohens_d_var": 0.016371,
+      "coverage": 0.8293,
+      "case_n": 193,
+      "control_n": 91
+    },
+    {
+      "cohens_d": -0.4643,
+      "cohens_d_var": 0.072128,
+      "coverage": 0.8049,
+      "case_n": 75,
+      "control_n": 17
+    },
+    {
+      "cohens_d": -0.1133,
+      "cohens_d_var": 0.028204,
+      "coverage": 0.878,
+      "case_n": 820,
+      "control_n": 37
+    },
+    {
+      "cohens_d": 1.1367,
+      "cohens_d_var": 0.135666,
+      "coverage": 0.9024,
+      "case_n": 38,
+      "control_n": 10
+    },
+    {
+      "cohens_d": 0.5989,
+      "cohens_d_var": 0.041526,
+      "coverage": 0.9268,
+      "case_n": 362,
+      "control_n": 26
+    },
+    {
+      "cohens_d": 0.1354,
+      "cohens_d_var": 0.033142,
+      "coverage": 0.6098,
+      "case_n": 40,
+      "control_n": 119
+    },
+    {
+      "cohens_d": 0.913,
+      "cohens_d_var": 0.413427,
+      "coverage": 0.9024,
+      "case_n": 3,
+      "control_n": 9
+    },
+    {
+      "cohens_d": 1.5431,
+      "cohens_d_var": 0.477914,
+      "coverage": 0.9024,
+      "case_n": 9,
+      "control_n": 3
+    },
+    {
+      "cohens_d": -0.2004,
+      "cohens_d_var": 0.142195,
+      "coverage": 0.8293,
+      "case_n": 27,
+      "control_n": 9
+    },
+    {
+      "cohens_d": -0.9311,
+      "cohens_d_var": 0.39799,
+      "coverage": 0.9024,
+      "case_n": 12,
+      "control_n": 3
+    },
+    {
+      "cohens_d": 0.6193,
+      "cohens_d_var": 0.224173,
+      "coverage": 0.439,
+      "case_n": 15,
+      "control_n": 6
+    },
+    {
+      "cohens_d": -0.5987,
+      "cohens_d_var": 0.258007,
+      "coverage": 0.9024,
+      "case_n": 9,
+      "control_n": 6
+    },
+    {
+      "cohens_d": -0.0075,
+      "cohens_d_var": 0.063691,
+      "coverage": 0.9024,
+      "case_n": 51,
+      "control_n": 22
+    },
+    {
+      "cohens_d": 1.2884,
+      "cohens_d_var": 0.082849,
+      "coverage": 0.8293,
+      "case_n": 29,
+      "control_n": 28
+    },
+    {
+      "cohens_d": -0.8284,
+      "cohens_d_var": 0.028317,
+      "coverage": 0.9024,
+      "case_n": 91,
+      "control_n": 65
+    },
+    {
+      "cohens_d": 2.1401,
+      "cohens_d_var": 0.119666,
+      "coverage": 0.9024,
+      "case_n": 29,
+      "control_n": 23
+    },
+    {
+      "cohens_d": 1.6571,
+      "cohens_d_var": 0.069332,
+      "coverage": 0.9024,
+      "case_n": 77,
+      "control_n": 23
+    },
+    {
+      "cohens_d": 3.2236,
+      "cohens_d_var": 0.715482,
+      "coverage": 0.9024,
+      "case_n": 12,
+      "control_n": 3
+    },
+    {
+      "cohens_d": 0.1334,
+      "cohens_d_var": 0.145308,
+      "coverage": 0.9024,
+      "case_n": 40,
+      "control_n": 8
+    }
+  ],
+  "within_ifn_meta": {
+    "k": 11,
+    "pooled_g": 1.247,
+    "I2": 0.9033,
+    "HKSJ_guarded_p": 9.722568206949056e-05,
+    "p_bonf": 0.000875031138625415
+  },
+  "outside_ifn_meta": {
+    "k": 24,
+    "pooled_g": 0.2411,
+    "I2": 0.8819,
+    "HKSJ_guarded_p": 0.21302765752252228,
+    "p_bonf": 1.0
+  },
+  "interpretation": "The 41 strictly-unique Schoggins genes share ZERO genes with the 9 IFN markers used to admit expansion cohorts (STAT1, IRF1, IFIT1, IFIT2, ISG15, MX1, OAS1, GBP1, CXCL10, RSAD2). If this panel still produces a large within-IFN effect, curation-level circularity is refuted."
+}
