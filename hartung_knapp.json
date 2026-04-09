@@ -1,0 +1,209 @@
+{
+  "analysis": "hartung_knapp_sidik_jonkman",
+  "bonferroni_n_tests": 9,
+  "bonferroni_threshold": 0.005555555555555556,
+  "note": "All effect sizes are Hedges' g (small-sample-corrected Cohen's d)",
+  "results": {
+    "hallmark_ifng_response": {
+      "k": 6,
+      "pooled_g": 1.003,
+      "tau2": 0.056,
+      "i_squared": 0.7214,
+      "DL": {
+        "se": 0.1179,
+        "z": 8.5078,
+        "p": 0.0,
+        "ci_95": [
+          0.772,
+          1.2341
+        ],
+        "p_Bonferroni": 0.0,
+        "survives_bonferroni": true
+      },
+      "HKSJ": {
+        "se": 0.1143,
+        "t_stat": 8.7784,
+        "df": 5,
+        "p": 0.00031816747148161184,
+        "ci_95": [
+          0.7093,
+          1.2967
+        ],
+        "p_Bonferroni": 0.0028635072433345066,
+        "survives_bonferroni": true
+      },
+      "HKSJ_guarded": {
+        "se": 0.1179,
+        "t_stat": 8.5078,
+        "df": 5,
+        "p": 0.0003689707136964593,
+        "ci_95": [
+          0.7,
+          1.3061
+        ],
+        "p_Bonferroni": 0.0033207364232681336,
+        "survives_bonferroni": true
+      },
+      "cohort_gs": [
+        {
+          "cohort": "tb_blood_gse19491",
+          "g": 1.057,
+          "var": 0.0323
+        },
+        {
+          "cohort": "influenza_pbmc_gse101702",
+          "g": 1.0455,
+          "var": 0.0317
+        },
+        {
+          "cohort": "rsv_blood_gse34205",
+          "g": 0.5966,
+          "var": 0.0661
+        },
+        {
+          "cohort": "viral_challenge_gse73072",
+          "g": 0.7626,
+          "var": 0.0051
+        },
+        {
+          "cohort": "influenza_challenge_gse68310",
+          "g": 1.0828,
+          "var": 0.0208
+        },
+        {
+          "cohort": "influenza_severe_gse111368",
+          "g": 1.4439,
+          "var": 0.03
+        }
+      ]
+    },
+    "hallmark_ifna_response": {
+      "k": 6,
+      "pooled_g": 1.1891,
+      "tau2": 0.1711,
+      "i_squared": 0.8837,
+      "DL": {
+        "se": 0.1835,
+        "z": 6.4795,
+        "p": 9.20208353960561e-11,
+        "ci_95": [
+          0.8294,
+          1.5488
+        ],
+        "p_Bonferroni": 8.281875185645049e-10,
+        "survives_bonferroni": true
+      },
+      "HKSJ": {
+        "se": 0.1715,
+        "t_stat": 6.9345,
+        "df": 5,
+        "p": 0.0009572232780479251,
+        "ci_95": [
+          0.7483,
+          1.6299
+        ],
+        "p_Bonferroni": 0.008615009502431326,
+        "survives_bonferroni": true
+      },
+      "HKSJ_guarded": {
+        "se": 0.1835,
+        "t_stat": 6.4795,
+        "df": 5,
+        "p": 0.0013052434738478613,
+        "ci_95": [
+          0.7173,
+          1.6608
+        ],
+        "p_Bonferroni": 0.011747191264630752,
+        "survives_bonferroni": true
+      },
+      "cohort_gs": [
+        {
+          "cohort": "tb_blood_gse19491",
+          "g": 0.9026,
+          "var": 0.0313
+        },
+        {
+          "cohort": "influenza_pbmc_gse101702",
+          "g": 1.4792,
+          "var": 0.0352
+        },
+        {
+          "cohort": "rsv_blood_gse34205",
+          "g": 0.9539,
+          "var": 0.0699
+        },
+        {
+          "cohort": "viral_challenge_gse73072",
+          "g": 0.7569,
+          "var": 0.0051
+        },
+        {
+          "cohort": "influenza_challenge_gse68310",
+          "g": 1.2113,
+          "var": 0.0213
+        },
+        {
+          "cohort": "influenza_severe_gse111368",
+          "g": 1.8694,
+          "var": 0.0337
+        }
+      ]
+    },
+    "hallmark_inflammatory_response": {
+      "k": 7,
+      "pooled_g": 0.7375,
+      "program": "inflammation",
+      "DL_p": 0.007218389509754841,
+      "DL_p_Bonferroni": 0.06496550558779357,
+      "HKSJ_guarded_p": 0.05014068849705611,
+      "HKSJ_guarded_p_Bonferroni": 0.45126619647350497,
+      "survives_DL_Bonferroni": false,
+      "survives_HKSJ_Bonferroni": false
+    },
+    "hallmark_hypoxia": {
+      "k": 6,
+      "pooled_g": 3.5449,
+      "program": "hypoxia",
+      "DL_p": 0.000335553319522397,
+      "DL_p_Bonferroni": 0.0030199798757015728,
+      "HKSJ_guarded_p": 0.0894742168890772,
+      "HKSJ_guarded_p_Bonferroni": 0.8052679520016948,
+      "survives_DL_Bonferroni": true,
+      "survives_HKSJ_Bonferroni": false
+    },
+    "hallmark_e2f_targets": {
+      "k": 5,
+      "pooled_g": 0.6208,
+      "program": "proliferation",
+      "DL_p": 0.2973472455696913,
+      "DL_p_Bonferroni": 1.0,
+      "HKSJ_guarded_p": 0.3561885848402544,
+      "HKSJ_guarded_p_Bonferroni": 1.0,
+      "survives_DL_Bonferroni": false,
+      "survives_HKSJ_Bonferroni": false
+    },
+    "hallmark_emt": {
+      "k": 6,
+      "pooled_g": 2.5078,
+      "program": "emt",
+      "DL_p": 0.00019705631130384482,
+      "DL_p_Bonferroni": 0.0017735068017346034,
+      "HKSJ_guarded_p": 0.03418368419778228,
+      "HKSJ_guarded_p_Bonferroni": 0.30765315778004054,
+      "survives_DL_Bonferroni": true,
+      "survives_HKSJ_Bonferroni": false
+    },
+    "hallmark_tnfa_nfkb": {
+      "k": 7,
+      "pooled_g": 0.5431,
+      "program": "inflammation",
+      "DL_p": 0.009501748795417209,
+      "DL_p_Bonferroni": 0.08551573915875488,
+      "HKSJ_guarded_p": 0.0629649066129494,
+      "HKSJ_guarded_p_Bonferroni": 0.5666841595165446,
+      "survives_DL_Bonferroni": false,
+      "survives_HKSJ_Bonferroni": false
+    }
+  }
+}

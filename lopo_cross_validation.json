@@ -1,0 +1,436 @@
+{
+  "description": "Leave-One-Program-Out cross-validation directly addressing circularity concern",
+  "lopo_qb_decomposition": {
+    "inflammation": {
+      "hallmark_ifng_response": {
+        "full_QB_frac": 0.6039754595529585,
+        "loo_QB_frac": 0.6339682598420201,
+        "delta": 0.029992800289061594,
+        "k_programs_loo": 4
+      },
+      "hallmark_ifna_response": {
+        "full_QB_frac": 0.6305928255282011,
+        "loo_QB_frac": 0.6076504376792147,
+        "delta": -0.02294238784898639,
+        "k_programs_loo": 4
+      },
+      "hallmark_inflammatory_response": {
+        "full_QB_frac": 0.41590135100911196,
+        "loo_QB_frac": 0.47816352284507163,
+        "delta": 0.06226217183595967,
+        "k_programs_loo": 4
+      },
+      "hallmark_tnfa_nfkb": {
+        "full_QB_frac": 0.5327364138155519,
+        "loo_QB_frac": 0.5838283743393009,
+        "delta": 0.05109196052374898,
+        "k_programs_loo": 4
+      },
+      "hallmark_hypoxia": {
+        "full_QB_frac": 0.19811849677400725,
+        "loo_QB_frac": 0.1795084219739563,
+        "delta": -0.018610074800050946,
+        "k_programs_loo": 4
+      },
+      "hallmark_e2f_targets": {
+        "full_QB_frac": 0.06675640534341165,
+        "loo_QB_frac": 0.04991212673978363,
+        "delta": -0.01684427860362802,
+        "k_programs_loo": 4
+      },
+      "hallmark_emt": {
+        "full_QB_frac": 0.2667980219903997,
+        "loo_QB_frac": 0.30336906266144686,
+        "delta": 0.03657104067104716,
+        "k_programs_loo": 4
+      }
+    },
+    "interferon": {
+      "hallmark_ifng_response": {
+        "full_QB_frac": 0.6039754595529585,
+        "loo_QB_frac": 0.2636341211303755,
+        "delta": -0.340341338422583,
+        "k_programs_loo": 4
+      },
+      "hallmark_ifna_response": {
+        "full_QB_frac": 0.6305928255282011,
+        "loo_QB_frac": 0.2641950440135411,
+        "delta": -0.36639778151465996,
+        "k_programs_loo": 4
+      },
+      "hallmark_inflammatory_response": {
+        "full_QB_frac": 0.41590135100911196,
+        "loo_QB_frac": 0.394350901520158,
+        "delta": -0.02155044948895396,
+        "k_programs_loo": 4
+      },
+      "hallmark_tnfa_nfkb": {
+        "full_QB_frac": 0.5327364138155519,
+        "loo_QB_frac": 0.49161086971973145,
+        "delta": -0.04112554409582048,
+        "k_programs_loo": 4
+      },
+      "hallmark_hypoxia": {
+        "full_QB_frac": 0.19811849677400725,
+        "loo_QB_frac": 0.2307435826159497,
+        "delta": 0.03262508584194246,
+        "k_programs_loo": 4
+      },
+      "hallmark_e2f_targets": {
+        "full_QB_frac": 0.06675640534341165,
+        "loo_QB_frac": 0.08595885461108846,
+        "delta": 0.019202449267676808,
+        "k_programs_loo": 4
+      },
+      "hallmark_emt": {
+        "full_QB_frac": 0.2667980219903997,
+        "loo_QB_frac": 0.2955655888039457,
+        "delta": 0.028767566813545975,
+        "k_programs_loo": 4
+      }
+    },
+    "proliferation": {
+      "hallmark_ifng_response": {
+        "full_QB_frac": 0.6039754595529585,
+        "loo_QB_frac": 0.5716524269226949,
+        "delta": -0.03232303263026359,
+        "k_programs_loo": 4
+      },
+      "hallmark_ifna_response": {
+        "full_QB_frac": 0.6305928255282011,
+        "loo_QB_frac": 0.602072105904653,
+        "delta": -0.028520719623548074,
+        "k_programs_loo": 4
+      },
+      "hallmark_inflammatory_response": {
+        "full_QB_frac": 0.41590135100911196,
+        "loo_QB_frac": 0.21107397750872034,
+        "delta": -0.20482737350039162,
+        "k_programs_loo": 4
+      },
+      "hallmark_tnfa_nfkb": {
+        "full_QB_frac": 0.5327364138155519,
+        "loo_QB_frac": 0.3308470408567281,
+        "delta": -0.2018893729588238,
+        "k_programs_loo": 4
+      },
+      "hallmark_hypoxia": {
+        "full_QB_frac": 0.19811849677400725,
+        "loo_QB_frac": 0.2264903604431796,
+        "delta": 0.028371863669172354,
+        "k_programs_loo": 4
+      },
+      "hallmark_e2f_targets": {
+        "full_QB_frac": 0.06675640534341165,
+        "loo_QB_frac": 0.10780116862337817,
+        "delta": 0.04104476327996652,
+        "k_programs_loo": 4
+      },
+      "hallmark_emt": {
+        "full_QB_frac": 0.2667980219903997,
+        "loo_QB_frac": 0.27236733318915296,
+        "delta": 0.005569311198753257,
+        "k_programs_loo": 4
+      }
+    },
+    "hypoxia": {
+      "hallmark_ifng_response": {
+        "full_QB_frac": 0.6039754595529585,
+        "loo_QB_frac": 0.6486939063151256,
+        "delta": 0.044718446762167074,
+        "k_programs_loo": 4
+      },
+      "hallmark_ifna_response": {
+        "full_QB_frac": 0.6305928255282011,
+        "loo_QB_frac": 0.6643703433121491,
+        "delta": 0.033777517783948,
+        "k_programs_loo": 4
+      },
+      "hallmark_inflammatory_response": {
+        "full_QB_frac": 0.41590135100911196,
+        "loo_QB_frac": 0.4177044335874114,
+        "delta": 0.0018030825782994198,
+        "k_programs_loo": 4
+      },
+      "hallmark_tnfa_nfkb": {
+        "full_QB_frac": 0.5327364138155519,
+        "loo_QB_frac": 0.5206334949227326,
+        "delta": -0.012102918892819337,
+        "k_programs_loo": 4
+      },
+      "hallmark_hypoxia": {
+        "full_QB_frac": 0.19811849677400725,
+        "loo_QB_frac": 0.16763527716582727,
+        "delta": -0.030483219608179984,
+        "k_programs_loo": 4
+      },
+      "hallmark_e2f_targets": {
+        "full_QB_frac": 0.06675640534341165,
+        "loo_QB_frac": 0.06839121846587767,
+        "delta": 0.0016348131224660223,
+        "k_programs_loo": 4
+      },
+      "hallmark_emt": {
+        "full_QB_frac": 0.2667980219903997,
+        "loo_QB_frac": 0.2353203984932506,
+        "delta": -0.03147762349714911,
+        "k_programs_loo": 4
+      }
+    },
+    "emt": {
+      "hallmark_ifng_response": {
+        "full_QB_frac": 0.6039754595529585,
+        "loo_QB_frac": 0.6283434729172251,
+        "delta": 0.02436801336426664,
+        "k_programs_loo": 4
+      },
+      "hallmark_ifna_response": {
+        "full_QB_frac": 0.6305928255282011,
+        "loo_QB_frac": 0.6680246992493971,
+        "delta": 0.03743187372119605,
+        "k_programs_loo": 4
+      },
+      "hallmark_inflammatory_response": {
+        "full_QB_frac": 0.41590135100911196,
+        "loo_QB_frac": 0.4692170355040104,
+        "delta": 0.05331568449489843,
+        "k_programs_loo": 4
+      },
+      "hallmark_tnfa_nfkb": {
+        "full_QB_frac": 0.5327364138155519,
+        "loo_QB_frac": 0.614718840441843,
+        "delta": 0.08198242662629107,
+        "k_programs_loo": 4
+      },
+      "hallmark_hypoxia": {
+        "full_QB_frac": 0.19811849677400725,
+        "loo_QB_frac": 0.1564073148686591,
+        "delta": -0.041711181905348144,
+        "k_programs_loo": 4
+      },
+      "hallmark_e2f_targets": {
+        "full_QB_frac": 0.06675640534341165,
+        "loo_QB_frac": 0.029845972455310166,
+        "delta": -0.03691043288810149,
+        "k_programs_loo": 4
+      },
+      "hallmark_emt": {
+        "full_QB_frac": 0.2667980219903997,
+        "loo_QB_frac": 0.17406596197372048,
+        "delta": -0.09273206001667922,
+        "k_programs_loo": 4
+      }
+    }
+  },
+  "loo_program_prediction": {
+    "n_cohorts": 30,
+    "correct": 15,
+    "accuracy": 0.5,
+    "chance": 0.2,
+    "improvement_over_chance": 2.5,
+    "per_program_accuracy": {
+      "inflammation": {
+        "correct": 4,
+        "total": 7
+      },
+      "interferon": {
+        "correct": 6,
+        "total": 6
+      },
+      "proliferation": {
+        "correct": 1,
+        "total": 5
+      },
+      "hypoxia": {
+        "correct": 1,
+        "total": 6
+      },
+      "emt": {
+        "correct": 3,
+        "total": 6
+      }
+    },
+    "predictions": [
+      {
+        "cohort": "sepsis_mortality_gse65682",
+        "true_program": "inflammation",
+        "predicted_program": "proliferation",
+        "correct": false
+      },
+      {
+        "cohort": "breast_prognosis_gse2034",
+        "true_program": "proliferation",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "breast_er_gse7390",
+        "true_program": "proliferation",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "hypoxia_cellline_gse53012",
+        "true_program": "hypoxia",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "sepsis_blood_gse28750",
+        "true_program": "inflammation",
+        "predicted_program": "inflammation",
+        "correct": true
+      },
+      {
+        "cohort": "tb_blood_gse19491",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      },
+      {
+        "cohort": "ipf_lung_gse47460",
+        "true_program": "emt",
+        "predicted_program": "proliferation",
+        "correct": false
+      },
+      {
+        "cohort": "copd_lung_gse47460",
+        "true_program": "inflammation",
+        "predicted_program": "inflammation",
+        "correct": true
+      },
+      {
+        "cohort": "influenza_pbmc_gse101702",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      },
+      {
+        "cohort": "trauma_blood_gse36809",
+        "true_program": "inflammation",
+        "predicted_program": "inflammation",
+        "correct": true
+      },
+      {
+        "cohort": "hcc_liver_gse6764",
+        "true_program": "proliferation",
+        "predicted_program": "interferon",
+        "correct": false
+      },
+      {
+        "cohort": "crohn_intestine_gse112366",
+        "true_program": "inflammation",
+        "predicted_program": "interferon",
+        "correct": false
+      },
+      {
+        "cohort": "rsv_blood_gse34205",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      },
+      {
+        "cohort": "viral_challenge_gse73072",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      },
+      {
+        "cohort": "breast_relapse_gse1456",
+        "true_program": "proliferation",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "hypoxia_mcf7_gse3188",
+        "true_program": "hypoxia",
+        "predicted_program": "interferon",
+        "correct": false
+      },
+      {
+        "cohort": "hypoxia_timecourse_gse47533",
+        "true_program": "hypoxia",
+        "predicted_program": "hypoxia",
+        "correct": true
+      },
+      {
+        "cohort": "hypoxia_multicell_gse18494",
+        "true_program": "hypoxia",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "emt_tgfb_gse17708",
+        "true_program": "emt",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "emt_hmle_gse24202",
+        "true_program": "emt",
+        "predicted_program": "emt",
+        "correct": true
+      },
+      {
+        "cohort": "emt_mammary_gse43495",
+        "true_program": "emt",
+        "predicted_program": "emt",
+        "correct": true
+      },
+      {
+        "cohort": "sepsis_shock_gse95233",
+        "true_program": "inflammation",
+        "predicted_program": "inflammation",
+        "correct": true
+      },
+      {
+        "cohort": "melioidosis_blood_gse69528",
+        "true_program": "inflammation",
+        "predicted_program": "interferon",
+        "correct": false
+      },
+      {
+        "cohort": "lung_tumor_gse19188",
+        "true_program": "proliferation",
+        "predicted_program": "proliferation",
+        "correct": true
+      },
+      {
+        "cohort": "influenza_challenge_gse68310",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      },
+      {
+        "cohort": "ccrcc_kidney_gse36895",
+        "true_program": "hypoxia",
+        "predicted_program": "inflammation",
+        "correct": false
+      },
+      {
+        "cohort": "gbm_brain_gse4290",
+        "true_program": "hypoxia",
+        "predicted_program": "interferon",
+        "correct": false
+      },
+      {
+        "cohort": "emt_arpe19_gse12548",
+        "true_program": "emt",
+        "predicted_program": "emt",
+        "correct": true
+      },
+      {
+        "cohort": "ipf_lung_gse53845",
+        "true_program": "emt",
+        "predicted_program": "hypoxia",
+        "correct": false
+      },
+      {
+        "cohort": "influenza_severe_gse111368",
+        "true_program": "interferon",
+        "predicted_program": "interferon",
+        "correct": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "hallmark_ifng_response": {
+    "Q_total": 429.66,
+    "Q_within": 170.16,
+    "Q_between": 259.51,
+    "fraction_Q_between": 0.604,
+    "I2_total": 0.9325,
+    "I2_within": 0.8531,
+    "p_between": 0.0
+  },
+  "hallmark_ifna_response": {
+    "Q_total": 393.18,
+    "Q_within": 145.24,
+    "Q_between": 247.94,
+    "fraction_Q_between": 0.6306,
+    "I2_total": 0.9262,
+    "I2_within": 0.8279,
+    "p_between": 0.0
+  },
+  "hallmark_inflammatory_response": {
+    "Q_total": 387.0,
+    "Q_within": 226.05,
+    "Q_between": 160.95,
+    "fraction_Q_between": 0.4159,
+    "I2_total": 0.9251,
+    "I2_within": 0.8894,
+    "p_between": 0.0
+  },
+  "hallmark_hypoxia": {
+    "Q_total": 573.41,
+    "Q_within": 459.81,
+    "Q_between": 113.6,
+    "fraction_Q_between": 0.1981,
+    "I2_total": 0.9494,
+    "I2_within": 0.9456,
+    "p_between": 0.0
+  },
+  "hallmark_e2f_targets": {
+    "Q_total": 448.64,
+    "Q_within": 418.69,
+    "Q_between": 29.95,
+    "fraction_Q_between": 0.0668,
+    "I2_total": 0.9354,
+    "I2_within": 0.9403,
+    "p_between": 5.011509850327833e-06
+  },
+  "hallmark_emt": {
+    "Q_total": 240.56,
+    "Q_within": 176.38,
+    "Q_between": 64.18,
+    "fraction_Q_between": 0.2668,
+    "I2_total": 0.8794,
+    "I2_within": 0.8583,
+    "p_between": 3.8269387658829146e-13
+  },
+  "hallmark_tnfa_nfkb": {
+    "Q_total": 335.83,
+    "Q_within": 156.92,
+    "Q_between": 178.91,
+    "fraction_Q_between": 0.5327,
+    "I2_total": 0.9136,
+    "I2_within": 0.8407,
+    "p_between": 0.0
+  }
+}
