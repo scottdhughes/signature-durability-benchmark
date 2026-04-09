@@ -1,48 +1,85 @@
-# Signature Durability Benchmark
+# Signature Durability Benchmark — Expanded IFN Panel
 
-Companion reproducibility package for: "Program-Conditioned Reproducibility of Transcriptomic Signatures Is Underestimated by Cross-Context Benchmarks" (clawRxiv 2604.00815).
+Companion reproducibility package for: "Interferon Signatures Are Reproducible Across Blood, Tissue, and Autoimmune Contexts but Fail Outside IFN-Engaged Cohorts: An 11-Cohort Multi-Source Validation with Orthogonal ISG Holdout" (clawRxiv 2604.00815).
+
+## Key Results (Expanded Panel, k=11 IFN cohorts)
+
+| Metric | IFN-γ Hallmark | IFN-α Hallmark | **Schoggins 2011 IRG** | Blind IFN composite |
+|--------|---------------|----------------|------------------------|---------------------|
+| Within-IFN g | +1.383 | +1.458 | **+1.393** | +1.402 |
+| HKSJ-guarded p_Bonf | **0.0049** | **0.0003** | **0.0006** | **0.0010** |
+| Permutation p | **0.0008** | **0.0004** | **0.0008** | **0.0007** |
+| Outside-IFN g | +0.138 | +0.219 | +0.241 | +0.196 |
+| Outside-IFN p | 0.48 (NS) | 0.17 (NS) | 0.18 (NS) | 0.25 (NS) |
+
+**The Schoggins 2011 IRG panel** — independently derived from viral overexpression screens, with only 25% gene overlap with MSigDB Hallmark IFN — reproduces the IFN-γ / IFN-α effect with nearly identical magnitude. This refutes the concern that the finding is an MSigDB curation artifact.
 
 ## Contents
 
-- `SKILL.md` — Deterministic execution contract (CPU-only, Python 3.12, uv)
-- `cohort_manifest.tsv` — 30 GEO cohorts with biological program assignments
-- `signature_panel.tsv` — 29 signatures (22 primary + 7 blind holdouts)
-- `benchmark_config.yaml` — Audit configuration
-- `per_cohort_effects.csv` — Cohen's d for each (signature, cohort) pair (29 × 30 = 870 rows)
-- `i2_decomposition.json` — Q_W, Q_B, Q_total decomposition for the 7 Hallmark signatures
-- `permutation_validation.json` — 10,000 permutations of program labels (anti-circularity test 1)
-- `lopo_cross_validation.json` — Leave-one-program-out CV + LOO program prediction (anti-circularity tests 2 & 3)
-- `within_program_durability.csv` — Within-program vs outside-program effects per signature
-- `aggregate_durability_scores.csv` — Full 29-signature classification across 6 model variants
-- `hartung_knapp.json` — HKSJ t-distribution sensitivity analysis
-- `winsorize_outlier.json` — Winsorized vs non-Winsorized analysis (GSE47533 outlier handling)
+### Code (executable package)
+- `pyproject.toml` — Package metadata and dependencies (Python 3.12+)
+- `uv.lock` — Frozen lockfile for reproducible environment
+- `src/signature_durability_benchmark/` — Full Python package source
+- `scripts/` — Analysis scripts:
+  - `process_ifn_expansion_2.py` — Download + process 5 new IFN cohorts
+  - `compute_expanded_effects.py` — Per-cohort scoring for all 35×30 pairs
+  - `rerun_all_expanded.py` — I² decomposition, HKSJ, permutation, LOPO
 
-## Quick Reproduction
+### Data
+- `SKILL.md` — Deterministic execution contract
+- `cohort_manifest.tsv` — 35 cohorts (30 original + 5 IFN expansion)
+- `signature_panel.tsv` — 30 signatures (29 original + Schoggins 2011 IRG)
+- `per_cohort_effects.csv` — Cohen's d for all 1,050 (signature, cohort) pairs
+
+### Frozen analysis outputs
+- `i2_decomposition.json` — Q_W, Q_B, Q_total for 9 target signatures
+- `hartung_knapp.json` — DL + HKSJ + HKSJ-guarded meta-analysis
+- `permutation_validation.json` — 10,000 permutation test (seed=42)
+- `lopo_cross_validation.json` — Leave-one-program-out Q_B stability
+- `outputs/canonical_v8/` — Full output set including per-sample details
+
+## Reproduction
 
 ```bash
 git clone https://github.com/scottdhughes/signature-durability-benchmark.git
 cd signature-durability-benchmark
 uv sync --frozen
-uv run signature-durability-benchmark run --config benchmark_config.yaml --out outputs/canonical
-uv run signature-durability-benchmark verify --config benchmark_config.yaml --run-dir outputs/canonical
+uv run python scripts/compute_expanded_effects.py
+uv run python scripts/rerun_all_expanded.py
 ```
 
-## Key Findings
+Outputs in `outputs/canonical_v8/` should match the frozen JSONs at repo root to 4 decimal places.
 
-- **Q_B/Q_tot = 39%** (median 42%) across 7 Hallmark signatures: between-program heterogeneity accounts for 39% of total Q
-- **IFN signatures**: 60-63% of "irreproducibility" is context mixing
-- **LOO program prediction**: 50% accuracy (2.5x chance), interferon at 6/6 = 100%
-- **LOPO Q_B stability**: Hiding the on-program collapses Q_B (IFN-γ: 0.604 → 0.264); hiding any other program leaves Q_B stable (Δ < 0.05)
-- **IFN-γ within-program**: g = +1.0, HKSJ-Bonferroni p = 0.003
-- **IFN-γ outside-program**: g = +0.18 (NS)
+## The 11 Interferon Cohorts
+
+| Cohort | Type | Tissue | Platform | Cases | Controls |
+|--------|------|--------|----------|-------|----------|
+| tb_blood_gse19491 | Viral/TB | Whole blood | GPL570 | 103 | 52 |
+| influenza_pbmc_gse101702 | Viral | PBMC | GPL10558 | 107 | 52 |
+| rsv_blood_gse34205 | Viral | Whole blood | GPL570 | 51 | 22 |
+| viral_challenge_gse73072 | Viral | Whole blood | GPL571 | 861 | 272 |
+| influenza_challenge_gse68310 | Viral | Whole blood | GPL10558 | — | — |
+| influenza_severe_gse111368 | Viral | Whole blood | GPL10558 | — | — |
+| **sle_pbmc_gse50772** | **Autoimmune** | **PBMC** | **GPL570** | **61** | **20** |
+| **sle_blood_gse49454** | **Autoimmune** | **Whole blood** | **GPL10558** | **157** | **20** |
+| **psoriasis_skin_gse13355** | **Autoimmune** | **Skin** | **GPL570** | **58** | **64** |
+| **psoriasis_skin_gse14905** | **Autoimmune** | **Skin** | **GPL570** | **33** | **21** |
+| **dengue_blood_gse51808** | **Viral** | **Whole blood** | **GPL13158** | **28** | **9** |
+
+Bold = newly added in the expanded panel. The expanded panel includes tissue-resident IFN (skin, PBMC) and autoimmune IFN (SLE), addressing the original "all blood/viral" limitation.
 
 ## Anti-Circularity Evidence
 
 Three independent tests refute the concern that cohort-to-program assignment is arbitrary:
-1. **Permutation test** (10,000 iterations): observed Q_B exceeds 99th percentile of permuted null for IFN-γ, IFN-α, TNFα
-2. **LOO program prediction**: cohort-to-program assignment is data-recoverable at 50% accuracy
-3. **LOPO Q_B stability**: Q_B/Q_tot collapses only when the matching program is hidden
+
+1. **Permutation test** (10,000 iterations of label shuffling): observed Q_B/Q_tot exceeds null at p < 0.001 for all 4 IFN signatures (Hallmark IFN-γ, IFN-α, Schoggins 2011, blind composite)
+2. **LOPO Q_B stability**: hiding the interferon program drops Q_B/Q_tot by 27-34 percentage points; hiding any other program perturbs it by < 0.07 (clean diagonal pattern)
+3. **Orthogonal Schoggins IRG panel** (76 genes, 25% overlap with Hallmark): independently reproduces the IFN-γ effect with nearly identical magnitude (g=1.393 vs 1.383), refuting MSigDB curation artifacts
 
 ## License
 
 CC-BY 4.0
+
+## Citation
+
+Nguyen K, Hughes S. Interferon Signatures Are Reproducible Across Blood, Tissue, and Autoimmune Contexts but Fail Outside IFN-Engaged Cohorts. clawRxiv 2604.00815 (2026).

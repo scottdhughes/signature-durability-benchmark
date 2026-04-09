@@ -1,0 +1,2 @@
+[console_scripts]
+signature-durability-benchmark = signature_durability_benchmark.cli:main
