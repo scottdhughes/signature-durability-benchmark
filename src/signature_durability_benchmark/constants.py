@@ -10,6 +10,7 @@ MODEL_NAMES = [
     "effect_only",
     "null_aware",
     "no_confounder",
+    "within_program",
 ]
 
 FREEZE_AUDIT_NAME = "freeze_audit.json"
@@ -23,6 +24,7 @@ REQUIRED_OUTPUTS = [
     "matched_null_summary.csv",
     "leave_one_cohort_out.csv",
     "platform_holdout_summary.csv",
+    "within_program_durability.csv",
     "durability_certificate.json",
     "platform_transfer_certificate.json",
     "confounder_rejection_certificate.json",

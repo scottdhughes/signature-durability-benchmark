@@ -1,0 +1,95 @@
+{
+  "description": "Descriptive weighted heterogeneity decomposition for within-IFN IFN-gamma effects",
+  "full_ifn_partition_summary": {
+    "k": 11,
+    "pooled_g": 0.9949,
+    "Q": 133.773,
+    "I2": 0.9252,
+    "tau2": 0.4066
+  },
+  "full_ifn_partition_summary_note": "This inverse-variance weighted mean is used only for descriptive weighted-Q partitions in this file. The inferential guarded DL/HKSJ pooled IFN-gamma effect is reported separately in outputs/canonical_v8/hartung_knapp_expanded.json.",
+  "subgroup_analyses": {
+    "tissue_cat": {
+      "blood_pbmc": {
+        "k": 9,
+        "pooled_g": 0.8895,
+        "Q": 28.209,
+        "I2": 0.7164,
+        "tau2": 0.0719
+      },
+      "skin": {
+        "k": 2,
+        "pooled_g": 3.2366,
+        "Q": 7.608,
+        "I2": 0.8686,
+        "tau2": 0.7353
+      }
+    },
+    "etiology": {
+      "viral": {
+        "k": 7,
+        "pooled_g": 0.8423,
+        "Q": 14.463,
+        "I2": 0.5852,
+        "tau2": 0.0347
+      },
+      "autoimmune": {
+        "k": 4,
+        "pooled_g": 2.1692,
+        "Q": 45.026,
+        "I2": 0.9334,
+        "tau2": 1.2
+      }
+    },
+    "platform_family": {
+      "Illumina": {
+        "k": 4,
+        "pooled_g": 1.1641,
+        "Q": 8.899,
+        "I2": 0.6629,
+        "tau2": 0.0632
+      },
+      "Other": {
+        "k": 2,
+        "pooled_g": 0.7378,
+        "Q": 0.788,
+        "I2": 0,
+        "tau2": 0
+      },
+      "Affymetrix": {
+        "k": 5,
+        "pooled_g": 1.6843,
+        "Q": 79.523,
+        "I2": 0.9497,
+        "tau2": 1.7959
+      }
+    }
+  },
+  "variance_explained_by_moderator": {
+    "tissue_cat": {
+      "Q_total": 133.773,
+      "Q_within": 35.818,
+      "Q_between": 97.955,
+      "R2": 0.7323
+    },
+    "etiology": {
+      "Q_total": 133.773,
+      "Q_within": 59.489,
+      "Q_between": 74.284,
+      "R2": 0.5553
+    },
+    "platform_family": {
+      "Q_total": 133.773,
+      "Q_within": 89.211,
+      "Q_between": 44.562,
+      "R2": 0.3331
+    }
+  },
+  "combined_r2": {
+    "Q_total": 133.773,
+    "Q_within": 12.313,
+    "Q_between": 121.46,
+    "R2": 0.908
+  },
+  "interpretation": "Within-IFN I\u00b2 of 0.9252 for the IFN-gamma core is descriptively partitioned into: tissue explains 73.2%, etiology explains 55.5%, platform explains 33.3%. Combined moderators explain 90.8% of total within-IFN Q. Because k=11 and the combined partition contains sparse cells, this is a descriptive heterogeneity decomposition rather than a definitive inferential meta-regression."
+}

@@ -1,0 +1,32 @@
+{
+  "case_id": "ayers_ifng6_rescue",
+  "headline_metrics": {
+    "aggregate_effect": 0.24582615205581188,
+    "aggregate_i_squared": 0.9289987326218861,
+    "full_model_class": "mixed",
+    "inferred_program": "interferon",
+    "outside_interferon_effect": -0.010233184832122249,
+    "outside_interferon_p": 0.9485843875669513,
+    "permutation_p": 0.05194805194805195,
+    "within_interferon_effect": 0.866220116076745,
+    "within_interferon_p": 0.024501314739984036,
+    "within_program_class": "durable"
+  },
+  "interpretation": "This is the rescue pattern the method is meant to expose: a signature imported from a different application domain is not cleanly one-program in the aggregate (`mixed`, aggregate effect +0.246, I\u00b2=0.929), but the best-supported program is interferon, the within-interferon effect is positive and guarded-significant (+0.866, p=0.0245), and the outside-interferon effect is essentially null. In other words, the cross-context dilution does not imply that the signature is broken; it indicates context mismatch.",
+  "motivation": "This published oncology response signature comes from outside the frozen 5-program panel. Taken naively across all 35 cohorts it looks mixed, but triage can still recover the underlying interferon home program and the within-context durable signal.",
+  "source_signature": {
+    "citation": "Ayers M, Lunceford J, Nebozhyn M, et al. IFN-gamma-related mRNA profile predicts clinical response to PD-1 blockade. J Clin Invest. 2017;127:2930-2940.",
+    "doi": "10.1172/JCI91190",
+    "genes": [
+      "IDO1",
+      "CXCL10",
+      "CXCL9",
+      "HLA-DRA",
+      "STAT1",
+      "IFNG"
+    ],
+    "name": "Ayers IFN-gamma-related 6-gene profile"
+  },
+  "triage_output_dir": "/Users/scott/sci_op/signature-durability-benchmark/outputs/canonical_v8/rescued_signature_case_study/triage_ayers_ifng6",
+  "triage_summary": "# Diagnostic Report: ayers_ifng6_signature\n\n- Input: `ayers_ifng6_signature.tsv`\n- Inferred best-supported program: `interferon`\n- Full-model classification: `mixed`\n- Within-program classification: `durable`\n- Mean coverage: `0.976`\n- Aggregate effect: `0.246` (p=`1.176e-12`)\n- Program-structure permutation p: `0.05195`\n\nayers_ifng6_signature shows real signal but does not reduce cleanly to one program. The aggregate effect is 0.246 with I\u00b2=0.929, suggesting either cross-context activation or overly broad program boundaries.\n\n## Program Ranking\n\n- `interferon`: separation=0.856, within=0.866 (p=0.0245), outside=-0.010 (p=0.9486)\n- `hypoxia`: separation=0.194, within=0.452 (p=0.2997), outside=0.258 (p=0.1739)\n- `proliferation`: separation=-1.360, within=-0.018 (p=0.9516), outside=0.341 (p=0.07718)\n- `emt`: separation=-1.480, within=-0.115 (p=0.7333), outside=0.365 (p=0.05643)\n- `inflammation`: separation=-1.738, within=-0.303 (p=0.3661), outside=0.434 (p=0.02681)\n"
+}

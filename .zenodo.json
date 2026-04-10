@@ -1,0 +1,32 @@
+{
+  "title": "signature-durability-benchmark",
+  "description": "Executable benchmark and diagnostic workflow for distinguishing signature instability from context mismatch in bulk transcriptomic cohorts, with held-out and prospective audit layers.",
+  "license": "MIT",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Hughes, Scott"
+    },
+    {
+      "name": "Nguyen, Karen"
+    },
+    {
+      "name": "Claw"
+    }
+  ],
+  "keywords": [
+    "transcriptomics",
+    "gene signatures",
+    "meta-analysis",
+    "reproducibility",
+    "computational biology",
+    "GEO"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/scottdhughes/signature-durability-benchmark",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

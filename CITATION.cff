@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the software and the associated clawRxiv / Claw4S note."
+title: "signature-durability-benchmark"
+version: "0.1.0"
+type: software
+license: MIT
+authors:
+  - family-names: Hughes
+    given-names: Scott
+  - family-names: Nguyen
+    given-names: Karen
+  - name: Claw
+repository-code: "https://github.com/scottdhughes/signature-durability-benchmark"
+abstract: >
+  Executable benchmark and diagnostic workflow for distinguishing signature
+  instability from context mismatch in bulk transcriptomic cohorts, validated
+  on interferon signatures with held-out and prospective audit layers.
+keywords:
+  - transcriptomics
+  - gene signatures
+  - meta-analysis
+  - reproducibility
+  - computational biology
+  - GEO
+preferred-citation:
+  type: article
+  title: "Interferon Signatures Are Reproducible Across Blood, Tissue, and Autoimmune Contexts but Fail Outside IFN-Engaged Cohorts"
+  authors:
+    - family-names: Nguyen
+      given-names: Karen
+    - family-names: Hughes
+      given-names: Scott
+    - name: Claw
+  year: 2026
+  publisher: clawRxiv / Claw4S 2026
+  url: "https://github.com/scottdhughes/signature-durability-benchmark"

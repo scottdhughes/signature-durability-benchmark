@@ -1,0 +1,481 @@
+{
+  "description": "Held-out RNA-seq external validation for the program-conditioned IFN diagnostic, split into a primary bulk RNA-seq panel and an exploratory PBMC stress test.",
+  "exploratory_pbmc_stress_test": {
+    "cohorts": {
+      "gse152418_pbmc_covid_vs_healthy": {
+        "case_samples": 16,
+        "control_samples": 17,
+        "design_summary": "COVID-19 PBMC vs healthy controls",
+        "geo_accession": "GSE152418",
+        "notes": "Exploratory cell-selected PBMC stress test; the GEO series also contains one convalescent sample, excluded from the two-group comparison.",
+        "signatures": {
+          "blind_durable_ifn_composite": {
+            "case_n": 16,
+            "cohens_d": -0.07828091853183188,
+            "cohens_d_var": 0.11557032889415528,
+            "control_n": 17,
+            "coverage_fraction": 0.96,
+            "direction_consistent": false,
+            "shared_gene_count": 24
+          },
+          "hallmark_e2f_targets": {
+            "case_n": 16,
+            "cohens_d": 1.602889740007991,
+            "cohens_d_var": 0.1544055958095598,
+            "control_n": 17,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifna_response": {
+            "case_n": 16,
+            "cohens_d": 0.1272855608977142,
+            "cohens_d_var": 0.11572296089122891,
+            "control_n": 17,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifng_response": {
+            "case_n": 16,
+            "cohens_d": -0.40861150762328186,
+            "cohens_d_var": 0.11800722983288232,
+            "control_n": 17,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": false,
+            "shared_gene_count": 29
+          },
+          "hallmark_inflammatory_response": {
+            "case_n": 16,
+            "cohens_d": -0.7612578144395495,
+            "cohens_d_var": 0.12425798886141427,
+            "control_n": 17,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": false,
+            "shared_gene_count": 29
+          },
+          "hallmark_tnfa_nfkb": {
+            "case_n": 16,
+            "cohens_d": -1.1620920454277262,
+            "cohens_d_var": 0.13593896555840088,
+            "control_n": 17,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": false,
+            "shared_gene_count": 29
+          },
+          "schoggins_2011_irg": {
+            "case_n": 16,
+            "cohens_d": -0.20337534335802676,
+            "cohens_d_var": 0.11610417174384935,
+            "control_n": 17,
+            "coverage_fraction": 0.9736842105263158,
+            "direction_consistent": false,
+            "shared_gene_count": 74
+          }
+        },
+        "tissue": "pbmc",
+        "total_samples": 33
+      }
+    },
+    "description": "Exploratory cell-selected PBMC stress test. Retained separately from the primary bulk RNA-seq pool to show that the external extension does not trivially validate every IFN-related comparison."
+  },
+  "primary_bulk_rnaseq_panel": {
+    "cohorts": {
+      "gse152075_nasopharynx_sarscov2_pos_vs_neg": {
+        "case_samples": 430,
+        "control_samples": 54,
+        "design_summary": "SARS-CoV-2 positive vs negative nasopharyngeal swabs",
+        "geo_accession": "GSE152075",
+        "signatures": {
+          "blind_durable_ifn_composite": {
+            "case_n": 430,
+            "cohens_d": 1.3792665981550958,
+            "cohens_d_var": 0.02274451406356702,
+            "control_n": 54,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 25
+          },
+          "hallmark_e2f_targets": {
+            "case_n": 430,
+            "cohens_d": -0.3276043696909916,
+            "cohens_d_var": 0.020890121784904115,
+            "control_n": 54,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": false,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifna_response": {
+            "case_n": 430,
+            "cohens_d": 1.2336158793323784,
+            "cohens_d_var": 0.022351365085214403,
+            "control_n": 54,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_ifng_response": {
+            "case_n": 430,
+            "cohens_d": 0.9495749841846476,
+            "cohens_d_var": 0.021710749912537006,
+            "control_n": 54,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_inflammatory_response": {
+            "case_n": 430,
+            "cohens_d": -0.07153582218147232,
+            "cohens_d_var": 0.020784535783679472,
+            "control_n": 54,
+            "coverage_fraction": 1.0,
+            "direction_consistent": false,
+            "shared_gene_count": 30
+          },
+          "hallmark_tnfa_nfkb": {
+            "case_n": 430,
+            "cohens_d": -0.2854943635898537,
+            "cohens_d_var": 0.02086345071940922,
+            "control_n": 54,
+            "coverage_fraction": 1.0,
+            "direction_consistent": false,
+            "shared_gene_count": 30
+          },
+          "schoggins_2011_irg": {
+            "case_n": 430,
+            "cohens_d": 0.8919498680550197,
+            "cohens_d_var": 0.021601123793254046,
+            "control_n": 54,
+            "coverage_fraction": 0.9736842105263158,
+            "direction_consistent": true,
+            "shared_gene_count": 74
+          }
+        },
+        "tissue": "nasopharynx",
+        "total_samples": 484
+      },
+      "gse152641_blood_covid_vs_healthy": {
+        "case_samples": 62,
+        "control_samples": 24,
+        "design_summary": "COVID-19 whole blood vs healthy controls",
+        "geo_accession": "GSE152641",
+        "signatures": {
+          "blind_durable_ifn_composite": {
+            "case_n": 62,
+            "cohens_d": 1.147198990286318,
+            "cohens_d_var": 0.06441673080439492,
+            "control_n": 24,
+            "coverage_fraction": 0.96,
+            "direction_consistent": true,
+            "shared_gene_count": 24
+          },
+          "hallmark_e2f_targets": {
+            "case_n": 62,
+            "cohens_d": 0.5406361422220809,
+            "cohens_d_var": 0.05846453263557414,
+            "control_n": 24,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifna_response": {
+            "case_n": 62,
+            "cohens_d": 1.2234965192527325,
+            "cohens_d_var": 0.06546834830038098,
+            "control_n": 24,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifng_response": {
+            "case_n": 62,
+            "cohens_d": 0.9536841904759651,
+            "cohens_d_var": 0.06205305645468474,
+            "control_n": 24,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_inflammatory_response": {
+            "case_n": 62,
+            "cohens_d": 0.5136301936397878,
+            "cohens_d_var": 0.05829900087709549,
+            "control_n": 24,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_tnfa_nfkb": {
+            "case_n": 62,
+            "cohens_d": 0.555869731697692,
+            "cohens_d_var": 0.058561647288718856,
+            "control_n": 24,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "schoggins_2011_irg": {
+            "case_n": 62,
+            "cohens_d": 1.2102291169091237,
+            "cohens_d_var": 0.06528062029335242,
+            "control_n": 24,
+            "coverage_fraction": 0.9736842105263158,
+            "direction_consistent": true,
+            "shared_gene_count": 74
+          }
+        },
+        "tissue": "whole_blood",
+        "total_samples": 86
+      },
+      "gse167000_blood_sarscov2_pos_vs_neg": {
+        "case_samples": 65,
+        "control_samples": 30,
+        "design_summary": "Hospitalized SARS-CoV-2 positive vs negative whole blood",
+        "geo_accession": "GSE167000",
+        "signatures": {
+          "blind_durable_ifn_composite": {
+            "case_n": 65,
+            "cohens_d": 1.1023005172631068,
+            "cohens_d_var": 0.05432832938414841,
+            "control_n": 30,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 25
+          },
+          "hallmark_e2f_targets": {
+            "case_n": 65,
+            "cohens_d": 1.2778334473231114,
+            "cohens_d_var": 0.05652723406172291,
+            "control_n": 30,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifna_response": {
+            "case_n": 65,
+            "cohens_d": 1.1849274453544487,
+            "cohens_d_var": 0.05532299580728371,
+            "control_n": 30,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_ifng_response": {
+            "case_n": 65,
+            "cohens_d": 1.0541740143788847,
+            "cohens_d_var": 0.05378210002748094,
+            "control_n": 30,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_inflammatory_response": {
+            "case_n": 65,
+            "cohens_d": 0.8093873383313048,
+            "cohens_d_var": 0.05138117903200379,
+            "control_n": 30,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_tnfa_nfkb": {
+            "case_n": 65,
+            "cohens_d": 0.7878572475419867,
+            "cohens_d_var": 0.051200185237548,
+            "control_n": 30,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "schoggins_2011_irg": {
+            "case_n": 65,
+            "cohens_d": 1.1612068210489135,
+            "cohens_d_var": 0.055030091757264255,
+            "control_n": 30,
+            "coverage_fraction": 0.9736842105263158,
+            "direction_consistent": true,
+            "shared_gene_count": 74
+          }
+        },
+        "tissue": "whole_blood",
+        "total_samples": 95
+      },
+      "gse171110_blood_severe_covid_vs_healthy": {
+        "case_samples": 44,
+        "control_samples": 10,
+        "design_summary": "Severe COVID-19 whole blood vs healthy controls",
+        "geo_accession": "GSE171110",
+        "signatures": {
+          "blind_durable_ifn_composite": {
+            "case_n": 44,
+            "cohens_d": 0.6621757338827411,
+            "cohens_d_var": 0.12325570756732189,
+            "control_n": 10,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 25
+          },
+          "hallmark_e2f_targets": {
+            "case_n": 44,
+            "cohens_d": 1.9240640422746997,
+            "cohens_d_var": 0.15347372364353773,
+            "control_n": 10,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_ifna_response": {
+            "case_n": 44,
+            "cohens_d": 0.924400559717862,
+            "cohens_d_var": 0.12710792694013254,
+            "control_n": 10,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_ifng_response": {
+            "case_n": 44,
+            "cohens_d": 0.41008340259079784,
+            "cohens_d_var": 0.1207528528871117,
+            "control_n": 10,
+            "coverage_fraction": 0.9666666666666667,
+            "direction_consistent": true,
+            "shared_gene_count": 29
+          },
+          "hallmark_inflammatory_response": {
+            "case_n": 44,
+            "cohens_d": 0.5748356981161781,
+            "cohens_d_var": 0.12225533143107715,
+            "control_n": 10,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "hallmark_tnfa_nfkb": {
+            "case_n": 44,
+            "cohens_d": 0.5648114878422051,
+            "cohens_d_var": 0.12214955306968651,
+            "control_n": 10,
+            "coverage_fraction": 1.0,
+            "direction_consistent": true,
+            "shared_gene_count": 30
+          },
+          "schoggins_2011_irg": {
+            "case_n": 44,
+            "cohens_d": 0.8141423217053827,
+            "cohens_d_var": 0.12533303180295785,
+            "control_n": 10,
+            "coverage_fraction": 0.9736842105263158,
+            "direction_consistent": true,
+            "shared_gene_count": 74
+          }
+        },
+        "tissue": "whole_blood",
+        "total_samples": 54
+      }
+    },
+    "description": "Primary held-out bulk RNA-seq validation panel. These cohorts were chosen to test cross-platform transfer of the IFN diagnostic on bulk whole-blood or upper-airway RNA-seq datasets with explicit acute SARS-CoV-2 case/control labels and processed matrices deposited directly in GEO.",
+    "ifn_focus_summary": {
+      "all_four_guarded_p_bonf_7": {
+        "blind_durable_ifn_composite": 0.020380685083470886,
+        "hallmark_ifna_response": 0.011073612983052629,
+        "hallmark_ifng_response": 0.022369824617483977,
+        "schoggins_2011_irg": 0.018235614998644487
+      },
+      "all_four_pooled_g": {
+        "blind_durable_ifn_composite": 1.17666976245412,
+        "hallmark_ifna_response": 1.1932780197679036,
+        "hallmark_ifng_response": 0.9219878131841389,
+        "schoggins_2011_irg": 0.9961811922261409
+      },
+      "all_four_positive_in_all_primary_cohorts": true
+    },
+    "n_cohorts": 4,
+    "n_samples": 719,
+    "pooled_signatures": {
+      "blind_durable_ifn_composite": {
+        "Q": 3.969273269742149,
+        "guarded_p": 0.0029115264404958405,
+        "guarded_p_bonf_7": 0.020380685083470886,
+        "i_squared": 0.24419413929772454,
+        "k": 4,
+        "mean_coverage": 0.99,
+        "pooled_g": 1.17666976245412,
+        "sign_consistency": 1.0,
+        "tau2": 0.017299403748279048
+      },
+      "hallmark_e2f_targets": {
+        "Q": 53.903752273925754,
+        "guarded_p": 0.19638979980804244,
+        "guarded_p_bonf_7": 1.0,
+        "i_squared": 0.9443452473446611,
+        "k": 4,
+        "mean_coverage": 0.9666666666666667,
+        "pooled_g": 0.8175315194464244,
+        "sign_consistency": 0.75,
+        "tau2": 0.9054489274817783
+      },
+      "hallmark_ifna_response": {
+        "Q": 0.6567762167839066,
+        "guarded_p": 0.0015819447118646612,
+        "guarded_p_bonf_7": 0.011073612983052629,
+        "i_squared": 0.0,
+        "k": 4,
+        "mean_coverage": 0.9916666666666667,
+        "pooled_g": 1.1932780197679036,
+        "sign_consistency": 1.0,
+        "tau2": 0.0
+      },
+      "hallmark_ifng_response": {
+        "Q": 2.5462360882270043,
+        "guarded_p": 0.0031956892310691398,
+        "guarded_p_bonf_7": 0.022369824617483977,
+        "i_squared": 0.0,
+        "k": 4,
+        "mean_coverage": 0.9666666666666667,
+        "pooled_g": 0.9219878131841389,
+        "sign_consistency": 1.0,
+        "tau2": 0.0
+      },
+      "hallmark_inflammatory_response": {
+        "Q": 13.046898466100336,
+        "guarded_p": 0.169970838319773,
+        "guarded_p_bonf_7": 1.0,
+        "i_squared": 0.7700602938089172,
+        "k": 4,
+        "mean_coverage": 1.0,
+        "pooled_g": 0.42659239623645256,
+        "sign_consistency": 0.75,
+        "tau2": 0.1673695093903568
+      },
+      "hallmark_tnfa_nfkb": {
+        "Q": 21.21902611356935,
+        "guarded_p": 0.29486854708489163,
+        "guarded_p_bonf_7": 1.0,
+        "i_squared": 0.8586174509639002,
+        "k": 4,
+        "mean_coverage": 1.0,
+        "pooled_g": 0.38166598365875576,
+        "sign_consistency": 0.75,
+        "tau2": 0.30381738543858505
+      },
+      "schoggins_2011_irg": {
+        "Q": 1.9640678535321352,
+        "guarded_p": 0.0026050878569492124,
+        "guarded_p_bonf_7": 0.018235614998644487,
+        "i_squared": 0.0,
+        "k": 4,
+        "mean_coverage": 0.9736842105263158,
+        "pooled_g": 0.9961811922261409,
+        "sign_consistency": 1.0,
+        "tau2": 0.0
+      }
+    },
+    "selection_rules": [
+      "Bulk RNA-seq supplementary matrix deposited directly in GEO",
+      "Explicit two-group acute SARS-CoV-2 case/control labels in the series matrix",
+      "Whole blood, leukocyte-rich whole blood, or upper-airway bulk tissue",
+      "At least 25 samples after filtering to the primary two-group comparison"
+    ]
+  }
+}

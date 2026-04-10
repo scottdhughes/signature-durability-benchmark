@@ -1,0 +1,36 @@
+signature_id,cohort_id,cohens_d,cohens_d_var,direction_consistent,coverage_fraction,case_n,control_n,biological_program,tissue,platform,platform_id
+hallmark_hypoxia,sepsis_mortality_gse65682,0.29301891372403854,0.01156508948724161,True,0.7666666666666667,114,365,inflammation,whole_blood,affymetrix,GPL13667
+hallmark_hypoxia,breast_prognosis_gse2034,0.0622810556738683,0.019006988640771112,True,0.9666666666666667,69,217,proliferation,breast_tumor,affymetrix,GPL96
+hallmark_hypoxia,breast_er_gse7390,-1.0294806283176086,0.025587447653675037,False,0.9666666666666667,134,64,proliferation,breast_tumor,affymetrix,GPL96
+hallmark_hypoxia,hypoxia_cellline_gse53012,3.5214038632487163,0.38635361269367324,True,1.0,18,9,hypoxia,cell_line,affymetrix,GPL570
+hallmark_hypoxia,sepsis_blood_gse28750,2.407023530059055,0.2385641654913457,True,1.0,10,20,inflammation,whole_blood,affymetrix,GPL570
+hallmark_hypoxia,tb_blood_gse19491,0.5637234797365548,0.029681129953068684,True,1.0,103,52,interferon,whole_blood,illumina,GPL6947
+hallmark_hypoxia,ipf_lung_gse47460,0.3729163186522777,0.016329219386944094,True,0.8333333333333334,193,91,emt,lung,agilent,GPL14550
+hallmark_hypoxia,copd_lung_gse47460,0.31525110509385457,0.07149606372223917,True,0.8666666666666667,75,17,inflammation,lung,agilent,GPL6480
+hallmark_hypoxia,influenza_pbmc_gse101702,0.702068712677219,0.029853759395701115,True,1.0,107,52,interferon,pbmc,agilent,GPL21185
+hallmark_hypoxia,trauma_blood_gse36809,0.9370625625281588,0.02870929350420349,True,0.9666666666666667,820,37,inflammation,whole_blood,affymetrix,GPL570
+hallmark_hypoxia,hcc_liver_gse6764,0.5078193731881496,0.12489449028414744,True,1.0,38,10,proliferation,liver,affymetrix,GPL570
+hallmark_hypoxia,crohn_intestine_gse112366,1.1176669262187302,0.0426735918540948,True,1.0,362,26,inflammation,intestine,affymetrix,GPL13158
+hallmark_hypoxia,rsv_blood_gse34205,0.9831437345143895,0.07031063882073466,True,1.0,51,22,interferon,whole_blood,affymetrix,GPL570
+hallmark_hypoxia,viral_challenge_gse73072,0.12442474034731907,0.004838327246580682,True,0.9666666666666667,861,272,interferon,whole_blood,affymetrix,GPL14604
+hallmark_hypoxia,breast_relapse_gse1456,0.4431300630349458,0.03370197431534789,True,0.9666666666666667,40,119,proliferation,breast_tumor,affymetrix,GPL96
+hallmark_hypoxia,hypoxia_mcf7_gse3188,1.256876131315592,0.44452062524668967,True,1.0,3,9,hypoxia,cell_line,affymetrix,GPL570
+hallmark_hypoxia,hypoxia_timecourse_gse47533,10.094592861531726,4.624565101522376,True,1.0,9,3,hypoxia,cell_line,illumina,GPL6884
+hallmark_hypoxia,hypoxia_multicell_gse18494,1.539052142383111,0.17453529971220236,True,0.8333333333333334,27,9,hypoxia,cell_line,affymetrix,GPL9419
+hallmark_hypoxia,emt_tgfb_gse17708,0.4888515755049576,0.3770546740911757,True,1.0,12,3,emt,cell_line,affymetrix,GPL570
+hallmark_hypoxia,emt_hmle_gse24202,-0.9745950157507653,0.2376551296363389,False,0.8333333333333334,15,6,emt,cell_line,affymetrix,GPL3921
+hallmark_hypoxia,emt_mammary_gse43495,-4.933106068421667,1.0572437240735468,False,1.0,9,6,emt,cell_line,illumina,GPL6883
+hallmark_hypoxia,sepsis_shock_gse95233,2.683684784863952,0.11302017595631941,True,1.0,51,22,inflammation,whole_blood,affymetrix,GPL570
+hallmark_hypoxia,melioidosis_blood_gse69528,2.838650886061559,0.13897068443803584,True,0.8333333333333334,29,28,inflammation,whole_blood,illumina,GPL10558
+hallmark_hypoxia,lung_tumor_gse19188,1.7654969080019163,0.03610726864394167,True,1.0,91,65,proliferation,lung,affymetrix,GPL570
+hallmark_hypoxia,influenza_challenge_gse68310,0.047943789043985365,0.01872712224016045,True,1.0,211,71,interferon,whole_blood,illumina,GPL10558
+hallmark_hypoxia,ccrcc_kidney_gse36895,6.659126034183807,0.5020123802920617,True,1.0,29,23,hypoxia,kidney,affymetrix,GPL570
+hallmark_hypoxia,gbm_brain_gse4290,0.43745393290030016,0.05655895285507673,True,1.0,77,23,hypoxia,brain,affymetrix,GPL570
+hallmark_hypoxia,emt_arpe19_gse12548,-1.4496501407784468,0.4391383296840188,False,1.0,12,3,emt,cell_line,affymetrix,GPL570
+hallmark_hypoxia,ipf_lung_gse53845,0.26191808347857165,0.14583687356615588,True,1.0,40,8,emt,lung,agilent,GPL6480
+hallmark_hypoxia,influenza_severe_gse111368,1.48013546692171,0.030239704138231023,True,0.8333333333333334,59,130,interferon,whole_blood,illumina,GPL10558
+hallmark_hypoxia,sle_pbmc_gse50772,1.362565623161701,0.07659522941405411,True,0.9666666666666667,61,20,interferon,pbmc,Affymetrix HG-U133 Plus 2.0,GPL570
+hallmark_hypoxia,sle_blood_gse49454,0.5155646746477561,0.05663747437704299,True,1.0,157,20,interferon,blood,Illumina HumanHT-12 V4.0,GPL10558
+hallmark_hypoxia,psoriasis_skin_gse13355,1.973022895627491,0.04841015874617194,True,1.0,58,64,interferon,skin,Affymetrix HG-U133 Plus 2.0,GPL570
+hallmark_hypoxia,psoriasis_skin_gse14905,-0.09316305081110118,0.0757601981030864,False,1.0,33,21,interferon,skin,Affymetrix HG-U133 Plus 2.0,GPL570
+hallmark_hypoxia,dengue_blood_gse51808,1.2281675730948898,0.16093972745280807,True,1.0,28,9,interferon,blood,Affymetrix HT-HG-U133A,GPL13158

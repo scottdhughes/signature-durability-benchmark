@@ -19,7 +19,7 @@ runtime:
   verification_tolerance: 0.01
 
 scoring:
-  null_draws: 32
+  null_draws: 200
   coverage_min_fraction: 0.60
 
 meta_analysis:

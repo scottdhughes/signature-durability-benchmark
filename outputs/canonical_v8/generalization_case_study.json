@@ -1,0 +1,309 @@
+{
+  "description": "Deterministic selection of the second non-IFN positive generalization case from hallmark_hypoxia versus hallmark_emt using frozen benchmark artifacts.",
+  "external_validation": {
+    "chosen_signature_support": {
+      "coverage_fraction": 1.0,
+      "effect_size_g": 5.11250154211455,
+      "positive_direction": true,
+      "rank_among_scored_signatures": 1,
+      "signature_id": "hallmark_hypoxia"
+    },
+    "cohort": {
+      "contrast_description": "Human T-cell bulk RNA-seq cultured in hypoxia versus normoxia",
+      "expected_case_n": 6,
+      "expected_control_n": 6,
+      "external_cohort_id": "gse179885_tcells_hypoxia_vs_normoxia",
+      "geo_accession": "GSE179885",
+      "tissue": "t_cells"
+    },
+    "description": "External hypoxia exact-perturbation layer selected under the deterministic external_hypoxia SEARCH_PROTOCOL. This cohort is supportive rather than headline because it contains 12 total samples.",
+    "download_audit": [
+      {
+        "checked_at_utc": "2026-04-10T13:10:34.788015+00:00",
+        "fetched_this_run": false,
+        "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_series_matrix.txt.gz",
+        "sha256": "f414aaa2030590b8897fa90edacee20a7018fcb4113ff063040cbd5678f9f2ba",
+        "size_bytes": 1929,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/matrix/GSE179885_series_matrix.txt.gz"
+      },
+      {
+        "checked_at_utc": "2026-04-10T13:10:34.791255+00:00",
+        "fetched_this_run": false,
+        "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_Raw_counts_TPM_Normlized.csv.gz",
+        "sha256": "e7bce35aa0377b637ea9f221934860a961ae0dbdaec5fabe570cd9567501b7a0",
+        "size_bytes": 1869129,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/suppl/GSE179885_Raw_counts_TPM_Normlized.csv.gz"
+      }
+    ],
+    "search_protocol_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/SEARCH_PROTOCOL.md",
+    "signature_results": [
+      {
+        "case_n": 6,
+        "cohens_d": 5.11250154211455,
+        "cohens_d_var": 1.3730933360608721,
+        "control_n": 6,
+        "coverage_fraction": 1.0,
+        "direction_consistent": true,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": 0.784963124798542,
+        "mean_control": -0.7849631247985421,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_hypoxia",
+        "signature_label": "hallmark_hypoxia"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": 0.9400777373730721,
+        "cohens_d_var": 0.32084642498507304,
+        "control_n": 6,
+        "coverage_fraction": 0.8666666666666667,
+        "direction_consistent": true,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": 0.10914757442538107,
+        "mean_control": -0.10914757442538109,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_emt",
+        "signature_label": "hallmark_emt"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": -1.2360906684998263,
+        "cohens_d_var": 0.34768700783706774,
+        "control_n": 6,
+        "coverage_fraction": 0.9666666666666667,
+        "direction_consistent": false,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": -0.24609087842361865,
+        "mean_control": 0.24609087842361888,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_ifna_response",
+        "signature_label": "IFN-alpha core"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": -1.249311474719184,
+        "cohens_d_var": 0.34905613367509586,
+        "control_n": 6,
+        "coverage_fraction": 0.9666666666666667,
+        "direction_consistent": false,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": -0.5620607723222673,
+        "mean_control": 0.5620607723222674,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_e2f_targets",
+        "signature_label": "E2F Targets"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": -1.3647426913371925,
+        "cohens_d_var": 0.3616287775373151,
+        "control_n": 6,
+        "coverage_fraction": 0.9,
+        "direction_consistent": false,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": -0.14914458440391554,
+        "mean_control": 0.14914458440391523,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_tnfa_nfkb",
+        "signature_label": "TNF-alpha/NF-kB"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": -1.635064206736514,
+        "cohens_d_var": 0.3954167919786744,
+        "control_n": 6,
+        "coverage_fraction": 0.9666666666666667,
+        "direction_consistent": false,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": -0.3313792661380682,
+        "mean_control": 0.3313792661380684,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_ifng_response",
+        "signature_label": "IFN-gamma core"
+      },
+      {
+        "case_n": 6,
+        "cohens_d": -2.2897748488590497,
+        "cohens_d_var": 0.5024848710751985,
+        "control_n": 6,
+        "coverage_fraction": 0.9333333333333333,
+        "direction_consistent": false,
+        "dropped_blank_rows": 0,
+        "duplicate_rows_removed": 0,
+        "mean_case": -0.21056299553908464,
+        "mean_control": 0.21056299553908475,
+        "normalized_gene_count": 30,
+        "raw_row_count": 30,
+        "signature_id": "hallmark_inflammatory_response",
+        "signature_label": "Inflammatory Response"
+      }
+    ]
+  },
+  "home_program_cohorts": [
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 10.0946,
+      "cohort_id": "hypoxia_timecourse_gse47533",
+      "control_label": "normoxia"
+    },
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 6.6591,
+      "cohort_id": "ccrcc_kidney_gse36895",
+      "control_label": "normoxia"
+    },
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 3.5214,
+      "cohort_id": "hypoxia_cellline_gse53012",
+      "control_label": "normoxia"
+    },
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 1.5391,
+      "cohort_id": "hypoxia_multicell_gse18494",
+      "control_label": "normoxia"
+    },
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 1.2569,
+      "cohort_id": "hypoxia_mcf7_gse3188",
+      "control_label": "normoxia"
+    },
+    {
+      "case_label": "hypoxia",
+      "cohens_d": 0.4375,
+      "cohort_id": "gbm_brain_gse4290",
+      "control_label": "normoxia"
+    }
+  ],
+  "largest_foreign_effects": [
+    {
+      "case_label": "mesenchymal",
+      "cohens_d": -4.9331,
+      "cohort_id": "emt_mammary_gse43495",
+      "control_label": "epithelial",
+      "foreign_program": "emt"
+    },
+    {
+      "case_label": "sepsis",
+      "cohens_d": 2.8387,
+      "cohort_id": "melioidosis_blood_gse69528",
+      "control_label": "healthy",
+      "foreign_program": "inflammation"
+    },
+    {
+      "case_label": "sepsis",
+      "cohens_d": 2.6837,
+      "cohort_id": "sepsis_shock_gse95233",
+      "control_label": "healthy",
+      "foreign_program": "inflammation"
+    },
+    {
+      "case_label": "sepsis",
+      "cohens_d": 2.407,
+      "cohort_id": "sepsis_blood_gse28750",
+      "control_label": "healthy",
+      "foreign_program": "inflammation"
+    },
+    {
+      "case_label": "psoriasis",
+      "cohens_d": 1.973,
+      "cohort_id": "psoriasis_skin_gse13355",
+      "control_label": "healthy",
+      "foreign_program": "interferon"
+    },
+    {
+      "case_label": "tumor",
+      "cohens_d": 1.7655,
+      "cohort_id": "lung_tumor_gse19188",
+      "control_label": "normal",
+      "foreign_program": "proliferation"
+    }
+  ],
+  "ranked_candidates": [
+    {
+      "frozen_p_bonf_hksj_guarded": 0.024108897051675404,
+      "home_program": "hypoxia",
+      "loo_accuracy": 1.0,
+      "loo_perfect": true,
+      "mean_abs_foreign_effect": 1.1019206896551723,
+      "outside_effect": 0.6451933458912675,
+      "outside_p": 0.006584433055782397,
+      "passes_p_bonf": true,
+      "rank": 1,
+      "signature_id": "hallmark_hypoxia",
+      "split_perfect": true,
+      "split_sign_agreement": 1.0,
+      "within_effect": 3.378118939048493,
+      "within_outside_gap": 2.7329255931572254,
+      "within_p": 0.05724359150546445
+    },
+    {
+      "frozen_p_bonf_hksj_guarded": 1.0,
+      "home_program": "emt",
+      "loo_accuracy": 1.0,
+      "loo_perfect": true,
+      "mean_abs_foreign_effect": 0.5014758620689655,
+      "outside_effect": 0.20934430354729835,
+      "outside_p": 0.0699698808073064,
+      "passes_p_bonf": false,
+      "rank": 2,
+      "signature_id": "hallmark_emt",
+      "split_perfect": true,
+      "split_sign_agreement": 1.0,
+      "within_effect": 2.273579605335832,
+      "within_outside_gap": 2.0642353017885338,
+      "within_p": 0.039142131609512576
+    }
+  ],
+  "selected_case": {
+    "frozen_p_bonf_hksj_guarded": 0.024108897051675404,
+    "home_program": "hypoxia",
+    "loo_accuracy": 1.0,
+    "loo_perfect": true,
+    "mean_abs_foreign_effect": 1.1019206896551723,
+    "outside_effect": 0.6451933458912675,
+    "outside_p": 0.006584433055782397,
+    "passes_p_bonf": true,
+    "rank": 1,
+    "signature_id": "hallmark_hypoxia",
+    "split_perfect": true,
+    "split_sign_agreement": 1.0,
+    "triage_best_program_matches_home": true,
+    "triage_full_model_class": "mixed",
+    "triage_within_program_class": "mixed",
+    "within_effect": 3.378118939048493,
+    "within_outside_gap": 2.7329255931572254,
+    "within_p": 0.05724359150546445
+  },
+  "selection_rule": {
+    "candidates": [
+      "hallmark_hypoxia",
+      "hallmark_emt"
+    ],
+    "expected_winner": "hallmark_hypoxia",
+    "ranking": [
+      "passes p_bonf_HKSJ_guarded < 0.05",
+      "perfect leave-one-out sign prediction",
+      "perfect split-half sign agreement",
+      "lower mean absolute foreign-program effect",
+      "higher within-minus-abs(outside) separation"
+    ]
+  },
+  "selection_rule_satisfied": true,
+  "triage_output_dir": "/Users/scott/sci_op/signature-durability-benchmark/outputs/canonical_v8/generalization_case_study_assets/triage_hallmark_hypoxia",
+  "triage_summary": "# Diagnostic Report: hallmark_hypoxia\n\n- Input: `hallmark_hypoxia.tsv`\n- Inferred best-supported program: `hypoxia`\n- Full-model classification: `mixed`\n- Within-program classification: `mixed`\n- Mean coverage: `0.960`\n- Aggregate effect: `0.492` (p=`1.048e-48`)\n- Program-structure permutation p: `0.5175`\n\nhallmark_hypoxia shows real signal but does not reduce cleanly to one program. The aggregate effect is 0.492 with I\u00b2=0.941, suggesting either cross-context activation or overly broad program boundaries.\n\n## Program Ranking\n\n- `hypoxia`: separation=2.733, within=3.378 (p=0.05725), outside=0.645 (p=0.006584)\n- `inflammation`: separation=0.707, within=1.448 (p=0.01303), outside=0.741 (p=0.02944)\n- `interferon`: separation=-0.178, within=0.791 (p=0.002678), outside=0.968 (p=0.03133)\n- `proliferation`: separation=-0.650, within=0.344 (p=0.506), outside=0.994 (p=0.002776)\n- `emt`: separation=-2.888, within=-0.738 (p=0.3641), outside=1.150 (p=0.0002243)\n"
+}

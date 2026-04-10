@@ -1,0 +1,151 @@
+{
+  "chosen_signature_support": {
+    "coverage_fraction": 1.0,
+    "effect_size_g": 5.11250154211455,
+    "positive_direction": true,
+    "rank_among_scored_signatures": 1,
+    "signature_id": "hallmark_hypoxia"
+  },
+  "cohort": {
+    "contrast_description": "Human T-cell bulk RNA-seq cultured in hypoxia versus normoxia",
+    "expected_case_n": 6,
+    "expected_control_n": 6,
+    "external_cohort_id": "gse179885_tcells_hypoxia_vs_normoxia",
+    "geo_accession": "GSE179885",
+    "tissue": "t_cells"
+  },
+  "description": "External hypoxia exact-perturbation layer selected under the deterministic external_hypoxia SEARCH_PROTOCOL. This cohort is supportive rather than headline because it contains 12 total samples.",
+  "download_audit": [
+    {
+      "checked_at_utc": "2026-04-10T13:10:34.788015+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_series_matrix.txt.gz",
+      "sha256": "f414aaa2030590b8897fa90edacee20a7018fcb4113ff063040cbd5678f9f2ba",
+      "size_bytes": 1929,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/matrix/GSE179885_series_matrix.txt.gz"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:10:34.791255+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_Raw_counts_TPM_Normlized.csv.gz",
+      "sha256": "e7bce35aa0377b637ea9f221934860a961ae0dbdaec5fabe570cd9567501b7a0",
+      "size_bytes": 1869129,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/suppl/GSE179885_Raw_counts_TPM_Normlized.csv.gz"
+    }
+  ],
+  "search_protocol_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/SEARCH_PROTOCOL.md",
+  "signature_results": [
+    {
+      "case_n": 6,
+      "cohens_d": 5.11250154211455,
+      "cohens_d_var": 1.3730933360608721,
+      "control_n": 6,
+      "coverage_fraction": 1.0,
+      "direction_consistent": true,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": 0.784963124798542,
+      "mean_control": -0.7849631247985421,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_hypoxia",
+      "signature_label": "hallmark_hypoxia"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": 0.9400777373730721,
+      "cohens_d_var": 0.32084642498507304,
+      "control_n": 6,
+      "coverage_fraction": 0.8666666666666667,
+      "direction_consistent": true,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": 0.10914757442538107,
+      "mean_control": -0.10914757442538109,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_emt",
+      "signature_label": "hallmark_emt"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": -1.2360906684998263,
+      "cohens_d_var": 0.34768700783706774,
+      "control_n": 6,
+      "coverage_fraction": 0.9666666666666667,
+      "direction_consistent": false,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": -0.24609087842361865,
+      "mean_control": 0.24609087842361888,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_ifna_response",
+      "signature_label": "IFN-alpha core"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": -1.249311474719184,
+      "cohens_d_var": 0.34905613367509586,
+      "control_n": 6,
+      "coverage_fraction": 0.9666666666666667,
+      "direction_consistent": false,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": -0.5620607723222673,
+      "mean_control": 0.5620607723222674,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_e2f_targets",
+      "signature_label": "E2F Targets"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": -1.3647426913371925,
+      "cohens_d_var": 0.3616287775373151,
+      "control_n": 6,
+      "coverage_fraction": 0.9,
+      "direction_consistent": false,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": -0.14914458440391554,
+      "mean_control": 0.14914458440391523,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_tnfa_nfkb",
+      "signature_label": "TNF-alpha/NF-kB"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": -1.635064206736514,
+      "cohens_d_var": 0.3954167919786744,
+      "control_n": 6,
+      "coverage_fraction": 0.9666666666666667,
+      "direction_consistent": false,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": -0.3313792661380682,
+      "mean_control": 0.3313792661380684,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_ifng_response",
+      "signature_label": "IFN-gamma core"
+    },
+    {
+      "case_n": 6,
+      "cohens_d": -2.2897748488590497,
+      "cohens_d_var": 0.5024848710751985,
+      "control_n": 6,
+      "coverage_fraction": 0.9333333333333333,
+      "direction_consistent": false,
+      "dropped_blank_rows": 0,
+      "duplicate_rows_removed": 0,
+      "mean_case": -0.21056299553908464,
+      "mean_control": 0.21056299553908475,
+      "normalized_gene_count": 30,
+      "raw_row_count": 30,
+      "signature_id": "hallmark_inflammatory_response",
+      "signature_label": "Inflammatory Response"
+    }
+  ]
+}

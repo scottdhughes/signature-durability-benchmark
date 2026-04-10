@@ -7,3 +7,6 @@ data/freeze/cohort_matrices/
 data/freeze/cohort_phenotypes/
 outputs/
 .pytest_cache/
+data/prospective_holdout/downloads/
+data/external_hypoxia/downloads/
+data/external_rnaseq/cache/gene2ensembl.gz

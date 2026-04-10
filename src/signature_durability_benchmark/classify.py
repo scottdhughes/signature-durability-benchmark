@@ -1,4 +1,4 @@
-"""Classification rules for 5 models."""
+"""Classification rules for 6 models."""
 from __future__ import annotations
 from typing import Any
 
@@ -21,6 +21,8 @@ def classify_signature(profile: dict[str, Any], model_name: str) -> dict[str, An
     loo = profile.get("loo_stability", 0.0)
     max_conf = abs(profile.get("max_confounder_effect", 0.0))
     null_p = profile.get("null_separation_p", 1.0)
+    within_p = profile.get("within_p", None)
+    within_d = profile.get("within_d", None)
 
     if coverage < t["coverage_min"]:
         predicted = "insufficient_coverage"
@@ -45,6 +47,20 @@ def classify_signature(profile: dict[str, Any], model_name: str) -> dict[str, An
             predicted = "durable"
     elif model_name == "no_confounder":
         if aggregate_p > t["aggregate_p_max"] or dir_consistency < t["direction_consistency_min"]:
+            predicted = "brittle"
+        elif i_sq > t["i_squared_max"] or loo < t["loo_stability_min"]:
+            predicted = "mixed"
+        else:
+            predicted = "durable"
+    elif model_name == "within_program":
+        # Confounder check first (same as full model)
+        if max_conf >= aggregate_effect:
+            predicted = "confounded"
+        # Within-program check: if signature has within-program data and is significant
+        elif within_p is not None and within_p < 0.05 and abs(within_d) > 0.2:
+            predicted = "durable"
+        # Fall back to cross-context checks
+        elif aggregate_p > t["aggregate_p_max"] or dir_consistency < t["direction_consistency_min"]:
             predicted = "brittle"
         elif i_sq > t["i_squared_max"] or loo < t["loo_stability_min"]:
             predicted = "mixed"

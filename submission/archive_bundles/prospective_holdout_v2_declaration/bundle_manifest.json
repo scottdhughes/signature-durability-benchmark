@@ -1,0 +1,19 @@
+{
+  "bundle": "prospective_holdout_v2_declaration",
+  "status": "declared_pending_evaluation",
+  "files": [
+    "CHECKSUMS.sha256",
+    "PREDICTION_PROTOCOL_v2.md",
+    "RELEASE_NOTES.md",
+    "prediction_registry_v2.tsv",
+    "prospective_holdout_v2/README.md",
+    "prospective_holdout_v2/declaration_manifest.json",
+    "prospective_holdout_v2/declaration_manifest.sha256",
+    "prospective_holdout_v2/declaration_receipt.json",
+    "prospective_holdout_v2/declaration_request.tsq",
+    "prospective_holdout_v2/declaration_response.tsr",
+    "prospective_holdout_v2/freetsa_cacert.pem",
+    "prospective_holdout_v2/tsa_reply.txt",
+    "prospective_holdout_v2/verification.txt"
+  ]
+}

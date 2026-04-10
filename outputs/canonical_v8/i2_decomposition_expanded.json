@@ -1,0 +1,101 @@
+{
+  "hallmark_ifng_response": {
+    "Q_total": 591.89,
+    "Q_within": 283.124,
+    "Q_between": 308.766,
+    "Q_B_fraction": 0.5217,
+    "I2_total": 0.9426,
+    "I2_within": 0.894,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_ifna_response": {
+    "Q_total": 514.225,
+    "Q_within": 203.978,
+    "Q_between": 310.246,
+    "Q_B_fraction": 0.6033,
+    "I2_total": 0.9339,
+    "I2_within": 0.8529,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_inflammatory_response": {
+    "Q_total": 481.34,
+    "Q_within": 316.553,
+    "Q_between": 164.788,
+    "Q_B_fraction": 0.3424,
+    "I2_total": 0.9294,
+    "I2_within": 0.9052,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_tnfa_nfkb": {
+    "Q_total": 450.908,
+    "Q_within": 275.711,
+    "Q_between": 175.197,
+    "Q_B_fraction": 0.3885,
+    "I2_total": 0.9246,
+    "I2_within": 0.8912,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_hypoxia": {
+    "Q_total": 575.358,
+    "Q_within": 508.268,
+    "Q_between": 67.09,
+    "Q_B_fraction": 0.1166,
+    "I2_total": 0.9409,
+    "I2_within": 0.941,
+    "p_between": 9.336975637097567e-14,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_e2f_targets": {
+    "Q_total": 573.934,
+    "Q_within": 539.006,
+    "Q_between": 34.928,
+    "Q_B_fraction": 0.0609,
+    "I2_total": 0.9408,
+    "I2_within": 0.9443,
+    "p_between": 4.805354341108625e-07,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "hallmark_emt": {
+    "Q_total": 269.755,
+    "Q_within": 189.561,
+    "Q_between": 80.193,
+    "Q_B_fraction": 0.2973,
+    "I2_total": 0.874,
+    "I2_within": 0.8417,
+    "p_between": 1.1102230246251565e-16,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "schoggins_2011_irg": {
+    "Q_total": 545.194,
+    "Q_within": 235.055,
+    "Q_between": 310.138,
+    "Q_B_fraction": 0.5689,
+    "I2_total": 0.9376,
+    "I2_within": 0.8724,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  },
+  "blind_durable_ifn_composite": {
+    "Q_total": 535.058,
+    "Q_within": 225.153,
+    "Q_between": 309.905,
+    "Q_B_fraction": 0.5792,
+    "I2_total": 0.9365,
+    "I2_within": 0.8668,
+    "p_between": 0.0,
+    "k_cohorts": 35,
+    "k_programs": 5
+  }
+}

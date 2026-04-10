@@ -1,0 +1,299 @@
+{
+  "description": "Failure-mode analysis showing that ambiguous diagnostics correspond to coarse or mixed biological program labels rather than broken signatures.",
+  "cross_talk_summary": {
+    "hallmark_inflammatory_response": {
+      "home_program": "inflammation",
+      "mean_abs_effect_home": 0.7589,
+      "mean_abs_effect_foreign": 0.9792,
+      "top_off_program_effects": [
+        {
+          "cohort_id": "emt_arpe19_gse12548",
+          "foreign_program": "emt",
+          "cohens_d": 6.6139,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        },
+        {
+          "cohort_id": "psoriasis_skin_gse13355",
+          "foreign_program": "interferon",
+          "cohens_d": 3.2465,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "emt_hmle_gse24202",
+          "foreign_program": "emt",
+          "cohens_d": -1.4617,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        },
+        {
+          "cohort_id": "hypoxia_timecourse_gse47533",
+          "foreign_program": "hypoxia",
+          "cohens_d": -1.3968,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        },
+        {
+          "cohort_id": "sle_blood_gse49454",
+          "foreign_program": "interferon",
+          "cohens_d": 1.3275,
+          "case_label": "sle",
+          "control_label": "healthy"
+        }
+      ]
+    },
+    "hallmark_tnfa_nfkb": {
+      "home_program": "inflammation",
+      "mean_abs_effect_home": 0.5165,
+      "mean_abs_effect_foreign": 0.8744,
+      "top_off_program_effects": [
+        {
+          "cohort_id": "emt_arpe19_gse12548",
+          "foreign_program": "emt",
+          "cohens_d": 5.3648,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        },
+        {
+          "cohort_id": "psoriasis_skin_gse13355",
+          "foreign_program": "interferon",
+          "cohens_d": 2.9071,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "lung_tumor_gse19188",
+          "foreign_program": "proliferation",
+          "cohens_d": -1.3967,
+          "case_label": "tumor",
+          "control_label": "normal"
+        },
+        {
+          "cohort_id": "sle_pbmc_gse50772",
+          "foreign_program": "interferon",
+          "cohens_d": 1.2551,
+          "case_label": "sle",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "emt_hmle_gse24202",
+          "foreign_program": "emt",
+          "cohens_d": -1.2247,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        }
+      ]
+    },
+    "hallmark_hypoxia": {
+      "home_program": "hypoxia",
+      "mean_abs_effect_home": 3.9181,
+      "mean_abs_effect_foreign": 1.1019,
+      "top_off_program_effects": [
+        {
+          "cohort_id": "emt_mammary_gse43495",
+          "foreign_program": "emt",
+          "cohens_d": -4.9331,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        },
+        {
+          "cohort_id": "melioidosis_blood_gse69528",
+          "foreign_program": "inflammation",
+          "cohens_d": 2.8387,
+          "case_label": "sepsis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "sepsis_shock_gse95233",
+          "foreign_program": "inflammation",
+          "cohens_d": 2.6837,
+          "case_label": "sepsis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "sepsis_blood_gse28750",
+          "foreign_program": "inflammation",
+          "cohens_d": 2.407,
+          "case_label": "sepsis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "psoriasis_skin_gse13355",
+          "foreign_program": "interferon",
+          "cohens_d": 1.973,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        }
+      ]
+    },
+    "hallmark_e2f_targets": {
+      "home_program": "proliferation",
+      "mean_abs_effect_home": 1.0487,
+      "mean_abs_effect_foreign": 0.9667,
+      "top_off_program_effects": [
+        {
+          "cohort_id": "psoriasis_skin_gse13355",
+          "foreign_program": "interferon",
+          "cohens_d": 3.2827,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "psoriasis_skin_gse14905",
+          "foreign_program": "interferon",
+          "cohens_d": 2.8324,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "dengue_blood_gse51808",
+          "foreign_program": "interferon",
+          "cohens_d": 2.6905,
+          "case_label": "dengue",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "emt_tgfb_gse17708",
+          "foreign_program": "emt",
+          "cohens_d": -2.3092,
+          "case_label": "mesenchymal",
+          "control_label": "epithelial"
+        },
+        {
+          "cohort_id": "ccrcc_kidney_gse36895",
+          "foreign_program": "hypoxia",
+          "cohens_d": 2.1504,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        }
+      ]
+    },
+    "hallmark_emt": {
+      "home_program": "emt",
+      "mean_abs_effect_home": 2.5434,
+      "mean_abs_effect_foreign": 0.5015,
+      "top_off_program_effects": [
+        {
+          "cohort_id": "hypoxia_timecourse_gse47533",
+          "foreign_program": "hypoxia",
+          "cohens_d": -1.5054,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        },
+        {
+          "cohort_id": "gbm_brain_gse4290",
+          "foreign_program": "hypoxia",
+          "cohens_d": 1.4635,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        },
+        {
+          "cohort_id": "ccrcc_kidney_gse36895",
+          "foreign_program": "hypoxia",
+          "cohens_d": 1.2584,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        },
+        {
+          "cohort_id": "psoriasis_skin_gse13355",
+          "foreign_program": "interferon",
+          "cohens_d": -1.2079,
+          "case_label": "psoriasis",
+          "control_label": "healthy"
+        },
+        {
+          "cohort_id": "hypoxia_cellline_gse53012",
+          "foreign_program": "hypoxia",
+          "cohens_d": 1.017,
+          "case_label": "hypoxia",
+          "control_label": "normoxia"
+        }
+      ]
+    }
+  },
+  "ambiguous_program_examples": {
+    "hallmark_inflammatory_response": {
+      "full_Q_B_fraction": 0.3424,
+      "drop_by_hidden_program": {
+        "inflammation": -0.0422,
+        "interferon": -0.0549,
+        "proliferation": 0.1952,
+        "hypoxia": 0.0028,
+        "emt": -0.0024
+      },
+      "largest_drop_when_hiding": "proliferation",
+      "largest_drop_value": 0.1952
+    },
+    "hallmark_tnfa_nfkb": {
+      "full_Q_B_fraction": 0.3885,
+      "drop_by_hidden_program": {
+        "inflammation": -0.0231,
+        "interferon": -0.1051,
+        "proliferation": 0.1806,
+        "hypoxia": 0.0181,
+        "emt": 0.004
+      },
+      "largest_drop_when_hiding": "proliferation",
+      "largest_drop_value": 0.1806
+    },
+    "hallmark_e2f_targets": {
+      "full_Q_B_fraction": 0.0609,
+      "drop_by_hidden_program": {
+        "inflammation": 0.0269,
+        "interferon": -0.0294,
+        "proliferation": -0.0152,
+        "hypoxia": -0.0036,
+        "emt": 0.0199
+      },
+      "largest_drop_when_hiding": "inflammation",
+      "largest_drop_value": 0.0269,
+      "q_between_fraction": 0.0609,
+      "within_program_p_bonf": 0.03584667590091706,
+      "within_program_i2": 0.9594,
+      "within_proliferation_effect_span": {
+        "min": -1.2068,
+        "max": 2.1416,
+        "span": 3.3484
+      },
+      "within_proliferation_details": [
+        {
+          "cohort_id": "lung_tumor_gse19188",
+          "cohens_d": 2.1416,
+          "case_label": "tumor",
+          "control_label": "normal",
+          "tissue": "lung"
+        },
+        {
+          "cohort_id": "hcc_liver_gse6764",
+          "cohens_d": 1.0479,
+          "case_label": "hcc",
+          "control_label": "normal",
+          "tissue": "liver"
+        },
+        {
+          "cohort_id": "breast_relapse_gse1456",
+          "cohens_d": 0.7708,
+          "case_label": "relapse",
+          "control_label": "no_relapse",
+          "tissue": "breast_tumor"
+        },
+        {
+          "cohort_id": "breast_prognosis_gse2034",
+          "cohens_d": 0.0766,
+          "case_label": "relapse",
+          "control_label": "no_relapse",
+          "tissue": "breast_tumor"
+        },
+        {
+          "cohort_id": "breast_er_gse7390",
+          "cohens_d": -1.2068,
+          "case_label": "er_positive",
+          "control_label": "er_negative",
+          "tissue": "breast_tumor"
+        }
+      ],
+      "interpretation": "E2F targets have high within-program heterogeneity not because the signature is random, but because the coarse 'proliferation' bucket mixes tumor-vs-normal, prognosis, and subtype contrasts."
+    }
+  }
+}

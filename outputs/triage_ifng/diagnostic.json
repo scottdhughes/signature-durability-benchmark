@@ -1,0 +1,269 @@
+{
+  "aggregate_profile": {
+    "aggregate_effect": 0.409852686622842,
+    "aggregate_p": 1.0667637158341679e-34,
+    "direction_consistency": 0.6571428571428571,
+    "i_squared": 0.9425580500821144,
+    "loo_stability": 1.0,
+    "max_confounder_effect": 0.0,
+    "mean_coverage": 0.9847619047619048,
+    "null_separation_p": 0.005,
+    "platform_holdout_consistency": 1.0,
+    "predicted_class": "mixed",
+    "within_d": 1.3832488029035663,
+    "within_p": 0.0005496417192925721
+  },
+  "classification": {
+    "focus_program": "interferon",
+    "full_model": "mixed",
+    "within_program": "durable"
+  },
+  "confounder_overlap": {
+    "batch_ribosomal": 0.0,
+    "generic_inflammation": 0.0,
+    "immune_infiltration": 0.0,
+    "proliferation_cell_cycle": 0.0,
+    "stress_response": 0.0
+  },
+  "declared_program": null,
+  "dominant_confounder": {
+    "name": "proliferation_cell_cycle",
+    "overlap_fraction": 0.0,
+    "weighted_effect": 0.0
+  },
+  "inferred_program": {
+    "outside_effect": 0.13828922134936572,
+    "outside_p": 0.48389417978599464,
+    "program": "interferon",
+    "separation_score": 1.2449595815542005,
+    "within_effect": 1.3832488029035663,
+    "within_p": 0.0005496417192925721
+  },
+  "input_path": "/Users/scott/sci_op/signature-durability-benchmark/tmp_ifng_signature.tsv",
+  "interpretation": "tmp_ifng_signature behaves like a context-matched interferon signature: the within-program pooled effect is 1.383 (p=0.0005496) while the outside-program effect shrinks to 0.138 (p=0.4839), and the observed program structure exceeds random labelings (permutation p=0.000999).",
+  "normalization_audit": {
+    "dropped_blank_rows": 0,
+    "duplicate_rows_removed": 0,
+    "normalized_gene_count": 30,
+    "raw_row_count": 30
+  },
+  "permutation_program_structure": {
+    "n_permutations": 1000,
+    "null_95th": 0.32646225236744847,
+    "null_99th": 0.40968392817621385,
+    "null_mean": 0.1561179098255563,
+    "observed_Q_B_fraction": 0.5216656861342764,
+    "p_value": 0.000999000999000999,
+    "seed": 42
+  },
+  "program_diagnostics": {
+    "emt": {
+      "outside": {
+        "Q": 514.5876222033665,
+        "guarded_p": 0.002686706400426988,
+        "guarded_se": 0.1955525375398026,
+        "hksj_p": 0.002686706400426988,
+        "hksj_se": 0.1955525375398026,
+        "i_squared": 0.9455874980433666,
+        "k": 29,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.6439941677300645,
+        "pooled_p": 0.002686706400426988,
+        "pooled_se": 0.1955525375398026,
+        "tau2": 0.6549688112022312
+      },
+      "outside_k": 29,
+      "within": {
+        "Q": 35.07449000410426,
+        "guarded_p": 0.8824090836362928,
+        "guarded_se": 0.6457562194574353,
+        "hksj_p": 0.8824090836362928,
+        "hksj_se": 0.6457562194574353,
+        "i_squared": 0.8574462522643972,
+        "k": 6,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.10050214370319335,
+        "pooled_p": 0.8824090836362928,
+        "pooled_se": 0.6457562194574353,
+        "tau2": 0.9522971908096541
+      },
+      "within_k": 6,
+      "within_outside_gap": -0.5434920240268711
+    },
+    "hypoxia": {
+      "outside": {
+        "Q": 543.1622772741266,
+        "guarded_p": 0.016098394639459314,
+        "guarded_se": 0.21442475234032854,
+        "hksj_p": 0.016098394639459314,
+        "hksj_se": 0.21442475234032854,
+        "i_squared": 0.9484500283404829,
+        "k": 29,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.5492349268685474,
+        "pooled_p": 0.016098394639459314,
+        "pooled_se": 0.21442475234032854,
+        "tau2": 0.660969398970553
+      },
+      "outside_k": 29,
+      "within": {
+        "Q": 39.55089368997609,
+        "guarded_p": 0.21902864941167396,
+        "guarded_se": 0.45980104576380104,
+        "hksj_p": 0.1891828478318641,
+        "hksj_se": 0.4252116876361115,
+        "i_squared": 0.8735806063146629,
+        "k": 6,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.6459745800268288,
+        "pooled_p": 0.21902864941167396,
+        "pooled_se": 0.45980104576380104,
+        "tau2": 1.0678310228215968
+      },
+      "within_k": 6,
+      "within_outside_gap": 0.09673965315828148
+    },
+    "inflammation": {
+      "outside": {
+        "Q": 480.93450175657665,
+        "guarded_p": 0.0026484464332786786,
+        "guarded_se": 0.2207974524180512,
+        "hksj_p": 0.0026484464332786786,
+        "hksj_se": 0.2207974524180512,
+        "i_squared": 0.9438592991324504,
+        "k": 28,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.7309802095479092,
+        "pooled_p": 0.0026484464332786786,
+        "pooled_se": 0.2207974524180512,
+        "tau2": 0.7265509448747907
+      },
+      "outside_k": 28,
+      "within": {
+        "Q": 50.233670630719885,
+        "guarded_p": 0.8899193945922295,
+        "guarded_se": 0.27835835984312873,
+        "hksj_p": 0.8899193945922295,
+        "hksj_se": 0.27835835984312873,
+        "i_squared": 0.8805582008110161,
+        "k": 7,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": -0.04019253144365342,
+        "pooled_p": 0.8899193945922295,
+        "pooled_se": 0.27835835984312873,
+        "tau2": 0.31080671616929395
+      },
+      "within_k": 7,
+      "within_outside_gap": -0.7711727409915626
+    },
+    "interferon": {
+      "outside": {
+        "Q": 194.81625796693748,
+        "guarded_p": 0.48389417978599464,
+        "guarded_se": 0.19434732145370548,
+        "hksj_p": 0.48389417978599464,
+        "hksj_se": 0.19434732145370548,
+        "i_squared": 0.8819400380644651,
+        "k": 24,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.13828922134936572,
+        "pooled_p": 0.48389417978599464,
+        "pooled_se": 0.19434732145370548,
+        "tau2": 0.38965747787949373
+      },
+      "outside_k": 24,
+      "within": {
+        "Q": 133.7746140177169,
+        "guarded_p": 0.0005496417192925721,
+        "guarded_se": 0.2775018971429941,
+        "hksj_p": 0.0005496417192925721,
+        "hksj_se": 0.2775018971429941,
+        "i_squared": 0.9252474015834155,
+        "k": 11,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 1.3832488029035663,
+        "pooled_p": 0.0005496417192925721,
+        "pooled_se": 0.2775018971429941,
+        "tau2": 0.4065934687974159
+      },
+      "within_k": 11,
+      "within_outside_gap": 1.2449595815542005
+    },
+    "proliferation": {
+      "outside": {
+        "Q": 478.71432201698855,
+        "guarded_p": 0.0036595166016270605,
+        "guarded_se": 0.21414144611183156,
+        "hksj_p": 0.0036595166016270605,
+        "hksj_se": 0.21414144611183156,
+        "i_squared": 0.9394210729317373,
+        "k": 30,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": 0.6770338192096049,
+        "pooled_p": 0.0036595166016270605,
+        "pooled_se": 0.21414144611183156,
+        "tau2": 0.6946549147971025
+      },
+      "outside_k": 30,
+      "within": {
+        "Q": 24.493326731351093,
+        "guarded_p": 0.7281953475594404,
+        "guarded_se": 0.2551225779081713,
+        "hksj_p": 0.7281953475594404,
+        "hksj_se": 0.2551225779081713,
+        "i_squared": 0.8366902118330843,
+        "k": 5,
+        "method": "DL_HKSJ_guarded_random_effects",
+        "pooled_effect": -0.09511543380805397,
+        "pooled_p": 0.7281953475594404,
+        "pooled_se": 0.2551225779081713,
+        "tau2": 0.15894735231139193
+      },
+      "within_k": 5,
+      "within_outside_gap": -0.7721492530176589
+    }
+  },
+  "program_ranking": [
+    {
+      "outside_effect": 0.13828922134936572,
+      "outside_p": 0.48389417978599464,
+      "program": "interferon",
+      "separation_score": 1.2449595815542005,
+      "within_effect": 1.3832488029035663,
+      "within_p": 0.0005496417192925721
+    },
+    {
+      "outside_effect": 0.5492349268685474,
+      "outside_p": 0.016098394639459314,
+      "program": "hypoxia",
+      "separation_score": 0.09673965315828148,
+      "within_effect": 0.6459745800268288,
+      "within_p": 0.21902864941167396
+    },
+    {
+      "outside_effect": 0.6439941677300645,
+      "outside_p": 0.002686706400426988,
+      "program": "emt",
+      "separation_score": -0.5434920240268711,
+      "within_effect": 0.10050214370319335,
+      "within_p": 0.8824090836362928
+    },
+    {
+      "outside_effect": 0.7309802095479092,
+      "outside_p": 0.0026484464332786786,
+      "program": "inflammation",
+      "separation_score": -1.7711727409915627,
+      "within_effect": -0.04019253144365342,
+      "within_p": 0.8899193945922295
+    },
+    {
+      "outside_effect": 0.6770338192096049,
+      "outside_p": 0.0036595166016270605,
+      "program": "proliferation",
+      "separation_score": -1.772149253017659,
+      "within_effect": -0.09511543380805397,
+      "within_p": 0.7281953475594404
+    }
+  ],
+  "signature_name": "tmp_ifng_signature"
+}

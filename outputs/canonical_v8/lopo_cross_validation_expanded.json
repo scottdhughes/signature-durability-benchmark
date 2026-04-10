@@ -1,0 +1,92 @@
+{
+  "hallmark_ifng_response": {
+    "full": 0.5217,
+    "loo": {
+      "inflammation": 0.5157,
+      "interferon": 0.2334,
+      "proliferation": 0.4597,
+      "hypoxia": 0.5516,
+      "emt": 0.518
+    }
+  },
+  "hallmark_ifna_response": {
+    "full": 0.6033,
+    "loo": {
+      "inflammation": 0.5628,
+      "interferon": 0.2674,
+      "proliferation": 0.5552,
+      "hypoxia": 0.6304,
+      "emt": 0.6113
+    }
+  },
+  "hallmark_inflammatory_response": {
+    "full": 0.3424,
+    "loo": {
+      "inflammation": 0.3846,
+      "interferon": 0.3973,
+      "proliferation": 0.1472,
+      "hypoxia": 0.3396,
+      "emt": 0.3448
+    }
+  },
+  "hallmark_tnfa_nfkb": {
+    "full": 0.3885,
+    "loo": {
+      "inflammation": 0.4116,
+      "interferon": 0.4936,
+      "proliferation": 0.2079,
+      "hypoxia": 0.3704,
+      "emt": 0.3845
+    }
+  },
+  "hallmark_hypoxia": {
+    "full": 0.1166,
+    "loo": {
+      "inflammation": 0.1015,
+      "interferon": 0.1525,
+      "proliferation": 0.1153,
+      "hypoxia": 0.0862,
+      "emt": 0.111
+    }
+  },
+  "hallmark_e2f_targets": {
+    "full": 0.0609,
+    "loo": {
+      "inflammation": 0.034,
+      "interferon": 0.0903,
+      "proliferation": 0.0761,
+      "hypoxia": 0.0645,
+      "emt": 0.041
+    }
+  },
+  "hallmark_emt": {
+    "full": 0.2973,
+    "loo": {
+      "inflammation": 0.3035,
+      "interferon": 0.4374,
+      "proliferation": 0.3031,
+      "hypoxia": 0.2419,
+      "emt": 0.1804
+    }
+  },
+  "schoggins_2011_irg": {
+    "full": 0.5689,
+    "loo": {
+      "inflammation": 0.5569,
+      "interferon": 0.2967,
+      "proliferation": 0.5066,
+      "hypoxia": 0.5991,
+      "emt": 0.5631
+    }
+  },
+  "blind_durable_ifn_composite": {
+    "full": 0.5792,
+    "loo": {
+      "inflammation": 0.5406,
+      "interferon": 0.2579,
+      "proliferation": 0.5342,
+      "hypoxia": 0.6056,
+      "emt": 0.5892
+    }
+  }
+}

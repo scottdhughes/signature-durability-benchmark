@@ -1,0 +1,262 @@
+{
+  "download_audit": [
+    {
+      "checked_at_utc": "2026-04-10T13:09:50.354656+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE184610/GSE184610_series_matrix.txt.gz",
+      "sha256": "eb5e1e39e1c44af2142ce9b26d5b8f744a3916a7401b48910c42df5a266e42b1",
+      "size_bytes": 15157,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184610/matrix/GSE184610_series_matrix.txt.gz"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:09:50.357898+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE184610/GSE184610_Covid_samples_CPM.txt.gz",
+      "sha256": "59491c7d913d40241b562c54370d72a6948f09c5c2ccfb1713a57e9f9a876568",
+      "size_bytes": 22413296,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184610/suppl/GSE184610_Covid_samples_CPM.txt.gz"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:09:52.730995+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE243217/GSE243217_series_matrix.txt.gz",
+      "sha256": "a7236f508e22f9aeba69f93b4d0ac4e244242687f22db369974bff3ee418ffe4",
+      "size_bytes": 5410,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243217/matrix/GSE243217_series_matrix.txt.gz"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:09:52.734248+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE243217/GSE243217_RAW.tar",
+      "sha256": "b18c84546f0f678b9150b8dd81fb321f6ac0f06c4ed3dabf36f25dcc9e3cc82e",
+      "size_bytes": 8079360,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243217/suppl/GSE243217_RAW.tar"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:09:53.591101+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE202805/GSE202805_series_matrix.txt.gz",
+      "sha256": "4d932284d9ae56c332e5a7a413e50e7ecdfd50769339d7820e5ff7d8e59de5d7",
+      "size_bytes": 5268,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202805/matrix/GSE202805_series_matrix.txt.gz"
+    },
+    {
+      "checked_at_utc": "2026-04-10T13:09:53.594886+00:00",
+      "fetched_this_run": false,
+      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE202805/GSE202805_genecounts_20220406.txt.gz",
+      "sha256": "c71e9065106b962a74acddb73b3dfc901b5dda0087aca20361e8bff628ebb93c",
+      "size_bytes": 8658402,
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202805/suppl/GSE202805_genecounts_20220406.txt.gz"
+    }
+  ],
+  "per_cohort_effects_csv": "/Users/scott/sci_op/signature-durability-benchmark/outputs/canonical_v8/prospective_rounds/prospective_holdout_v1/per_cohort_effects.csv",
+  "pooled_primary_panel": {
+    "blind_durable_ifn_composite": {
+      "Q": 7.29468730756483,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.6357992622730462,
+        "gse202805_pbmc_acute_covid19_vs_healthy": -0.1237954169689658,
+        "gse243217_pbmc_covid19_vs_healthy": 1.1511896208681973
+      },
+      "guarded_p": 0.23267002928883254,
+      "guarded_p_bonf_4": 0.9306801171553302,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.3404961703247231,
+      "hksj_p": 0.23267002928883254,
+      "hksj_se": 0.3404961703247231,
+      "i_squared": 0.7258278640777468,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.5762094113286871,
+      "pooled_p": 0.23267002928883254,
+      "pooled_se": 0.3404961703247231,
+      "positive_hits": 2,
+      "sign_consistency": 0.6666666666666666,
+      "tau2": 0.1719697477879253
+    },
+    "hallmark_e2f_targets": {
+      "Q": 3.6003343456715964,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.30462456624927126,
+        "gse202805_pbmc_acute_covid19_vs_healthy": 0.4456296307468557,
+        "gse243217_pbmc_covid19_vs_healthy": 0.9385017829745386
+      },
+      "guarded_p": 0.12493300815863015,
+      "guarded_p_bonf_4": 0.4997320326345206,
+      "guarded_p_bonf_7": 0.874531057110411,
+      "guarded_se": 0.18807989812768033,
+      "hksj_p": 0.11864448267217283,
+      "hksj_se": 0.18228241419868602,
+      "i_squared": 0.4444960362071802,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.4808965795090245,
+      "pooled_p": 0.12493300815863015,
+      "pooled_se": 0.18807989812768033,
+      "positive_hits": 3,
+      "sign_consistency": 1.0,
+      "tau2": 0.05100055045654251
+    },
+    "hallmark_ifna_response": {
+      "Q": 9.076910072990627,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.6855974171336319,
+        "gse202805_pbmc_acute_covid19_vs_healthy": -0.09687314697634825,
+        "gse243217_pbmc_covid19_vs_healthy": 1.3491458023512357
+      },
+      "guarded_p": 0.23550667736165032,
+      "guarded_p_bonf_4": 0.9420267094466013,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.39152854993942526,
+      "hksj_p": 0.23550667736165032,
+      "hksj_se": 0.39152854993942526,
+      "i_squared": 0.7796607012830031,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.6566599178733648,
+      "pooled_p": 0.23550667736165032,
+      "pooled_se": 0.39152854993942526,
+      "positive_hits": 2,
+      "sign_consistency": 0.6666666666666666,
+      "tau2": 0.2349097869656488
+    },
+    "hallmark_ifng_response": {
+      "Q": 10.53060852535035,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.6062862797572555,
+        "gse202805_pbmc_acute_covid19_vs_healthy": -0.5187073801249412,
+        "gse243217_pbmc_covid19_vs_healthy": 0.8613740301302715
+      },
+      "guarded_p": 0.46768110985753225,
+      "guarded_p_bonf_4": 1.0,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.4034391587177545,
+      "hksj_p": 0.46768110985753225,
+      "hksj_se": 0.4034391587177545,
+      "i_squared": 0.8100774522967598,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.3587694322380138,
+      "pooled_p": 0.46768110985753225,
+      "pooled_se": 0.4034391587177545,
+      "positive_hits": 2,
+      "sign_consistency": 0.6666666666666666,
+      "tau2": 0.2718371399877173
+    },
+    "hallmark_inflammatory_response": {
+      "Q": 4.643403531883305,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": -0.019767549734085666,
+        "gse202805_pbmc_acute_covid19_vs_healthy": 0.48169877441579095,
+        "gse243217_pbmc_covid19_vs_healthy": 0.566012182596625
+      },
+      "guarded_p": 0.36616699013608306,
+      "guarded_p_bonf_4": 1.0,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.21713067189369503,
+      "hksj_p": 0.32478537057986484,
+      "hksj_se": 0.19437670510439395,
+      "i_squared": 0.5692814578213439,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.25163300225825425,
+      "pooled_p": 0.36616699013608306,
+      "pooled_se": 0.21713067189369503,
+      "positive_hits": 2,
+      "sign_consistency": 0.6666666666666666,
+      "tau2": 0.08193983088171808
+    },
+    "hallmark_tnfa_nfkb": {
+      "Q": 4.498258163660259,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.11490041248679146,
+        "gse202805_pbmc_acute_covid19_vs_healthy": 0.22682831939744122,
+        "gse243217_pbmc_covid19_vs_healthy": 0.8197637372424589
+      },
+      "guarded_p": 0.27046051220298845,
+      "guarded_p_bonf_4": 1.0,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.21435173560323925,
+      "hksj_p": 0.2634123161477689,
+      "hksj_se": 0.20994260324630848,
+      "i_squared": 0.5553834557213168,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.3233505708583519,
+      "pooled_p": 0.27046051220298845,
+      "pooled_se": 0.21435173560323925,
+      "positive_hits": 3,
+      "sign_consistency": 1.0,
+      "tau2": 0.07836800998150216
+    },
+    "schoggins_2011_irg": {
+      "Q": 8.276861256517128,
+      "cohort_effects": {
+        "gse184610_mucosa_sarscov2_positive_vs_control": 0.6152222619607933,
+        "gse202805_pbmc_acute_covid19_vs_healthy": -0.19566223992405,
+        "gse243217_pbmc_covid19_vs_healthy": 1.1636972289313232
+      },
+      "guarded_p": 0.2738323048628404,
+      "guarded_p_bonf_4": 1.0,
+      "guarded_p_bonf_7": 1.0,
+      "guarded_se": 0.3672443340209343,
+      "hksj_p": 0.2738323048628404,
+      "hksj_se": 0.3672443340209343,
+      "i_squared": 0.7583625074752561,
+      "k": 3,
+      "method": "DL_HKSJ_guarded_random_effects",
+      "pooled_effect": 0.5485588086543836,
+      "pooled_p": 0.2738323048628404,
+      "pooled_se": 0.3672443340209343,
+      "positive_hits": 2,
+      "sign_consistency": 0.6666666666666666,
+      "tau2": 0.20420237860882046
+    }
+  },
+  "prediction_summary": {
+    "declared_at_utc": "2026-04-10T05:09:01Z",
+    "overall_success": false,
+    "per_cohort_hits": [
+      {
+        "all_positive": true,
+        "external_cohort_id": "gse184610_mucosa_sarscov2_positive_vs_control",
+        "geo_accession": "GSE184610",
+        "positive_hits": 4,
+        "tissue": "oronasopharyngeal_mucosa"
+      },
+      {
+        "all_positive": true,
+        "external_cohort_id": "gse243217_pbmc_covid19_vs_healthy",
+        "geo_accession": "GSE243217",
+        "positive_hits": 4,
+        "tissue": "pbmc"
+      },
+      {
+        "all_positive": false,
+        "external_cohort_id": "gse202805_pbmc_acute_covid19_vs_healthy",
+        "geo_accession": "GSE202805",
+        "positive_hits": 0,
+        "tissue": "pbmc"
+      }
+    ],
+    "per_signature_success": {
+      "blind_durable_ifn_composite": false,
+      "hallmark_ifna_response": false,
+      "hallmark_ifng_response": false,
+      "schoggins_2011_irg": false
+    },
+    "round_id": "prospective_holdout_v1",
+    "success_rule": {
+      "per_cohort": "all four IFN signatures positive (g > 0) in each primary cohort",
+      "pooled": "each IFN signature pooled g >= 0.8, guarded Bonferroni-4 p < 0.05, sign consistency = 1.0"
+    }
+  },
+  "registry": {
+    "declared_at_utc": "2026-04-10T05:09:01Z",
+    "n_primary_cohorts": 3,
+    "path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/prediction_registry_v1.tsv",
+    "protocol_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/PREDICTION_PROTOCOL.md",
+    "protocol_sha256": "e393bf8b2b18160d7c9ff3b29e16277f4c569d30aedf1ea2c28e01b64ab0b890",
+    "sha256": "0b758bbf83fb1784276679878d6d564db7dbe2c24e5cf622981510b38af848bf"
+  }
+}

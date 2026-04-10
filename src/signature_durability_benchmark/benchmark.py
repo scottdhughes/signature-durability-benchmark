@@ -22,12 +22,14 @@ from .constants import ALL_CLASSES, DURABLE_CLASSES, MODEL_NAMES, REQUIRED_OUTPU
 from .config import SkillConfig
 from .meta_analysis import (
     direction_consistency,
+    dl_random_effects_meta,
     fixed_effect_meta,
     i_squared,
     leave_one_out,
     loo_stability,
     platform_holdout,
     platform_holdout_consistency,
+    within_program_meta,
 )
 from .normalize import normalize_signature
 from .null_model import generate_null_signatures, null_separation_p
@@ -46,6 +48,15 @@ from .utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+# Maps signature panel "program" column to cohort manifest "biological_program"
+_SIGNATURE_TO_COHORT_PROGRAM: dict[str, str] = {
+    "interferon_response": "interferon",
+    "inflammatory_response": "inflammation",
+    "hypoxia": "hypoxia",
+    "proliferation": "proliferation",
+    "emt": "emt",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -100,6 +111,7 @@ def _score_signature_across_cohorts(
     cohort_effects: list[float] = []
     cohort_variances: list[float] = []
     cohort_platforms: list[str] = []
+    cohort_bio_programs: list[str] = []
     cohort_confounder_maxes: list[float] = []
     coverages: list[float] = []
 
@@ -132,6 +144,7 @@ def _score_signature_across_cohorts(
         cohort_effects.append(result["cohens_d"])
         cohort_variances.append(result["cohens_d_var"])
         cohort_platforms.append(str(crow["platform"]))
+        cohort_bio_programs.append(str(crow.get("biological_program", "")))
         coverages.append(result["coverage_fraction"])
 
         # Score confounders in this cohort, weighted by signature overlap
@@ -156,6 +169,7 @@ def _score_signature_across_cohorts(
         "cohort_effects": cohort_effects,
         "cohort_variances": cohort_variances,
         "cohort_platforms": cohort_platforms,
+        "cohort_bio_programs": cohort_bio_programs,
         "cohort_confounder_maxes": cohort_confounder_maxes,
         "coverages": coverages,
     }
@@ -173,6 +187,7 @@ def _compute_null_effects(
     null_effects: list[float] = []
     for nsig in null_sigs:
         null_cohort_effects: list[float] = []
+        null_cohort_variances: list[float] = []
         for cid, cdata in cohort_data.items():
             crow = cdata["manifest"]
             nr = score_signature_in_cohort(
@@ -184,10 +199,8 @@ def _compute_null_effects(
                 str(crow["control_label"]),
             )
             null_cohort_effects.append(nr["cohens_d"])
-        # Use uniform variance weighting for null (no real variance estimate)
-        null_meta = fixed_effect_meta(
-            null_cohort_effects, [1.0] * len(null_cohort_effects)
-        )
+            null_cohort_variances.append(nr["cohens_d_var"])
+        null_meta = fixed_effect_meta(null_cohort_effects, null_cohort_variances)
         null_effects.append(null_meta["pooled_effect"])
     return null_effects
 
@@ -234,7 +247,7 @@ def _classify_all_models(
     srow: pd.Series,
     profile: dict[str, float],
 ) -> list[dict[str, Any]]:
-    """Classify a signature under all 5 models and return records."""
+    """Classify a signature under all 6 models and return records."""
     records: list[dict[str, Any]] = []
     for model_name in MODEL_NAMES:
         result = classify_signature(profile, model_name)
@@ -361,6 +374,11 @@ def _durability_score(row: pd.Series, model_name: str) -> float:
         return abs(effect) * dir_cons * (1.0 - null_p) * (1.0 - 0.5 * i_sq)
     elif model_name == "no_confounder":
         return abs(effect) * dir_cons * loo * (1.0 - 0.5 * i_sq)
+    elif model_name == "within_program":
+        within_d_val = float(row.get("within_d", 0.0)) if pd.notna(row.get("within_d")) else 0.0
+        within_p_val = float(row.get("within_p", 1.0)) if pd.notna(row.get("within_p")) else 1.0
+        # Score: combine within-program signal strength with confounder rejection
+        return abs(within_d_val) * (1.0 - within_p_val) * dir_cons - conf
     else:  # full_model
         return abs(effect) * dir_cons * loo * (1.0 - 0.5 * i_sq) - conf
 
@@ -447,17 +465,17 @@ def _aggregate_metrics(
             "blind_exact_recovery": blind_rec,
         }
 
-    # Success rule: full_model AUPRC > overlap_only AUPRC + tolerance
+    # Success rule: within_program AUPRC > overlap_only AUPRC + tolerance
     # AND secondary wins >= 2
-    full = per_model["full_model"]
+    best = per_model["within_program"]
     overlap = per_model["overlap_only"]
-    auprc_margin = full["auprc"] - overlap["auprc"]
+    auprc_margin = best["auprc"] - overlap["auprc"]
     auprc_pass = auprc_margin > tolerance
 
     secondary_wins = 0
     for metric in ["exact_class_accuracy", "direction_accuracy",
                    "confounded_rejection_accuracy", "blind_exact_recovery"]:
-        if full[metric] > overlap[metric]:
+        if best[metric] > overlap[metric]:
             secondary_wins += 1
 
     success = auprc_pass and secondary_wins >= 2
@@ -465,7 +483,7 @@ def _aggregate_metrics(
     return {
         "per_model": per_model,
         "success_rule": {
-            "full_model_auprc": full["auprc"],
+            "within_program_auprc": best["auprc"],
             "overlap_only_auprc": overlap["auprc"],
             "auprc_margin": auprc_margin,
             "tolerance": tolerance,
@@ -497,7 +515,7 @@ def _generate_public_summary(
         "",
         "## Success Rule",
         "",
-        f"- full_model AUPRC: {rule['full_model_auprc']:.4f}",
+        f"- within_program AUPRC: {rule['within_program_auprc']:.4f}",
         f"- overlap_only AUPRC: {rule['overlap_only_auprc']:.4f}",
         f"- AUPRC margin: {rule['auprc_margin']:.4f} (tolerance: {rule['tolerance']})",
         f"- AUPRC pass: {'YES' if rule['auprc_pass'] else 'NO'}",
@@ -675,6 +693,7 @@ def run_pipeline(config: SkillConfig, out_dir: str | Path) -> dict[str, Any]:
     all_loo_records: list[dict[str, Any]] = []
     all_platform_holdout_records: list[dict[str, Any]] = []
     all_null_summaries: list[dict[str, Any]] = []
+    all_within_program_records: list[dict[str, Any]] = []
     normalization_audit: dict[str, dict[str, Any]] = {}
 
     n_sigs = len(sig_manifest)
@@ -744,6 +763,43 @@ def run_pipeline(config: SkillConfig, out_dir: str | Path) -> dict[str, Any]:
             )
         )
 
+        # Within-program meta-analysis
+        sig_program = str(srow.get("program", ""))
+        cohort_program = _SIGNATURE_TO_COHORT_PROGRAM.get(sig_program, "")
+        if cohort_program:
+            wp_result = within_program_meta(
+                scoring_result["cohort_effects"],
+                scoring_result["cohort_variances"],
+                scoring_result["cohort_bio_programs"],
+                cohort_program,
+            )
+            wp_row: dict[str, Any] = {
+                "signature_id": sig_id,
+                "program": cohort_program,
+                "within_k": wp_result["within_k"],
+                "outside_k": wp_result["outside_k"],
+            }
+            if wp_result["within"] is not None:
+                wp_row["within_d"] = wp_result["within"]["pooled_effect"]
+                wp_row["within_se"] = wp_result["within"]["pooled_se"]
+                wp_row["within_p"] = wp_result["within"]["pooled_p"]
+                wp_row["within_i2"] = wp_result["within"]["i_squared"]
+                wp_row["within_tau2"] = wp_result["within"]["tau2"]
+                # Add within-program fields to profile for classification
+                profile["within_d"] = wp_result["within"]["pooled_effect"]
+                profile["within_p"] = wp_result["within"]["pooled_p"]
+            else:
+                wp_row.update({"within_d": None, "within_se": None, "within_p": None, "within_i2": None, "within_tau2": None})
+            if wp_result["outside"] is not None:
+                wp_row["outside_d"] = wp_result["outside"]["pooled_effect"]
+                wp_row["outside_se"] = wp_result["outside"]["pooled_se"]
+                wp_row["outside_p"] = wp_result["outside"]["pooled_p"]
+                wp_row["outside_i2"] = wp_result["outside"]["i_squared"]
+                wp_row["outside_tau2"] = wp_result["outside"]["tau2"]
+            else:
+                wp_row.update({"outside_d": None, "outside_se": None, "outside_p": None, "outside_i2": None, "outside_tau2": None})
+            all_within_program_records.append(wp_row)
+
         # Classification under all models
         all_classification_records.extend(
             _classify_all_models(sig_id, srow, profile)
@@ -757,6 +813,24 @@ def run_pipeline(config: SkillConfig, out_dir: str | Path) -> dict[str, Any]:
     loo_df = pd.DataFrame(all_loo_records)
     platform_holdout_df = pd.DataFrame(all_platform_holdout_records)
     null_summary_df = pd.DataFrame(all_null_summaries)
+    within_program_df = pd.DataFrame(all_within_program_records) if all_within_program_records else pd.DataFrame()
+
+    # Bonferroni correction for within-program tests (FIX 5)
+    # Correct over the 7 Hallmark signatures only (not all 18 rows),
+    # since only Hallmarks are tested for within-program durability.
+    if not within_program_df.empty and "within_p" in within_program_df.columns:
+        # Count only expected-durable signatures for Bonferroni denominator
+        durable_mask = within_program_df["signature_id"].isin(
+            scores_df.loc[scores_df["expected_class"] == "durable", "signature_id"].unique()
+        )
+        n_tests = int(durable_mask.sum()) if durable_mask.any() else within_program_df["within_p"].notna().sum()
+        if n_tests > 0:
+            within_program_df["within_p_bonferroni"] = within_program_df["within_p"].apply(
+                lambda p: min(p * n_tests, 1.0) if pd.notna(p) else None
+            )
+            within_program_df["bonferroni_n_tests"] = n_tests
+        else:
+            within_program_df["within_p_bonferroni"] = None
 
     # -----------------------------------------------------------------------
     # Aggregate metrics + success rule
@@ -781,6 +855,10 @@ def run_pipeline(config: SkillConfig, out_dir: str | Path) -> dict[str, Any]:
     write_table(null_summary_df, out_path / "matched_null_summary.csv")
     write_table(loo_df, out_path / "leave_one_cohort_out.csv")
     write_table(platform_holdout_df, out_path / "platform_holdout_summary.csv")
+
+    # Within-program durability analysis
+    if not within_program_df.empty:
+        write_table(within_program_df, out_path / "within_program_durability.csv")
 
     # Normalization audit
     write_json(out_path / "normalization_audit.json", normalization_audit)

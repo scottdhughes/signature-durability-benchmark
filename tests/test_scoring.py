@@ -5,12 +5,12 @@ from signature_durability_benchmark.scoring import score_signature_in_cohort
 from signature_durability_benchmark.normalize import normalize_signature, compute_coverage
 
 def test_perfect_separation_gives_large_effect():
-    genes = ["GENE_A", "GENE_B", "GENE_C"]
-    sig = pd.DataFrame({"gene_symbol": genes, "direction": ["up", "up", "up"], "weight": [1.0, 1.0, 1.0]})
+    genes = ["GENE_A", "GENE_B", "GENE_C", "GENE_D", "GENE_E"]
+    sig = pd.DataFrame({"gene_symbol": genes, "direction": ["up"] * len(genes), "weight": [1.0] * len(genes)})
     expr = pd.DataFrame({
         "gene_symbol": genes,
-        "S1": [10.0, 10.0, 10.0], "S2": [10.0, 10.0, 10.0],
-        "S3": [0.0, 0.0, 0.0], "S4": [0.0, 0.0, 0.0],
+        "S1": [10.0, 10.0, 10.0, 10.0, 10.0], "S2": [10.0, 10.0, 10.0, 10.0, 10.0],
+        "S3": [0.0, 0.0, 0.0, 0.0, 0.0], "S4": [0.0, 0.0, 0.0, 0.0, 0.0],
     }).set_index("gene_symbol")
     pheno = pd.DataFrame({"sample": ["S1", "S2", "S3", "S4"], "phenotype": ["case", "case", "control", "control"]})
     result = score_signature_in_cohort(sig, expr, pheno, "phenotype", "case", "control")
@@ -26,8 +26,17 @@ def test_no_overlap_gives_zero_coverage():
     assert result["coverage_fraction"] == 0.0
 
 def test_down_direction_inverts_score():
-    sig = pd.DataFrame({"gene_symbol": ["G1"], "direction": ["down"], "weight": [1.0]})
-    expr = pd.DataFrame({"gene_symbol": ["G1"], "S1": [10.0], "S2": [9.0], "S3": [0.0], "S4": [1.0]}).set_index("gene_symbol")
+    genes = ["G1", "G2", "G3", "G4", "G5"]
+    sig = pd.DataFrame({"gene_symbol": genes, "direction": ["down"] * len(genes), "weight": [1.0] * len(genes)})
+    expr = pd.DataFrame(
+        {
+            "gene_symbol": genes,
+            "S1": [10.0, 10.0, 10.0, 10.0, 10.0],
+            "S2": [9.0, 9.0, 9.0, 9.0, 9.0],
+            "S3": [0.0, 0.0, 0.0, 0.0, 0.0],
+            "S4": [1.0, 1.0, 1.0, 1.0, 1.0],
+        }
+    ).set_index("gene_symbol")
     pheno = pd.DataFrame({"sample": ["S1", "S2", "S3", "S4"], "phenotype": ["case", "case", "control", "control"]})
     result = score_signature_in_cohort(sig, expr, pheno, "phenotype", "case", "control")
     assert result["cohens_d"] < 0  # inverted because direction=down

@@ -1,0 +1,36 @@
+signature_id,cohort_id,cohens_d,cohens_d_var,direction_consistent,coverage_fraction,case_n,control_n,biological_program,tissue,platform,platform_id
+ayers_ifng6_signature,sepsis_mortality_gse65682,0.0,1.0,False,0.5,0,0,inflammation,whole_blood,affymetrix,GPL13667
+ayers_ifng6_signature,breast_prognosis_gse2034,-0.4097028723530248,0.0192936626158034,False,1.0,69,217,proliferation,breast_tumor,affymetrix,GPL96
+ayers_ifng6_signature,breast_er_gse7390,-0.7930627962783902,0.024499362387916657,False,1.0,134,64,proliferation,breast_tumor,affymetrix,GPL96
+ayers_ifng6_signature,hypoxia_cellline_gse53012,-0.23467230819902976,0.15773853721464504,False,1.0,18,9,hypoxia,cell_line,affymetrix,GPL570
+ayers_ifng6_signature,sepsis_blood_gse28750,-0.5659088088918133,0.14733900725340235,False,1.0,10,20,inflammation,whole_blood,affymetrix,GPL570
+ayers_ifng6_signature,tb_blood_gse19491,0.7871293697014086,0.030654641188682386,True,1.0,103,52,interferon,whole_blood,illumina,GPL6947
+ayers_ifng6_signature,ipf_lung_gse47460,-0.2889588225563852,0.01623138597218354,False,1.0,193,91,emt,lung,agilent,GPL14550
+ayers_ifng6_signature,copd_lung_gse47460,0.17093014135790505,0.07111472597203121,True,1.0,75,17,inflammation,lung,agilent,GPL6480
+ayers_ifng6_signature,influenza_pbmc_gse101702,-0.3496345539096125,0.028688173999371954,False,1.0,107,52,interferon,pbmc,agilent,GPL21185
+ayers_ifng6_signature,trauma_blood_gse36809,-1.085504186500754,0.028884458669208638,False,1.0,820,37,inflammation,whole_blood,affymetrix,GPL570
+ayers_ifng6_signature,hcc_liver_gse6764,0.8749475405876814,0.13018253906534774,True,1.0,38,10,proliferation,liver,affymetrix,GPL570
+ayers_ifng6_signature,crohn_intestine_gse112366,0.43503189502701045,0.04130770704962001,True,1.0,362,26,inflammation,intestine,affymetrix,GPL13158
+ayers_ifng6_signature,rsv_blood_gse34205,0.0405712793923312,0.06370155954673896,True,1.0,51,22,interferon,whole_blood,affymetrix,GPL570
+ayers_ifng6_signature,viral_challenge_gse73072,0.5871842083387587,0.004983651067636249,True,1.0,861,272,interferon,whole_blood,affymetrix,GPL14604
+ayers_ifng6_signature,breast_relapse_gse1456,0.40773680100315973,0.033607273202539506,True,1.0,40,119,proliferation,breast_tumor,affymetrix,GPL96
+ayers_ifng6_signature,hypoxia_mcf7_gse3188,-0.24256400445548953,0.3811497788627995,False,1.0,3,9,hypoxia,cell_line,affymetrix,GPL570
+ayers_ifng6_signature,hypoxia_timecourse_gse47533,0.4020557694183699,0.38543359325717924,True,1.0,9,3,hypoxia,cell_line,illumina,GPL6884
+ayers_ifng6_signature,hypoxia_multicell_gse18494,-0.400808325656709,0.14386815828083693,False,1.0,27,9,hypoxia,cell_line,affymetrix,GPL9419
+ayers_ifng6_signature,emt_tgfb_gse17708,-1.6493743069380842,0.45976999880830255,False,1.0,12,3,emt,cell_line,affymetrix,GPL570
+ayers_ifng6_signature,emt_hmle_gse24202,0.496621292461926,0.2209122073363465,True,1.0,15,6,emt,cell_line,affymetrix,GPL3921
+ayers_ifng6_signature,emt_mammary_gse43495,-0.5502159534694029,0.25615046117866574,False,1.0,9,6,emt,cell_line,illumina,GPL6883
+ayers_ifng6_signature,sepsis_shock_gse95233,-1.1927611247062968,0.07343466277892458,False,1.0,51,22,inflammation,whole_blood,affymetrix,GPL570
+ayers_ifng6_signature,melioidosis_blood_gse69528,0.28225527010122553,0.06898585272366603,True,0.8333333333333334,29,28,inflammation,whole_blood,illumina,GPL10558
+ayers_ifng6_signature,lung_tumor_gse19188,0.07998979807021209,0.026137457860707654,True,1.0,91,65,proliferation,lung,affymetrix,GPL570
+ayers_ifng6_signature,influenza_challenge_gse68310,0.8971331825996356,0.020150082063588565,True,1.0,211,71,interferon,whole_blood,illumina,GPL10558
+ayers_ifng6_signature,ccrcc_kidney_gse36895,1.6286661029491345,0.10113347390505173,True,1.0,29,23,hypoxia,kidney,affymetrix,GPL570
+ayers_ifng6_signature,gbm_brain_gse4290,1.2480558742740784,0.0633903404645772,True,1.0,77,23,hypoxia,brain,affymetrix,GPL570
+ayers_ifng6_signature,emt_arpe19_gse12548,-0.04294818932409722,0.3691502968942603,False,1.0,12,3,emt,cell_line,affymetrix,GPL570
+ayers_ifng6_signature,ipf_lung_gse53845,0.8084964613334252,0.15193130529048485,True,1.0,40,8,emt,lung,agilent,GPL6480
+ayers_ifng6_signature,influenza_severe_gse111368,-0.08558836894325225,0.024463313578598267,False,0.8333333333333334,59,130,interferon,whole_blood,illumina,GPL10558
+ayers_ifng6_signature,sle_pbmc_gse50772,0.7379076388310947,0.06849598624135812,True,1.0,61,20,interferon,pbmc,Affymetrix HG-U133 Plus 2.0,GPL570
+ayers_ifng6_signature,sle_blood_gse49454,0.7014253761251364,0.057276430943505256,True,1.0,157,20,interferon,blood,Illumina HumanHT-12 V4.0,GPL10558
+ayers_ifng6_signature,psoriasis_skin_gse13355,3.5550440835874824,0.08425245009690993,True,1.0,58,64,interferon,skin,Affymetrix HG-U133 Plus 2.0,GPL570
+ayers_ifng6_signature,psoriasis_skin_gse14905,2.18164028463759,0.11974978122824523,True,1.0,33,21,interferon,skin,Affymetrix HG-U133 Plus 2.0,GPL570
+ayers_ifng6_signature,dengue_blood_gse51808,0.8433178373038955,0.15016661106244494,True,1.0,28,9,interferon,blood,Affymetrix HT-HG-U133A,GPL13158

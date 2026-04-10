@@ -1,0 +1,51 @@
+{
+  "cohorts": [
+    {
+      "acquisition_mode": "direct_combined_matrix",
+      "contrast_description": "Acute yellow fever PBMC (survivor or non-survivor) versus controls",
+      "expected_case_n": 41,
+      "expected_control_n": 14,
+      "external_cohort_id": "gse243442_pbmc_yellow_fever_acute_vs_control",
+      "geo_accession": "GSE243442",
+      "predicted_ifn_direction": "positive",
+      "tissue": "pbmc"
+    },
+    {
+      "acquisition_mode": "direct_normalized_matrix",
+      "contrast_description": "Whole-blood influenza infection versus healthy controls",
+      "expected_case_n": 19,
+      "expected_control_n": 22,
+      "external_cohort_id": "gse213168_blood_influenza_infected_vs_healthy",
+      "geo_accession": "GSE213168",
+      "predicted_ifn_direction": "positive",
+      "tissue": "blood"
+    },
+    {
+      "acquisition_mode": "direct_combined_matrix",
+      "contrast_description": "Experimental RSV challenge nasal-cell RNA-seq, D3 infected versus D3 uninfected",
+      "expected_case_n": 23,
+      "expected_control_n": 16,
+      "external_cohort_id": "gse155237_nasal_rsv_d3_infected_vs_uninfected",
+      "geo_accession": "GSE155237",
+      "predicted_ifn_direction": "positive",
+      "tissue": "nasal_cells"
+    }
+  ],
+  "declared_at_utc": "2026-04-10T05:32:41Z",
+  "manifest_path": "data/prospective_holdout/external_timestamps/prospective_holdout_v2/declaration_manifest.json",
+  "manifest_sha256": "16bd4a41f35d89233062d4eb546f705006f640926ddf2ef7a939e5b07e4506b5",
+  "protocol_path": "data/prospective_holdout/PREDICTION_PROTOCOL_v2.md",
+  "protocol_sha256": "9551b383e4febcab0f7ea46049782e53a499667dfe04378c3c478f84e94df224",
+  "query_path": "data/prospective_holdout/external_timestamps/prospective_holdout_v2/declaration_request.tsq",
+  "query_sha256": "c998ce506c5482dc2f1ce4200877526a469054d3826bde4f2ad9bb3d32135707",
+  "registry_path": "data/prospective_holdout/prediction_registry_v2.tsv",
+  "registry_sha256": "6102e811a9a4dbbbbb253579a76dd6fb9fc648c8923824d19813c9a8073399fd",
+  "response_path": "data/prospective_holdout/external_timestamps/prospective_holdout_v2/declaration_response.tsr",
+  "response_sha256": "760560577f80ed9c309e3dd6448524aa0d65c91a35bc1bde2b105abcb7f8a7ed",
+  "round_id": "prospective_holdout_v2",
+  "status": "verified_existing_receipt",
+  "tsa_ca_url": "https://freetsa.org/files/cacert.pem",
+  "tsa_reply_time": "Apr 10 05:38:38 2026 GMT",
+  "tsa_url": "https://freetsa.org/tsr",
+  "verification_status": "OK"
+}

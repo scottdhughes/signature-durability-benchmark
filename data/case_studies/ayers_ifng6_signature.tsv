@@ -1,0 +1,7 @@
+gene_symbol	direction	weight
+IDO1	up	1.0
+CXCL10	up	1.0
+CXCL9	up	1.0
+HLA-DRA	up	1.0
+STAT1	up	1.0
+IFNG	up	1.0

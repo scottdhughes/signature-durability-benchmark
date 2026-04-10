@@ -1,0 +1,65 @@
+{
+  "hallmark_ifng_response": {
+    "observed_Q_B_fraction": 0.5217,
+    "null_mean": 0.1568,
+    "null_95th": 0.3254,
+    "null_99th": 0.4109,
+    "p_value": 0.0007999200079992001
+  },
+  "hallmark_ifna_response": {
+    "observed_Q_B_fraction": 0.6033,
+    "null_mean": 0.1692,
+    "null_95th": 0.3549,
+    "null_99th": 0.4555,
+    "p_value": 0.00039996000399960006
+  },
+  "hallmark_inflammatory_response": {
+    "observed_Q_B_fraction": 0.3424,
+    "null_mean": 0.1279,
+    "null_95th": 0.2832,
+    "null_99th": 0.3625,
+    "p_value": 0.014998500149985002
+  },
+  "hallmark_tnfa_nfkb": {
+    "observed_Q_B_fraction": 0.3885,
+    "null_mean": 0.1335,
+    "null_95th": 0.2904,
+    "null_99th": 0.3747,
+    "p_value": 0.0072992700729927005
+  },
+  "hallmark_hypoxia": {
+    "observed_Q_B_fraction": 0.1166,
+    "null_mean": 0.1359,
+    "null_95th": 0.274,
+    "null_99th": 0.3438,
+    "p_value": 0.5422457754224578
+  },
+  "hallmark_e2f_targets": {
+    "observed_Q_B_fraction": 0.0609,
+    "null_mean": 0.1606,
+    "null_95th": 0.3213,
+    "null_99th": 0.4034,
+    "p_value": 0.8862113788621138
+  },
+  "hallmark_emt": {
+    "observed_Q_B_fraction": 0.2973,
+    "null_mean": 0.1192,
+    "null_95th": 0.2547,
+    "null_99th": 0.3218,
+    "p_value": 0.0211978802119788
+  },
+  "schoggins_2011_irg": {
+    "observed_Q_B_fraction": 0.5689,
+    "null_mean": 0.1659,
+    "null_95th": 0.3489,
+    "null_99th": 0.4461,
+    "p_value": 0.0007999200079992001
+  },
+  "blind_durable_ifn_composite": {
+    "observed_Q_B_fraction": 0.5792,
+    "null_mean": 0.1665,
+    "null_95th": 0.3475,
+    "null_99th": 0.4456,
+    "p_value": 0.0006999300069993001
+  }
+}
