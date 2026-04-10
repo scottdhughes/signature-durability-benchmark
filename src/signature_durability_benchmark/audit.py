@@ -34,6 +34,9 @@ ALLOWED_SYNTHETIC_REFERENCE_FILES = {
     "config/signature_panel.tsv",
     "data/freeze/signature_panel_manifest.tsv",
     "data/curation/source_provenance.md",
+    "paper/content_v6.md",
+    "paper/clawrxiv.md",
+    "paper/main.tex",
     "src/signature_durability_benchmark/audit.py",
 }
 

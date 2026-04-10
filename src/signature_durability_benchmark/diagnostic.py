@@ -15,6 +15,7 @@ from .normalize import normalize_signature
 from .utils import (
     ensure_columns,
     ensure_dir,
+    repo_relpath,
     read_table,
     stable_name_seed,
     write_json,
@@ -267,7 +268,7 @@ def run_triage(
 
     result = {
         "signature_name": signature_name,
-        "input_path": str(signature_path),
+        "input_path": repo_relpath(signature_path),
         "declared_program": declared_program,
         "inferred_program": inferred["best"] if inferred else None,
         "program_ranking": inferred["ranked"] if inferred else [],

@@ -16,6 +16,8 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
+ROOT = Path(__file__).resolve().parents[2]
+
 
 def ensure_dir(path: str | Path) -> Path:
     target = Path(path)
@@ -53,6 +55,16 @@ def sha256_file(path: str | Path) -> str:
         for chunk in iter(lambda: handle.read(65536), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def repo_relpath(path: str | Path) -> str:
+    candidate = Path(path)
+    if not candidate.is_absolute():
+        return str(candidate)
+    try:
+        return str(candidate.relative_to(ROOT))
+    except ValueError:
+        return str(candidate)
 
 
 def set_runtime_environment(seed: int) -> None:

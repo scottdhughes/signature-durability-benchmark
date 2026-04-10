@@ -64,39 +64,49 @@
   "keyword_audit": {
     "all_hits": [
       {
-        "line": 40,
+        "line": 43,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "KEYWORD_PATTERN = re.compile(r\"\\b(synthetic|stub|fake|mock|toy|placeholder|dummy)\\b\", re.IGNORECASE)"
       },
       {
-        "line": 265,
+        "line": 268,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "findings.append(\"All paper-facing target signatures are biologically grounded, non-synthetic panels.\")"
       },
       {
-        "line": 268,
+        "line": 271,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "f\"The broader 30-signature benchmark still contains {signatures['synthetic_control_signature_count']} explicit synthetic control signatures; they are benchmark controls, not headline evidence.\""
       },
       {
-        "line": 276,
+        "line": 279,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "findings.append(\"No unexpected synthetic/stub/mock keywords were found in the runtime code, paper, or skill surface.\")"
       },
       {
-        "line": 306,
+        "line": 309,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "f\"- Synthetic control signatures in broader benchmark: `{signatures['synthetic_control_signature_count']}`\","
       },
       {
-        "line": 330,
+        "line": 333,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "f\"- Paper target signatures all non-synthetic: `{signatures['paper_target_all_non_synthetic']}`\","
       },
       {
-        "line": 351,
+        "line": 354,
         "path": "src/signature_durability_benchmark/audit.py",
         "text": "f\"- Unexpected synthetic/stub/mock hits outside allowed provenance files: `{len(report['keyword_audit']['unexpected_hits'])}`\","
+      },
+      {
+        "line": 70,
+        "path": "paper/content_v6.md",
+        "text": "The broader 30-signature benchmark also contains 19 explicit synthetic control signatures used as benchmark scaffolding for brittle, mixed, confounded, and insufficient-coverage behavior. Those synthe"
+      },
+      {
+        "line": 19,
+        "path": "paper/clawrxiv.md",
+        "text": "- The broader 30-signature benchmark still contains explicit synthetic control signatures, but the paper-facing target panel, external validations, and prospective case studies use only non-synthetic "
       },
       {
         "line": 44,
@@ -366,6 +376,9 @@
       "config/signature_panel.tsv",
       "data/curation/source_provenance.md",
       "data/freeze/signature_panel_manifest.tsv",
+      "paper/clawrxiv.md",
+      "paper/content_v6.md",
+      "paper/main.tex",
       "src/signature_durability_benchmark/audit.py"
     ],
     "unexpected_hits": []

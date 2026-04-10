@@ -209,7 +209,8 @@ for p in predictions:
     confusion[p["true_program"]][p["predicted_program"]] += 1
 
 programs_sorted = sorted(set(y))
-print(f"  {'true \\ pred':15s} " + " ".join(f"{p[:8]:>10s}" for p in programs_sorted))
+header_label = "true \\ pred"
+print(f"  {header_label:15s} " + " ".join(f"{p[:8]:>10s}" for p in programs_sorted))
 for true_p in programs_sorted:
     row = f"  {true_p:15s} "
     for pred_p in programs_sorted:

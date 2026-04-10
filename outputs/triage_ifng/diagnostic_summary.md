@@ -1,6 +1,6 @@
-# Diagnostic Report: tmp_ifng_signature
+# Diagnostic Report: hallmark_ifng_response
 
-- Input: `tmp_ifng_signature.tsv`
+- Input: `hallmark_ifng_response.tsv`
 - Inferred best-supported program: `interferon`
 - Full-model classification: `mixed`
 - Within-program classification: `durable`
@@ -8,7 +8,7 @@
 - Aggregate effect: `0.410` (p=`1.067e-34`)
 - Program-structure permutation p: `0.000999`
 
-tmp_ifng_signature behaves like a context-matched interferon signature: the within-program pooled effect is 1.383 (p=0.0005496) while the outside-program effect shrinks to 0.138 (p=0.4839), and the observed program structure exceeds random labelings (permutation p=0.000999).
+hallmark_ifng_response behaves like a context-matched interferon signature: the within-program pooled effect is 1.383 (p=0.0005496) while the outside-program effect shrinks to 0.138 (p=0.4839), and the observed program structure exceeds random labelings (permutation p=0.000999).
 
 ## Program Ranking
 

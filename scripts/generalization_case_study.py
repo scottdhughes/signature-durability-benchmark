@@ -25,7 +25,7 @@ from signature_durability_benchmark.generalization import (
     summarize_foreign_effects,
 )
 from signature_durability_benchmark.meta_analysis import guarded_hksj_random_effects_meta
-from signature_durability_benchmark.utils import ensure_dir, read_json, read_table, write_json, write_text
+from signature_durability_benchmark.utils import ensure_dir, read_json, read_table, repo_relpath, write_json, write_text
 
 
 CONFIG = ROOT / "config" / "benchmark_config.yaml"
@@ -155,7 +155,7 @@ def main() -> None:
             home_program=str(chosen["home_program"]),
         ),
         "triage_summary": triage_summary,
-        "triage_output_dir": str(triage_dir),
+        "triage_output_dir": repo_relpath(triage_dir),
         "external_validation": external_hypoxia if chosen["signature_id"] == "hallmark_hypoxia" else None,
     }
     write_json(OUT_JSON, payload)

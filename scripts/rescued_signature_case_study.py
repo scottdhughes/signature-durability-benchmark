@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from signature_durability_benchmark.config import load_config
 from signature_durability_benchmark.diagnostic import run_triage
-from signature_durability_benchmark.utils import ensure_dir, read_json, write_json, write_text
+from signature_durability_benchmark.utils import ensure_dir, read_json, repo_relpath, write_json, write_text
 
 
 CONFIG = ROOT / "config" / "benchmark_config.yaml"
@@ -112,7 +112,7 @@ def main() -> None:
             "and the outside-interferon effect is essentially null. In other words, the cross-context dilution "
             "does not imply that the signature is broken; it indicates context mismatch."
         ),
-        "triage_output_dir": str(TRIAGE_DIR),
+        "triage_output_dir": repo_relpath(TRIAGE_DIR),
         "triage_summary": triage_summary,
     }
     write_json(OUT_JSON, payload)

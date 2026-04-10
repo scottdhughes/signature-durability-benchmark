@@ -65,3 +65,16 @@ def test_declaration_bundle_contains_required_files():
     assert (bundle / "prospective_holdout_v2" / "declaration_receipt.json").exists()
     assert (bundle / "CHECKSUMS.sha256").exists()
     assert (bundle / "RELEASE_NOTES.md").exists()
+
+
+def test_public_json_artifacts_do_not_embed_local_absolute_paths():
+    targets = [
+        ROOT / "outputs" / "canonical_v8" / "prospective_holdout_validation.json",
+        ROOT / "outputs" / "canonical_v8" / "external_hypoxia_validation.json",
+        ROOT / "outputs" / "canonical_v8" / "generalization_case_study.json",
+        ROOT / "outputs" / "canonical_v8" / "rescued_signature_case_study.json",
+        ROOT / "outputs" / "triage_ifng" / "diagnostic.json",
+    ]
+    for path in targets:
+        text = path.read_text(encoding="utf-8")
+        assert "/Users/scott/" not in text, path

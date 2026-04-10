@@ -17,23 +17,23 @@
   "description": "External hypoxia exact-perturbation layer selected under the deterministic external_hypoxia SEARCH_PROTOCOL. This cohort is supportive rather than headline because it contains 12 total samples.",
   "download_audit": [
     {
-      "checked_at_utc": "2026-04-10T13:10:34.788015+00:00",
+      "checked_at_utc": "2026-04-10T16:06:29.924540+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_series_matrix.txt.gz",
+      "local_path": "data/external_hypoxia/downloads/GSE179885/GSE179885_series_matrix.txt.gz",
       "sha256": "f414aaa2030590b8897fa90edacee20a7018fcb4113ff063040cbd5678f9f2ba",
       "size_bytes": 1929,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/matrix/GSE179885_series_matrix.txt.gz"
     },
     {
-      "checked_at_utc": "2026-04-10T13:10:34.791255+00:00",
+      "checked_at_utc": "2026-04-10T16:06:29.924897+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/downloads/GSE179885/GSE179885_Raw_counts_TPM_Normlized.csv.gz",
+      "local_path": "data/external_hypoxia/downloads/GSE179885/GSE179885_Raw_counts_TPM_Normlized.csv.gz",
       "sha256": "e7bce35aa0377b637ea9f221934860a961ae0dbdaec5fabe570cd9567501b7a0",
       "size_bytes": 1869129,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE179nnn/GSE179885/suppl/GSE179885_Raw_counts_TPM_Normlized.csv.gz"
     }
   ],
-  "search_protocol_path": "/Users/scott/sci_op/signature-durability-benchmark/data/external_hypoxia/SEARCH_PROTOCOL.md",
+  "search_protocol_path": "data/external_hypoxia/SEARCH_PROTOCOL.md",
   "signature_results": [
     {
       "case_n": 6,

@@ -7,7 +7,7 @@
     "loo_stability": 1.0,
     "max_confounder_effect": 0.0,
     "mean_coverage": 0.9847619047619048,
-    "null_separation_p": 0.005,
+    "null_separation_p": 0.0,
     "platform_holdout_consistency": 1.0,
     "predicted_class": "mixed",
     "within_d": 1.3832488029035663,
@@ -25,7 +25,7 @@
     "proliferation_cell_cycle": 0.0,
     "stress_response": 0.0
   },
-  "declared_program": null,
+  "declared_program": "interferon",
   "dominant_confounder": {
     "name": "proliferation_cell_cycle",
     "overlap_fraction": 0.0,
@@ -39,8 +39,8 @@
     "within_effect": 1.3832488029035663,
     "within_p": 0.0005496417192925721
   },
-  "input_path": "/Users/scott/sci_op/signature-durability-benchmark/tmp_ifng_signature.tsv",
-  "interpretation": "tmp_ifng_signature behaves like a context-matched interferon signature: the within-program pooled effect is 1.383 (p=0.0005496) while the outside-program effect shrinks to 0.138 (p=0.4839), and the observed program structure exceeds random labelings (permutation p=0.000999).",
+  "input_path": "outputs/triage_ifng/hallmark_ifng_response.tsv",
+  "interpretation": "hallmark_ifng_response behaves like a context-matched interferon signature: the within-program pooled effect is 1.383 (p=0.0005496) while the outside-program effect shrinks to 0.138 (p=0.4839), and the observed program structure exceeds random labelings (permutation p=0.000999).",
   "normalization_audit": {
     "dropped_blank_rows": 0,
     "duplicate_rows_removed": 0,
@@ -265,5 +265,5 @@
       "within_p": 0.7281953475594404
     }
   ],
-  "signature_name": "tmp_ifng_signature"
+  "signature_name": "hallmark_ifng_response"
 }

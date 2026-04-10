@@ -39,7 +39,7 @@
     "within_effect": 3.378109096484284,
     "within_p": 0.05724552323130585
   },
-  "input_path": "/Users/scott/sci_op/signature-durability-benchmark/outputs/canonical_v8/generalization_case_study_assets/triage_hallmark_hypoxia/hallmark_hypoxia.tsv",
+  "input_path": "outputs/canonical_v8/generalization_case_study_assets/triage_hallmark_hypoxia/hallmark_hypoxia.tsv",
   "interpretation": "hallmark_hypoxia shows real signal but does not reduce cleanly to one program. The aggregate effect is 0.492 with I\u00b2=0.941, suggesting either cross-context activation or overly broad program boundaries.",
   "normalization_audit": {
     "dropped_blank_rows": 0,

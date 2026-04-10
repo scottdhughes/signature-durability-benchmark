@@ -19,13 +19,14 @@ Datasets:
 import gzip
 import os
 import sys
+from pathlib import Path
 import pandas as pd
 import numpy as np
 
-BASE = "/Users/scott/sci_op/signature-durability-benchmark"
-RAW = os.path.join(BASE, "data/raw")
-MATRICES_DIR = os.path.join(BASE, "data/freeze/cohort_matrices")
-PHENO_DIR = os.path.join(BASE, "data/freeze/cohort_phenotypes")
+BASE = Path(__file__).resolve().parent.parent
+RAW = str(BASE / "data" / "raw")
+MATRICES_DIR = str(BASE / "data" / "freeze" / "cohort_matrices")
+PHENO_DIR = str(BASE / "data" / "freeze" / "cohort_phenotypes")
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 

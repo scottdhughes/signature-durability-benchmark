@@ -19,7 +19,7 @@ import pandas as pd
 
 from .meta_analysis import direction_consistency, guarded_hksj_random_effects_meta
 from .scoring import score_signature_in_cohort
-from .utils import ensure_dir, now_timestamp, read_json, read_table, sha256_file, write_json, write_table, write_text
+from .utils import ensure_dir, now_timestamp, read_json, read_table, repo_relpath, sha256_file, write_json, write_table, write_text
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -97,7 +97,7 @@ def fetch_url(url: str, destination: Path) -> dict[str, Any]:
         fetched_this_run = True
     return {
         "url": url,
-        "local_path": str(destination),
+        "local_path": repo_relpath(destination),
         "size_bytes": destination.stat().st_size,
         "sha256": sha256_file(destination),
         "fetched_this_run": fetched_this_run,
@@ -645,7 +645,7 @@ def evaluate_round(
             },
         },
         "pooled_primary_panel": pooled_results,
-        "per_cohort_effects_csv": str(out_csv),
+        "per_cohort_effects_csv": repo_relpath(out_csv),
     }
     write_json(out_json, summary)
     write_text(out_md, build_round_summary_markdown(registry, summary, pooled_results))
@@ -662,9 +662,9 @@ def legacy_v1_summary_from_evaluation(
 ) -> dict[str, Any]:
     return {
         "registry": {
-            "path": str(registry_path),
+            "path": repo_relpath(registry_path),
             "sha256": evaluation["registry_sha256"],
-            "protocol_path": str(protocol_path),
+            "protocol_path": repo_relpath(protocol_path),
             "protocol_sha256": evaluation["protocol_sha256"],
             "declared_at_utc": evaluation["declared_at_utc"],
             "n_primary_cohorts": int(len(evaluation["prediction_summary"]["per_cohort_hits"])),

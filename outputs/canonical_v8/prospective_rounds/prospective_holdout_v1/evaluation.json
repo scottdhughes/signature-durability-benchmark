@@ -1,62 +1,62 @@
 {
   "code_provenance": {
-    "git_commit": "3407444b3747da369b402ab586e523160ce4efb9",
+    "git_commit": "4fb3e048b19a8c0b47f27816d55a7e26796a84c4",
     "git_dirty": true
   },
   "declared_at_utc": "2026-04-10T05:09:01Z",
   "download_audit": [
     {
-      "checked_at_utc": "2026-04-10T13:09:50.354656+00:00",
+      "checked_at_utc": "2026-04-10T16:08:03.496783+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE184610/GSE184610_series_matrix.txt.gz",
+      "local_path": "data/prospective_holdout/downloads/GSE184610/GSE184610_series_matrix.txt.gz",
       "sha256": "eb5e1e39e1c44af2142ce9b26d5b8f744a3916a7401b48910c42df5a266e42b1",
       "size_bytes": 15157,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184610/matrix/GSE184610_series_matrix.txt.gz"
     },
     {
-      "checked_at_utc": "2026-04-10T13:09:50.357898+00:00",
+      "checked_at_utc": "2026-04-10T16:08:03.502926+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE184610/GSE184610_Covid_samples_CPM.txt.gz",
+      "local_path": "data/prospective_holdout/downloads/GSE184610/GSE184610_Covid_samples_CPM.txt.gz",
       "sha256": "59491c7d913d40241b562c54370d72a6948f09c5c2ccfb1713a57e9f9a876568",
       "size_bytes": 22413296,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE184nnn/GSE184610/suppl/GSE184610_Covid_samples_CPM.txt.gz"
     },
     {
-      "checked_at_utc": "2026-04-10T13:09:52.730995+00:00",
+      "checked_at_utc": "2026-04-10T16:08:07.171650+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE243217/GSE243217_series_matrix.txt.gz",
+      "local_path": "data/prospective_holdout/downloads/GSE243217/GSE243217_series_matrix.txt.gz",
       "sha256": "a7236f508e22f9aeba69f93b4d0ac4e244242687f22db369974bff3ee418ffe4",
       "size_bytes": 5410,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243217/matrix/GSE243217_series_matrix.txt.gz"
     },
     {
-      "checked_at_utc": "2026-04-10T13:09:52.734248+00:00",
+      "checked_at_utc": "2026-04-10T16:08:07.177799+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE243217/GSE243217_RAW.tar",
+      "local_path": "data/prospective_holdout/downloads/GSE243217/GSE243217_RAW.tar",
       "sha256": "b18c84546f0f678b9150b8dd81fb321f6ac0f06c4ed3dabf36f25dcc9e3cc82e",
       "size_bytes": 8079360,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE243nnn/GSE243217/suppl/GSE243217_RAW.tar"
     },
     {
-      "checked_at_utc": "2026-04-10T13:09:53.591101+00:00",
+      "checked_at_utc": "2026-04-10T16:08:08.180672+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE202805/GSE202805_series_matrix.txt.gz",
+      "local_path": "data/prospective_holdout/downloads/GSE202805/GSE202805_series_matrix.txt.gz",
       "sha256": "4d932284d9ae56c332e5a7a413e50e7ecdfd50769339d7820e5ff7d8e59de5d7",
       "size_bytes": 5268,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202805/matrix/GSE202805_series_matrix.txt.gz"
     },
     {
-      "checked_at_utc": "2026-04-10T13:09:53.594886+00:00",
+      "checked_at_utc": "2026-04-10T16:08:08.184707+00:00",
       "fetched_this_run": false,
-      "local_path": "/Users/scott/sci_op/signature-durability-benchmark/data/prospective_holdout/downloads/GSE202805/GSE202805_genecounts_20220406.txt.gz",
+      "local_path": "data/prospective_holdout/downloads/GSE202805/GSE202805_genecounts_20220406.txt.gz",
       "sha256": "c71e9065106b962a74acddb73b3dfc901b5dda0087aca20361e8bff628ebb93c",
       "size_bytes": 8658402,
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202805/suppl/GSE202805_genecounts_20220406.txt.gz"
     }
   ],
-  "evaluation_finished_at_utc": "2026-04-10T13:09:55.071706+00:00",
-  "evaluation_started_at_utc": "2026-04-10T13:09:50.239288+00:00",
-  "per_cohort_effects_csv": "/Users/scott/sci_op/signature-durability-benchmark/outputs/canonical_v8/prospective_rounds/prospective_holdout_v1/per_cohort_effects.csv",
+  "evaluation_finished_at_utc": "2026-04-10T16:08:10.249198+00:00",
+  "evaluation_started_at_utc": "2026-04-10T16:08:03.358339+00:00",
+  "per_cohort_effects_csv": "outputs/canonical_v8/prospective_rounds/prospective_holdout_v1/per_cohort_effects.csv",
   "pooled_primary_panel": {
     "blind_durable_ifn_composite": {
       "Q": 7.29468730756483,

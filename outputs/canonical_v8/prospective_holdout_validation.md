@@ -2,8 +2,8 @@
 
 - Registry: `prediction_registry_v1.tsv`
 - Declared at: `2026-04-10T05:09:01Z`
-- Evaluation started: `2026-04-10T13:09:50.239288+00:00`
-- Evaluation finished: `2026-04-10T13:09:55.071706+00:00`
+- Evaluation started: `2026-04-10T16:08:03.358339+00:00`
+- Evaluation finished: `2026-04-10T16:08:10.249198+00:00`
 - Registry SHA256: `0b758bbf83fb1784276679878d6d564db7dbe2c24e5cf622981510b38af848bf`
 - Overall success: `False`
 

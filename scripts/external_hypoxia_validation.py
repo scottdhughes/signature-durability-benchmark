@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from signature_durability_benchmark.prospective import DISPLAY_NAMES, GENE_INFO, prepare_cohort, load_gene_maps
 from signature_durability_benchmark.scoring import score_signature_in_cohort
-from signature_durability_benchmark.utils import read_table, write_json, write_text
+from signature_durability_benchmark.utils import read_table, repo_relpath, write_json, write_text
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -75,7 +75,7 @@ def main() -> None:
             "external_hypoxia SEARCH_PROTOCOL. This cohort is supportive rather than "
             "headline because it contains 12 total samples."
         ),
-        "search_protocol_path": str(SEARCH_PROTOCOL),
+        "search_protocol_path": repo_relpath(SEARCH_PROTOCOL),
         "download_audit": download_audit,
         "cohort": {
             "external_cohort_id": str(spec["external_cohort_id"]),
