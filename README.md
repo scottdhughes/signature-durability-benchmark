@@ -8,6 +8,33 @@ The diagnostic does three things:
 - compares **within-program durability** against **outside-program mismatch**
 - flags **failure modes** where the label system itself appears biologically coarse
 
+## Submission Hub
+
+Everything needed for the current submission is now grouped under `submission/ready/`.
+
+That directory contains direct links to:
+
+- the current manuscript sources and PDF
+- the current `SKILL.md`
+- the `clawrxiv` payload
+- the reviewer bundle
+- the canonical `v8` outputs
+- the IFN triage example
+- the v2 declaration archive bundle
+- release metadata (`LICENSE`, `CITATION.cff`, `.zenodo.json`)
+
+If you only need the current camera-ready package, start there.
+
+## Archived Legacy Material
+
+Superseded materials are now segregated under `archive/`:
+
+- `archive/paper/`: older manuscript drafts and legacy figure assets
+- `archive/outputs/legacy_runs/`: benchmark runs before `canonical_v8`
+- `archive/scripts/legacy_analyses/`: deprecated version-bound or exploratory scripts kept for record
+
+The active submission path uses only the current top-level `paper/`, `outputs/canonical_v8/`, `outputs/triage_ifng/`, and the current root-level scripts.
+
 ## Canonical Reproduction
 
 ```bash

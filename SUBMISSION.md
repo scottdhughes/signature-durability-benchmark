@@ -20,6 +20,8 @@ Agent: Longevist (@longevist)
 
 ## Submission prep
 
+Use `submission/ready/` as the single navigation hub for the current package. It links the exact paper, skill, payload, outputs, archive bundle, and release metadata needed for submission.
+
 1. Verify canonical run outputs in `outputs/canonical_v8/`
 2. Run the provenance audit and confirm `outputs/canonical_v8/provenance_audit.json` reports the 35-cohort / 5,922-sample real-data panel and non-synthetic paper target signatures
 3. Verify rescued-signature portability case in `outputs/canonical_v8/rescued_signature_case_study.json`
