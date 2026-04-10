@@ -2,7 +2,7 @@
 
 This benchmark uses a curated panel of gene signatures anchored to primary literature and public gene-set databases. Each entry below records the anchor source, extraction rule, and freeze rationale. Signature source families are deliberately non-overlapping with GEO cohort source families to prevent source leakage.
 
-The conceptual backbone is the MSigDB Hallmark gene-set collection (Liberzon et al., "The Molecular Signatures Database Hallmark Gene Set Collection," Cell Systems 2015), supplemented by curated senescence literature and synthetic negative-control signatures designed to test specific failure modes.
+The conceptual backbone is the MSigDB Hallmark gene-set collection (Liberzon et al., "The Molecular Signatures Database Hallmark Gene Set Collection," Cell Systems 2015), supplemented by curated senescence literature, the orthogonal Schoggins 2011 antiviral IRG panel, and synthetic negative-control signatures designed to test specific failure modes. The paper-facing headline analyses use only real/public signatures and real GEO cohorts; the synthetic signatures remain in the broader 30-signature benchmark solely as explicit controls for brittle, mixed, confounded, and insufficient-coverage behavior.
 
 ## Durable Signatures
 
@@ -29,6 +29,9 @@ Anchor family: MSigDB Hallmark TNFA_SIGNALING_VIA_NFKB. Resource location: MSigD
 
 ### curated_senescence
 Anchor family: cellular senescence consensus literature. Resource location: Coppe et al. "Senescence-Associated Secretory Phenotypes Reveal Cell-Nonautonomous Functions of Oncogenic RAS and the p53 Tumor Suppressor" (PLoS Biology 2008); Hernandez-Segura et al. "Hallmarks of Cellular Senescence" (Trends in Cell Biology 2018); Casella et al. "Transcriptome signature of cellular senescence" (NAR 2019). Extraction rule: 20 consensus senescence genes including CDK inhibitors (CDKN2A, CDKN1A, CDKN2B), tumor suppressors (TP53, RB1), SASP cytokines (IL6, CXCL8, CCL2), SASP proteases (MMP3, SERPINE1), senescence markers (GLB1, LMNB1-down, H2AFX, HMGA1/2), and apoptosis regulators (BCL2L1, BAX). LMNB1 is direction "down" per Freund et al. "Lamin B1 loss is a senescence-associated biomarker" (MBoC 2012). Frozen because this curated set captures the consensus senescence phenotype validated across fibroblast, epithelial, and in vivo aging models.
+
+### schoggins_2011_irg
+Anchor family: interferon-stimulated genes discovered by antiviral overexpression screening. Resource location: Schoggins et al. "A diverse range of gene products are effectors of the type I interferon antiviral response" (Nature 2011). Extraction rule: frozen 76-gene IRG panel comprising validated or high-confidence interferon-inducible antiviral effectors from the published screen, all direction "up" with uniform weight 1.0. Exact membership is enumerated in `data/freeze/signatures.tsv`. Frozen because it provides an orthogonal interferon source family independent of MSigDB curation and therefore serves as a direct anti-circularity validation panel in the paper.
 
 ## Brittle Signatures
 

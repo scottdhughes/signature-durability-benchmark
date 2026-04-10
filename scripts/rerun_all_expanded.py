@@ -40,17 +40,7 @@ print(f"Loaded {len(per_cohort)} effect rows for {per_cohort['signature_id'].nun
 print(f"Programs: {dict(pd.Series(list(cohort_to_program.values())).value_counts())}")
 
 # Target signatures for the paper
-TARGET_SIGS = [
-    "hallmark_ifng_response",
-    "hallmark_ifna_response",
-    "hallmark_inflammatory_response",
-    "hallmark_tnfa_nfkb",
-    "hallmark_hypoxia",
-    "hallmark_e2f_targets",
-    "hallmark_emt",
-    "schoggins_2011_irg",  # NEW
-    "blind_durable_ifn_composite",
-]
+TARGET_SIGS = pd.read_csv(ROOT / "config" / "paper_target_signatures.tsv", sep="\t")["signature_id"].tolist()
 
 PROGRAMS = ["inflammation", "interferon", "proliferation", "hypoxia", "emt"]
 

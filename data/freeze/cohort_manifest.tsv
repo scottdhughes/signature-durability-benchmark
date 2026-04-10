@@ -29,3 +29,8 @@ gbm_brain_gse4290	GSE4290	affymetrix	GPL570	brain	hypoxia	phenotype	hypoxia	norm
 emt_arpe19_gse12548	GSE12548	affymetrix	GPL570	cell_line	emt	phenotype	mesenchymal	epithelial	15
 ipf_lung_gse53845	GSE53845	agilent	GPL6480	lung	emt	phenotype	mesenchymal	epithelial	48
 influenza_severe_gse111368	GSE111368	illumina	GPL10558	whole_blood	interferon	phenotype	infected	healthy	189
+sle_pbmc_gse50772	GSE50772	Affymetrix HG-U133 Plus 2.0	GPL570	pbmc	interferon	phenotype	sle	healthy	81
+sle_blood_gse49454	GSE49454	Illumina HumanHT-12 V4.0	GPL10558	blood	interferon	phenotype	sle	healthy	177
+psoriasis_skin_gse13355	GSE13355	Affymetrix HG-U133 Plus 2.0	GPL570	skin	interferon	phenotype	psoriasis	healthy	122
+psoriasis_skin_gse14905	GSE14905	Affymetrix HG-U133 Plus 2.0	GPL570	skin	interferon	phenotype	psoriasis	healthy	54
+dengue_blood_gse51808	GSE51808	Affymetrix HT-HG-U133A	GPL13158	blood	interferon	phenotype	dengue	healthy	37

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compute per-cohort effect sizes for:
 1. All 35 cohorts (30 original + 5 new IFN expansion)
-2. All 7 Hallmark signatures + new Schoggins IRG signature
+2. All 30 frozen benchmark signatures, including the orthogonal Schoggins IRG panel
 
 Outputs: outputs/canonical_v8/per_cohort_effects.csv
 

@@ -41,6 +41,10 @@ def main() -> None:
     p = sub.add_parser("build-clawrxiv-payload", help="Build clawRxiv submission payload")
     p.add_argument("--config", required=True)
 
+    # audit-provenance
+    p = sub.add_parser("audit-provenance", help="Run the reproducibility and provenance audit")
+    p.add_argument("--config", required=True)
+
     # prospective-holdout
     p = sub.add_parser("prospective-holdout", help="Run the metadata-first prospective holdout evaluation")
     p.add_argument("--config", required=True)
@@ -99,6 +103,9 @@ def main() -> None:
     elif args.command == "build-clawrxiv-payload":
         from .submission import build_clawrxiv_payload
         build_clawrxiv_payload(config)
+    elif args.command == "audit-provenance":
+        from .audit import write_provenance_audit
+        write_provenance_audit(config.root_dir)
     elif args.command == "prospective-holdout":
         script_path = Path(__file__).resolve().parents[2] / "scripts" / "prospective_holdout_prediction.py"
         runpy.run_path(str(script_path), run_name="__main__")

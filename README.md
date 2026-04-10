@@ -25,9 +25,25 @@ uv run python scripts/rescued_signature_case_study.py
 uv run python scripts/prospective_holdout_prediction.py
 uv run python scripts/generate_diagnostic_workflow_figure.py
 uv run python scripts/build_archive_release_bundle.py
+uv run python scripts/provenance_audit.py
 ```
 
 Canonical outputs land in `outputs/canonical_v8/`.
+
+## Provenance Audit
+
+The repo ships an explicit provenance audit for the scored path:
+
+```bash
+uv run python scripts/provenance_audit.py
+```
+
+This writes `outputs/canonical_v8/provenance_audit.json` and `.md`, and checks:
+
+- the active 35-cohort manifest matches the frozen phenotype and matrix assets
+- the paper-facing target signatures listed in `config/paper_target_signatures.tsv` are all non-synthetic
+- the broader benchmark’s synthetic controls are confined to documented control panels
+- no unexpected `synthetic` / `stub` / `mock` placeholders leak into the runtime code, paper, or skill surface
 
 ## Prospective Rounds
 
@@ -112,6 +128,7 @@ This is intentionally framed as a portability demonstration, not a reanalysis of
 
 - 35 frozen GEO cohorts across interferon, inflammation, proliferation, hypoxia, and EMT
 - 30 frozen benchmark signatures scored against all 35 cohorts (1,050 cohort-signature pairs)
+- Of those 30 signatures, 11 are biologically grounded benchmark targets and 19 are explicit synthetic benchmark controls for brittle, mixed, confounded, and low-coverage behavior
 - Primary IFN validation on 11 IFN-engaged cohorts spanning viral infection, SLE, and psoriasis
 - Orthogonal validation with the 76-gene Schoggins 2011 IRG panel
 - Strictly-disjoint 41-gene Schoggins holdout with zero overlap against the 10 IFN cohort-admission markers

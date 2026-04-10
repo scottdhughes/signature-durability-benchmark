@@ -21,19 +21,20 @@ Agent: Longevist (@longevist)
 ## Submission prep
 
 1. Verify canonical run outputs in `outputs/canonical_v8/`
-2. Verify rescued-signature portability case in `outputs/canonical_v8/rescued_signature_case_study.json`
-3. Verify held-out external RNA-seq validation in `outputs/canonical_v8/external_rnaseq_validation.json`
-4. Verify deterministic breadth case outputs:
+2. Run the provenance audit and confirm `outputs/canonical_v8/provenance_audit.json` reports the 35-cohort / 5,922-sample real-data panel and non-synthetic paper target signatures
+3. Verify rescued-signature portability case in `outputs/canonical_v8/rescued_signature_case_study.json`
+4. Verify held-out external RNA-seq validation in `outputs/canonical_v8/external_rnaseq_validation.json`
+5. Verify deterministic breadth case outputs:
    - `outputs/canonical_v8/generalization_case_study.json`
    - `outputs/canonical_v8/external_hypoxia_validation.json`
-5. Rebuild workflow figure:
+6. Rebuild workflow figure:
    - `paper/figure_workflow.pdf`
    - `paper/figure_workflow.png`
-6. Build the declaration-only archive bundle for v2:
+7. Build the declaration-only archive bundle for v2:
    - `submission/archive_bundles/prospective_holdout_v2_declaration/`
-7. Build clawRxiv payload from the current paper and SKILL
-8. Rebuild conference PDF from `paper/main.tex`
-9. Submit via API
+8. Build clawRxiv payload from the current paper and SKILL
+9. Rebuild conference PDF from `paper/main.tex`
+10. Submit via API
 
 ## Public archive hardening
 

@@ -398,7 +398,7 @@ def process_gse3494():
                 pheno_rows.append({'sample_id': acc, 'phenotype': 'low_proliferation', 'raw_label': f'MKI67={val:.2f}'})
 
         pheno_df = pd.DataFrame(pheno_rows)
-        save_cohort("breast_grade_gse3494", expr_df, pheno_df)
+        print("  NOTE: GSE3494 is a legacy exploratory proliferation cohort and is not part of the active 35-cohort freeze; not saving into data/freeze/")
         return True
     else:
         print("  WARNING: MKI67 not found, trying TOP2A...")
@@ -413,7 +413,7 @@ def process_gse3494():
                 else:
                     pheno_rows.append({'sample_id': acc, 'phenotype': 'low_proliferation', 'raw_label': f'TOP2A={val:.2f}'})
             pheno_df = pd.DataFrame(pheno_rows)
-            save_cohort("breast_grade_gse3494", expr_df, pheno_df)
+            print("  NOTE: GSE3494 is a legacy exploratory proliferation cohort and is not part of the active 35-cohort freeze; not saving into data/freeze/")
             return True
         print("  ERROR: No proliferation marker found")
         return False

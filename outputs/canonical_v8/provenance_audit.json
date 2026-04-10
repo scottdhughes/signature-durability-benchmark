@@ -1,0 +1,431 @@
+{
+  "active_cohort_panel": {
+    "active_cohorts": 35,
+    "active_manifest_matches_freeze_manifest": true,
+    "active_manifest_path": "config/cohort_manifest.tsv",
+    "active_sample_sum": 5922,
+    "freeze_manifest_cohorts": 35,
+    "freeze_manifest_path": "data/freeze/cohort_manifest.tsv",
+    "matrix_column_mismatches": [],
+    "matrix_columns_match_manifest": true,
+    "missing_matrix_assets": [],
+    "missing_phenotype_assets": [],
+    "phenotype_count_mismatches": [],
+    "phenotype_counts_match_manifest": true,
+    "phenotype_sample_sum": 5922,
+    "unused_matrix_assets": [],
+    "unused_phenotype_assets": []
+  },
+  "canonical_outputs": {
+    "canonical_output_dir": "outputs/canonical_v8",
+    "expected_per_cohort_rows": 1050,
+    "headline_output_files_present": {
+      "external_rnaseq_validation.json": true,
+      "external_validation.json": true,
+      "failure_mode_analysis.json": true,
+      "generalization_case_study.json": true,
+      "hartung_knapp_expanded.json": true,
+      "i2_decomposition_expanded.json": true,
+      "lopo_cross_validation_expanded.json": true,
+      "permutation_validation_expanded.json": true,
+      "prospective_holdout_validation.json": true,
+      "rescued_signature_case_study.json": true,
+      "strictly_unique_schoggins.json": true,
+      "within_ifn_metaregression.json": true
+    },
+    "per_cohort_effect_rows": 1050,
+    "per_cohort_rows_match_expected": true,
+    "per_cohort_unique_cohorts": 35,
+    "per_cohort_unique_signatures": 30,
+    "triage_ifng_outputs_present": {
+      "diagnostic.json": true,
+      "diagnostic_summary.md": true,
+      "per_cohort_effects.csv": true
+    }
+  },
+  "external_data_layers": {
+    "external_hypoxia_all_geo_accessions_valid": true,
+    "external_hypoxia_manifest_rows": 1,
+    "external_rnaseq_all_geo_accessions_valid": true,
+    "external_rnaseq_manifest_rows": 5,
+    "prospective_v1_all_geo_accessions_valid": true,
+    "prospective_v1_rows": 3,
+    "prospective_v2_all_geo_accessions_valid": true,
+    "prospective_v2_receipt_round_id": "prospective_holdout_v2",
+    "prospective_v2_receipt_verification_status": "OK",
+    "prospective_v2_rows": 3
+  },
+  "findings": [
+    "Config and frozen cohort manifests are synchronized at 35 cohorts / 5,922 samples.",
+    "All paper-facing target signatures are biologically grounded, non-synthetic panels.",
+    "The broader 30-signature benchmark still contains 19 explicit synthetic control signatures; they are benchmark controls, not headline evidence.",
+    "No unexpected synthetic/stub/mock keywords were found in the runtime code, paper, or skill surface."
+  ],
+  "keyword_audit": {
+    "all_hits": [
+      {
+        "line": 40,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "KEYWORD_PATTERN = re.compile(r\"\\b(synthetic|stub|fake|mock|toy|placeholder|dummy)\\b\", re.IGNORECASE)"
+      },
+      {
+        "line": 265,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "findings.append(\"All paper-facing target signatures are biologically grounded, non-synthetic panels.\")"
+      },
+      {
+        "line": 268,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "f\"The broader 30-signature benchmark still contains {signatures['synthetic_control_signature_count']} explicit synthetic control signatures; they are benchmark controls, not headline evidence.\""
+      },
+      {
+        "line": 276,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "findings.append(\"No unexpected synthetic/stub/mock keywords were found in the runtime code, paper, or skill surface.\")"
+      },
+      {
+        "line": 306,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "f\"- Synthetic control signatures in broader benchmark: `{signatures['synthetic_control_signature_count']}`\","
+      },
+      {
+        "line": 330,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "f\"- Paper target signatures all non-synthetic: `{signatures['paper_target_all_non_synthetic']}`\","
+      },
+      {
+        "line": 351,
+        "path": "src/signature_durability_benchmark/audit.py",
+        "text": "f\"- Unexpected synthetic/stub/mock hits outside allowed provenance files: `{len(report['keyword_audit']['unexpected_hits'])}`\","
+      },
+      {
+        "line": 44,
+        "path": "README.md",
+        "text": "- the paper-facing target signatures listed in `config/paper_target_signatures.tsv` are all non-synthetic"
+      },
+      {
+        "line": 45,
+        "path": "README.md",
+        "text": "- the broader benchmark\u2019s synthetic controls are confined to documented control panels"
+      },
+      {
+        "line": 46,
+        "path": "README.md",
+        "text": "- no unexpected `synthetic` / `stub` / `mock` placeholders leak into the runtime code, paper, or skill surface"
+      },
+      {
+        "line": 131,
+        "path": "README.md",
+        "text": "- Of those 30 signatures, 11 are biologically grounded benchmark targets and 19 are explicit synthetic benchmark controls for brittle, mixed, confounded, and low-coverage behavior"
+      },
+      {
+        "line": 15,
+        "path": "SKILL.md",
+        "text": "The benchmark answers: is a transcriptomic signature reproducible **within** its native biological program, and does it correctly fail **outside** it? We use Cochran's Q decomposition (Q_within / Q_be"
+      },
+      {
+        "line": 231,
+        "path": "SKILL.md",
+        "text": "Verifies that the active scored cohort panel is the real 35-cohort GEO freeze, that the paper-facing target signatures are all non-synthetic, that no unexpected `synthetic` / `stub` / `mock` placehold"
+      },
+      {
+        "line": 24,
+        "path": "SUBMISSION.md",
+        "text": "2. Run the provenance audit and confirm `outputs/canonical_v8/provenance_audit.json` reports the 35-cohort / 5,922-sample real-data panel and non-synthetic paper target signatures"
+      },
+      {
+        "line": 11,
+        "path": "config/signature_panel.tsv",
+        "text": "brittle_small_study_inflammation\tprimary\tbrittle\tRandom subset of inflammatory genes plus non-specific housekeeping noise; mimics underpowered single-study extraction with no validation cohort.\tinflam"
+      },
+      {
+        "line": 12,
+        "path": "config/signature_panel.tsv",
+        "text": "brittle_platform_specific\tprimary\tbrittle\tRibosomal protein and mitochondrial genes known to vary by platform (array vs RNA-seq) and library prep; expected to show strong batch effects.\ttechnical_arti"
+      },
+      {
+        "line": 13,
+        "path": "config/signature_panel.tsv",
+        "text": "brittle_single_tissue\tprimary\tbrittle\tLiver-specific genes (albumin, apolipoproteins, CYPs) mixed with generic immune markers; expected to fail in non-hepatic cohorts.\ttissue_specific\tSynthetic brittl"
+      },
+      {
+        "line": 14,
+        "path": "config/signature_panel.tsv",
+        "text": "brittle_overfit_noise\tprimary\tbrittle\tRandom assortment of genes with no shared biological pathway or coherent regulation; mimics overfit feature selection from high-dimensional noise.\tnone\tSynthetic "
+      },
+      {
+        "line": 15,
+        "path": "config/signature_panel.tsv",
+        "text": "mixed_emt_inflammation\tprimary\tmixed\tCombines EMT mesenchymal markers with inflammatory cytokines; replicates in fibrosis and wound healing but fails in sepsis and pure immune activation.\temt\tSyntheti"
+      },
+      {
+        "line": 16,
+        "path": "config/signature_panel.tsv",
+        "text": "mixed_hypoxia_stress\tprimary\tmixed\tCombines hypoxia-response genes with stress/UPR markers; replicates in solid tumors but inconsistent in hematologic or non-hypoxic inflammatory contexts.\thypoxia\tSyn"
+      },
+      {
+        "line": 17,
+        "path": "config/signature_panel.tsv",
+        "text": "mixed_senescence_proliferation\tprimary\tmixed\tCombines senescence arrest markers (CDKN2A/1A) with residual proliferation genes; contradictory biology produces inconsistent cross-cohort scores.\tsenescen"
+      },
+      {
+        "line": 18,
+        "path": "config/signature_panel.tsv",
+        "text": "confounded_proliferation\tprimary\tconfounded\tPure cell-cycle/mitotic genes; dominates any proliferative contrast but reflects nuisance biology rather than specific pathway activation.\tproliferation\tSyn"
+      },
+      {
+        "line": 19,
+        "path": "config/signature_panel.tsv",
+        "text": "confounded_ribosomal\tprimary\tconfounded\tRibosomal protein genes (RPL/RPS family); universally expressed housekeeping genes that track sample quality and cell size, not specific biology.\ttechnical_arti"
+      },
+      {
+        "line": 20,
+        "path": "config/signature_panel.tsv",
+        "text": "confounded_immune_infiltrate\tprimary\tconfounded\tPure immune cell-type markers (T-cell, B-cell, monocyte, NK); tracks immune cell fraction rather than pathway activation within cells.\timmune_infiltrati"
+      },
+      {
+        "line": 21,
+        "path": "config/signature_panel.tsv",
+        "text": "stealth_confounded_hypoxia_prolif\tprimary\tconfounded\tHypoxia genes (VEGFA, LDHA, CA9) plus proliferation markers (MKI67, TOP2A, CDK1); real hypoxia signal contaminated by proliferation confounder. Sim"
+      },
+      {
+        "line": 22,
+        "path": "config/signature_panel.tsv",
+        "text": "stealth_confounded_inflam_immune\tprimary\tconfounded\tInflammatory cytokines (IL6, TNF, CCL2) plus immune infiltration markers (CD3D, CD8A, PTPRC); real inflammatory signal contaminated by immune infilt"
+      },
+      {
+        "line": 23,
+        "path": "config/signature_panel.tsv",
+        "text": "lowcov_olfactory_1\tprimary\tinsufficient_coverage\tOlfactory receptor genes not present on standard expression platforms; expected to fail coverage threshold.\tout_of_universe\tSynthetic sentinel: olfacto"
+      },
+      {
+        "line": 24,
+        "path": "config/signature_panel.tsv",
+        "text": "lowcov_olfactory_2\tprimary\tinsufficient_coverage\tSecond olfactory/taste receptor sentinel set; independent gene selection to confirm coverage rejection is robust.\tout_of_universe\tSynthetic sentinel: o"
+      },
+      {
+        "line": 5,
+        "path": "data/curation/source_provenance.md",
+        "text": "The conceptual backbone is the MSigDB Hallmark gene-set collection (Liberzon et al., \"The Molecular Signatures Database Hallmark Gene Set Collection,\" Cell Systems 2015), supplemented by curated senes"
+      },
+      {
+        "line": 39,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic brittle control mimicking underpowered single-study extraction. Extraction rule: random subset of 15 inflammatory-response genes (IL1B, CXCL2, CCL4, PTGS2, ICAM1, SOD2, PLAUR,"
+      },
+      {
+        "line": 42,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic brittle control for platform-dependent expression artifacts. Extraction rule: 10 ribosomal protein genes (RPL13A, RPL7, RPL3, RPL11, RPL5, RPS4X, RPS27A, RPS3, RPS8, RPS18) pl"
+      },
+      {
+        "line": 45,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic brittle control for tissue-specificity failure. Extraction rule: 13 liver-specific genes (ALB, APOA1, APOB, APOC3, CYP3A4, CYP2E1, CYP1A2, HP, TF, FGA, FGB, FGG, SERPINA1) plu"
+      },
+      {
+        "line": 48,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic brittle control for overfit/noise selection. Extraction rule: 15 genes selected for large genomic size or high somatic mutation frequency (ANKRD36, ZNF518A, KIAA1549, OBSCN, S"
+      },
+      {
+        "line": 53,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic mixed signature combining EMT and inflammatory biology. Extraction rule: 10 EMT markers (VIM, FN1, SNAI2, ZEB1, COL1A1, COL3A1, ACTA2, SPARC, FAP, LOXL2) plus 10 inflammatory "
+      },
+      {
+        "line": 56,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic mixed signature combining hypoxia and stress/UPR response. Extraction rule: 10 hypoxia genes (VEGFA, SLC2A1, LDHA, CA9, BNIP3, ADM, NDRG1, LOX, HIF1A, PDK1) plus 10 stress/UPR"
+      },
+      {
+        "line": 59,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic mixed signature combining senescence arrest and residual proliferation markers. Extraction rule: 10 senescence markers (CDKN2A, CDKN1A, TP53, GLB1, SERPINE1, IL6, CXCL8, IGFBP"
+      },
+      {
+        "line": 64,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic negative control \u2014 pure proliferation/mitotic biology. Extraction rule: 20 core cell-cycle/mitotic genes (MKI67, TOP2A, PCNA, CCNB1, CDK1, CCNA2, BUB1, AURKA, PLK1, CDC20, CCN"
+      },
+      {
+        "line": 67,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic negative control \u2014 ribosomal protein housekeeping genes. Extraction rule: 20 ribosomal protein genes (10 RPL + 10 RPS family members), all direction \"up\" with uniform weight. "
+      },
+      {
+        "line": 70,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic negative control \u2014 immune cell-type deconvolution markers. Extraction rule: 20 immune lineage markers spanning T cells (CD3D, CD3E, CD8A, CD8B, CD4, FOXP3), B cells (MS4A1, CD"
+      },
+      {
+        "line": 73,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic stealth confounded \u2014 real hypoxia signal contaminated by proliferation confounder. Extraction rule: 15 core hypoxia genes (VEGFA, SLC2A1, LDHA, CA9, BNIP3, ADM, NDRG1, LOX, HI"
+      },
+      {
+        "line": 76,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic stealth confounded \u2014 real inflammatory signal contaminated by immune infiltration confounder. Extraction rule: 15 core inflammatory genes (IL6, IL1B, TNF, CXCL8, CCL2, CCL3, P"
+      },
+      {
+        "line": 95,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic blind brittle control \u2014 neuronal/receptor genes with no coherent expression program in standard bulk-tissue cohorts. Extraction rule: 15 genes (ABCA7, GPR37, SLC17A7, CHRNA7, "
+      },
+      {
+        "line": 98,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic blind mixed signature combining EMT markers with stress/UPR genes. Extraction rule: 10 EMT genes (VIM, FN1, SNAI1, ZEB2, COL1A2, COL5A1, ACTA2, TAGLN, POSTN, TGFBI) plus 10 st"
+      },
+      {
+        "line": 101,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic blind confounded control \u2014 proliferation plus inflammation. Extraction rule: 10 proliferation genes (MKI67, TOP2A, PCNA, CCNB1, CDK1, CCNA2, BUB1, AURKA, PLK1, CDC20) plus 10 "
+      },
+      {
+        "line": 104,
+        "path": "data/curation/source_provenance.md",
+        "text": "Anchor family: synthetic blind stealth confounded \u2014 EMT signal plus immune infiltration markers. Extraction rule: 15 EMT genes (VIM, FN1, SNAI2, ZEB1, COL1A1, COL3A1, ACTA2, SPARC, FAP, LOXL2, POSTN, "
+      },
+      {
+        "line": 11,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "brittle_small_study_inflammation\tprimary\tbrittle\tRandom subset of inflammatory genes plus non-specific housekeeping noise; mimics underpowered single-study extraction with no validation cohort.\tinflam"
+      },
+      {
+        "line": 12,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "brittle_platform_specific\tprimary\tbrittle\tRibosomal protein and mitochondrial genes known to vary by platform (array vs RNA-seq) and library prep; expected to show strong batch effects.\ttechnical_arti"
+      },
+      {
+        "line": 13,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "brittle_single_tissue\tprimary\tbrittle\tLiver-specific genes (albumin, apolipoproteins, CYPs) mixed with generic immune markers; expected to fail in non-hepatic cohorts.\ttissue_specific\tSynthetic brittl"
+      },
+      {
+        "line": 14,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "brittle_overfit_noise\tprimary\tbrittle\tRandom assortment of genes with no shared biological pathway or coherent regulation; mimics overfit feature selection from high-dimensional noise.\tnone\tSynthetic "
+      },
+      {
+        "line": 15,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "mixed_emt_inflammation\tprimary\tmixed\tCombines EMT mesenchymal markers with inflammatory cytokines; replicates in fibrosis and wound healing but fails in sepsis and pure immune activation.\temt\tSyntheti"
+      },
+      {
+        "line": 16,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "mixed_hypoxia_stress\tprimary\tmixed\tCombines hypoxia-response genes with stress/UPR markers; replicates in solid tumors but inconsistent in hematologic or non-hypoxic inflammatory contexts.\thypoxia\tSyn"
+      },
+      {
+        "line": 17,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "mixed_senescence_proliferation\tprimary\tmixed\tCombines senescence arrest markers (CDKN2A/1A) with residual proliferation genes; contradictory biology produces inconsistent cross-cohort scores.\tsenescen"
+      },
+      {
+        "line": 18,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "confounded_proliferation\tprimary\tconfounded\tPure cell-cycle/mitotic genes; dominates any proliferative contrast but reflects nuisance biology rather than specific pathway activation.\tproliferation\tSyn"
+      },
+      {
+        "line": 19,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "confounded_ribosomal\tprimary\tconfounded\tRibosomal protein genes (RPL/RPS family); universally expressed housekeeping genes that track sample quality and cell size, not specific biology.\ttechnical_arti"
+      },
+      {
+        "line": 20,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "confounded_immune_infiltrate\tprimary\tconfounded\tPure immune cell-type markers (T-cell, B-cell, monocyte, NK); tracks immune cell fraction rather than pathway activation within cells.\timmune_infiltrati"
+      },
+      {
+        "line": 21,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "stealth_confounded_hypoxia_prolif\tprimary\tconfounded\tHypoxia genes (VEGFA, LDHA, CA9) plus proliferation markers (MKI67, TOP2A, CDK1); real hypoxia signal contaminated by proliferation confounder. Sim"
+      },
+      {
+        "line": 22,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "stealth_confounded_inflam_immune\tprimary\tconfounded\tInflammatory cytokines (IL6, TNF, CCL2) plus immune infiltration markers (CD3D, CD8A, PTPRC); real inflammatory signal contaminated by immune infilt"
+      },
+      {
+        "line": 23,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "lowcov_olfactory_1\tprimary\tinsufficient_coverage\tOlfactory receptor genes not present on standard expression platforms; expected to fail coverage threshold.\tout_of_universe\tSynthetic sentinel: olfacto"
+      },
+      {
+        "line": 24,
+        "path": "data/freeze/signature_panel_manifest.tsv",
+        "text": "lowcov_olfactory_2\tprimary\tinsufficient_coverage\tSecond olfactory/taste receptor sentinel set; independent gene selection to confirm coverage rejection is robust.\tout_of_universe\tSynthetic sentinel: o"
+      }
+    ],
+    "allowed_reference_files": [
+      "README.md",
+      "SKILL.md",
+      "SUBMISSION.md",
+      "config/signature_panel.tsv",
+      "data/curation/source_provenance.md",
+      "data/freeze/signature_panel_manifest.tsv",
+      "src/signature_durability_benchmark/audit.py"
+    ],
+    "unexpected_hits": []
+  },
+  "signature_panel": {
+    "config_manifest_id_count": 30,
+    "config_manifest_matches_freeze_manifest": true,
+    "extra_in_config_manifest": [],
+    "extra_in_freeze_manifest": [],
+    "freeze_manifest_id_count": 30,
+    "freeze_signature_id_count": 30,
+    "missing_from_config_manifest": [],
+    "missing_from_freeze_manifest": [],
+    "non_synthetic_benchmark_signature_count": 11,
+    "paper_target_all_manifested": true,
+    "paper_target_all_non_synthetic": true,
+    "paper_target_signatures": [
+      "hallmark_ifng_response",
+      "hallmark_ifna_response",
+      "hallmark_inflammatory_response",
+      "hallmark_tnfa_nfkb",
+      "hallmark_hypoxia",
+      "hallmark_e2f_targets",
+      "hallmark_emt",
+      "schoggins_2011_irg",
+      "blind_durable_ifn_composite"
+    ],
+    "paper_target_sources": {
+      "blind_durable_ifn_composite": "Blind: composite IFNg/IFNa core genes",
+      "hallmark_e2f_targets": "MSigDB Hallmark E2F_TARGETS (Liberzon et al. 2015)",
+      "hallmark_emt": "MSigDB Hallmark EPITHELIAL_MESENCHYMAL_TRANSITION (Liberzon et al. 2015)",
+      "hallmark_hypoxia": "MSigDB Hallmark HYPOXIA (Liberzon et al. 2015)",
+      "hallmark_ifna_response": "MSigDB Hallmark INTERFERON_ALPHA_RESPONSE (Liberzon et al. 2015)",
+      "hallmark_ifng_response": "MSigDB Hallmark INTERFERON_GAMMA_RESPONSE (Liberzon et al. 2015)",
+      "hallmark_inflammatory_response": "MSigDB Hallmark INFLAMMATORY_RESPONSE (Liberzon et al. 2015)",
+      "hallmark_tnfa_nfkb": "MSigDB Hallmark TNFA_SIGNALING_VIA_NFKB (Liberzon et al. 2015)",
+      "schoggins_2011_irg": "Schoggins et al. 2011 antiviral IRG panel (Nature 2011)"
+    },
+    "synthetic_control_signature_count": 19,
+    "synthetic_control_signature_ids": [
+      "blind_brittle_random",
+      "blind_confounded_prolif_inflam",
+      "blind_confounded_stealth_emt_immune",
+      "blind_lowcov_keratin",
+      "blind_mixed_emt_stress",
+      "brittle_overfit_noise",
+      "brittle_platform_specific",
+      "brittle_single_tissue",
+      "brittle_small_study_inflammation",
+      "confounded_immune_infiltrate",
+      "confounded_proliferation",
+      "confounded_ribosomal",
+      "lowcov_olfactory_1",
+      "lowcov_olfactory_2",
+      "mixed_emt_inflammation",
+      "mixed_hypoxia_stress",
+      "mixed_senescence_proliferation",
+      "stealth_confounded_hypoxia_prolif",
+      "stealth_confounded_inflam_immune"
+    ]
+  },
+  "status": "pass_with_notes"
+}

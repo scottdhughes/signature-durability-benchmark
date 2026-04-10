@@ -6,7 +6,7 @@ Context for this method-focused v6 bundle:
 - The expansion cohorts were admitted using 10 markers: STAT1, IRF1, IFIT1, IFIT2, ISG15, MX1, OAS1, GBP1, CXCL10, RSAD2.
 - The strictly-disjoint Schoggins result is scoped to rule out exact admission-marker reuse as the driver, not every possible cohort-selection effect.
 - The within-IFN heterogeneity analysis is framed as a descriptive weighted Q partition rather than a definitive mixed-effects meta-regression because k=11 and the combined moderator partition contains sparse cells.
-- New in this bundle: a real triage interface, held-out validation (leave-one-cohort-out and split-half), explicit failure-mode analysis for ambiguous comparator programs, a rescued published-signature portability case using the Ayers IFN-gamma-related 6-gene profile, a held-out four-cohort bulk RNA-seq transfer test, a deterministic second breadth case (Hallmark Hypoxia, intentionally still mixed), a generated workflow figure, a mixed metadata-first prospective v1 round with an interpretable acute-PBMC miss, and a second fresh v2 registry that is externally timestamped and intentionally still pending evaluation.
+- New in this bundle: a real triage interface, held-out validation (leave-one-cohort-out and split-half), explicit failure-mode analysis for ambiguous comparator programs, a rescued published-signature portability case using the Ayers IFN-gamma-related 6-gene profile, a held-out four-cohort bulk RNA-seq transfer test, a deterministic second breadth case (Hallmark Hypoxia, intentionally still mixed), a generated workflow figure, a mixed metadata-first prospective v1 round with an interpretable acute-PBMC miss, a second fresh v2 registry that is externally timestamped and intentionally still pending evaluation, and a provenance audit verifying that the active 35-cohort scored panel uses real GEO data and that the paper-facing target signatures are non-synthetic.
 
 Please score on:
 (A) Whether the paper's claims are now appropriately scoped and defensible
@@ -397,7 +397,7 @@ canonical_output_dir: outputs/canonical_v8
 
 This skill scores and triages gene signatures against 35 frozen real GEO expression cohorts (5,922 samples, 14 microarray platforms) covering five biological programs: interferon (k=11), inflammation (k=7), hypoxia (k=6), EMT (k=6), and proliferation (k=5). The expanded interferon arm (11 cohorts) spans viral infection (k=7), autoimmunity (SLE, psoriasis; k=4), and three tissues (whole blood, PBMC, skin).
 
-The benchmark answers: is a transcriptomic signature reproducible **within** its native biological program, and does it correctly fail **outside** it? We use Cochran's Q decomposition (Q_within / Q_between), DerSimonian-Laird random-effects meta-analysis with Hartung-Knapp-Sidik-Jonkman guarded inference, 10,000-iteration permutation testing, leave-one-program-out Q_B leverage diagnostics, held-out validation, a held-out external RNA-seq transfer layer, a deterministic second non-IFN breadth case, a metadata-first prospective holdout registry, an externally timestamped pending second prospective round, a generic locked-round evaluator for future readouts, and a reusable `triage` interface for new signatures.
+The benchmark answers: is a transcriptomic signature reproducible **within** its native biological program, and does it correctly fail **outside** it? We use Cochran's Q decomposition (Q_within / Q_between), DerSimonian-Laird random-effects meta-analysis with Hartung-Knapp-Sidik-Jonkman guarded inference, 10,000-iteration permutation testing, leave-one-program-out Q_B leverage diagnostics, held-out validation, a held-out external RNA-seq transfer layer, a deterministic second non-IFN breadth case, a metadata-first prospective holdout registry, an externally timestamped pending second prospective round, a generic locked-round evaluator for future readouts, a reusable `triage` interface for new signatures, and a provenance audit that verifies the active scored panel uses real GEO cohorts while quarantining the broader benchmark's explicit synthetic control signatures from the paper-facing target set.
 
 The interferon panel includes an **orthogonal Schoggins 2011 IRG panel** (76 genes from viral overexpression screens, 25% overlap with the frozen Hallmark IFN-γ core) and a **41-gene strictly-unique** Schoggins subset with zero overlap against the 10 marker genes used for expansion cohort admission — a direct test against exact admission-marker reuse.
 
@@ -427,7 +427,7 @@ Success condition: `outputs/canonical_v8/per_cohort_effects.csv` contains 1,050 
 
 ## Step 3: Run All Meta-Analyses on the Expanded Panel
 
-Runs I² decomposition, within-program DL+HKSJ meta-analysis, 10,000-iteration permutation test, and leave-one-program-out Q_B stability for 9 target signatures (Hallmark IFN-γ / IFN-α cores, Hallmark inflammatory / TNF-α-NFκB, Hallmark hypoxia, Hallmark E2F targets, Hallmark EMT, Schoggins 2011 IRG, blind IFN composite).
+Runs I² decomposition, within-program DL+HKSJ meta-analysis, 10,000-iteration permutation test, and leave-one-program-out Q_B stability for the 9 paper target signatures enumerated in `config/paper_target_signatures.tsv` (Hallmark IFN-γ / IFN-α cores, Hallmark inflammatory / TNF-α-NFκB, Hallmark hypoxia, Hallmark E2F targets, Hallmark EMT, Schoggins 2011 IRG, blind IFN composite).
 
 ```bash
 uv run python scripts/rerun_all_expanded.py
@@ -611,7 +611,21 @@ Success condition: `outputs/canonical_v8/rescued_signature_case_study.json` exis
 - `triage.full_model_class`: `mixed`
 - `triage.within_program_class`: `durable`
 
-## Step 17: Confirm Required Artifacts
+## Optional Step 17: Run the Provenance Audit
+
+Verifies that the active scored cohort panel is the real 35-cohort GEO freeze, that the paper-facing target signatures are all non-synthetic, that no unexpected `synthetic` / `stub` / `mock` placeholders leak into the runtime or paper surface, and that the broader synthetic controls remain documented benchmark controls rather than headline evidence.
+
+```bash
+uv run python scripts/provenance_audit.py
+```
+
+Success condition: `outputs/canonical_v8/provenance_audit.json` exists and shows:
+- `active_cohort_panel.active_cohorts`: `35`
+- `active_cohort_panel.active_sample_sum`: `5922`
+- `signature_panel.paper_target_all_non_synthetic`: `true`
+- `keyword_audit.unexpected_hits`: `[]`
+
+## Step 18: Confirm Required Artifacts
 
 Required files in `outputs/canonical_v8/`:
 - `per_cohort_effects.csv` (1,050 rows)
@@ -629,6 +643,7 @@ Required files in `outputs/canonical_v8/`:
 - `prospective_holdout_validation.json`
 - `prospective_holdout_per_cohort_effects.csv`
 - `rescued_signature_case_study.json`
+- `provenance_audit.json`
 
 ## Expected Headline Results
 
